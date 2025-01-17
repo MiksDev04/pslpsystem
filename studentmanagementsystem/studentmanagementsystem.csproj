@@ -169,7 +169,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\arrow right.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cas-building.jpg" />
   </ItemGroup>
@@ -208,6 +210,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\reject1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\people big.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\department.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skills big.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skills big1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\department1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\people big1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

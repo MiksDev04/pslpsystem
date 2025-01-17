@@ -121,10 +121,4 @@
     <value>This system efficiently manages student information, including personal details, enrolled courses, and acquired skills.
  It provides a user-friendly platform for seamless record-keeping, ensuring accurate and organized data for educational institutions.</value>
   </data>
-  <metadata name="guna2ResizeForm1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="guna2BorderlessForm1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>170, 17</value>
-  </metadata>
 </root>
