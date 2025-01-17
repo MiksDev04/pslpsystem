@@ -41,13 +41,12 @@
             this.ProfileBtn = new Guna.UI2.WinForms.Guna2TileButton();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.SearchBtn = new Guna.UI2.WinForms.Guna2Button();
             this.ExitBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.SearchBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.MainPnl = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.MainPnl = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.NavigationPnl.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.MainPnl.SuspendLayout();
@@ -59,9 +58,9 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(430, 45);
+            this.label1.Size = new System.Drawing.Size(440, 45);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Student Information Systen";
+            this.label1.Text = "Student Information System";
             // 
             // NavigationPnl
             // 
@@ -287,57 +286,6 @@
             this.guna2Panel1.Size = new System.Drawing.Size(1280, 65);
             this.guna2Panel1.TabIndex = 1;
             // 
-            // guna2TextBox2
-            // 
-            this.guna2TextBox2.Animated = true;
-            this.guna2TextBox2.BorderRadius = 15;
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FillColor = System.Drawing.Color.PaleGreen;
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Location = new System.Drawing.Point(803, 17);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PasswordChar = '\0';
-            this.guna2TextBox2.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.guna2TextBox2.PlaceholderText = "Search here...";
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.Size = new System.Drawing.Size(272, 36);
-            this.guna2TextBox2.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(368, 279);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(303, 45);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Content Goes Here";
-            // 
-            // SearchBtn
-            // 
-            this.SearchBtn.Animated = true;
-            this.SearchBtn.BackgroundImage = global::studentmanagementsystem.Properties.Resources.search;
-            this.SearchBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.SearchBtn.BorderColor = System.Drawing.Color.Transparent;
-            this.SearchBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.SearchBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.SearchBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.SearchBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.SearchBtn.FillColor = System.Drawing.Color.Transparent;
-            this.SearchBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.SearchBtn.ForeColor = System.Drawing.Color.White;
-            this.SearchBtn.Location = new System.Drawing.Point(1083, 18);
-            this.SearchBtn.Name = "SearchBtn";
-            this.SearchBtn.Size = new System.Drawing.Size(32, 32);
-            this.SearchBtn.TabIndex = 4;
-            // 
             // ExitBtn
             // 
             this.ExitBtn.Animated = true;
@@ -351,11 +299,62 @@
             this.ExitBtn.FillColor = System.Drawing.Color.Transparent;
             this.ExitBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.ExitBtn.ForeColor = System.Drawing.Color.White;
-            this.ExitBtn.Location = new System.Drawing.Point(1223, 18);
+            this.ExitBtn.Location = new System.Drawing.Point(1234, 21);
             this.ExitBtn.Name = "ExitBtn";
-            this.ExitBtn.Size = new System.Drawing.Size(32, 32);
+            this.ExitBtn.Size = new System.Drawing.Size(25, 25);
             this.ExitBtn.TabIndex = 5;
             this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
+            // 
+            // SearchBtn
+            // 
+            this.SearchBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SearchBtn.Animated = true;
+            this.SearchBtn.BackColor = System.Drawing.Color.Transparent;
+            this.SearchBtn.BackgroundImage = global::studentmanagementsystem.Properties.Resources.search;
+            this.SearchBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SearchBtn.BorderColor = System.Drawing.Color.Transparent;
+            this.SearchBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.SearchBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.SearchBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.SearchBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.SearchBtn.FillColor = System.Drawing.Color.Transparent;
+            this.SearchBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.SearchBtn.ForeColor = System.Drawing.Color.White;
+            this.SearchBtn.Location = new System.Drawing.Point(1040, 23);
+            this.SearchBtn.Name = "SearchBtn";
+            this.SearchBtn.Size = new System.Drawing.Size(25, 25);
+            this.SearchBtn.TabIndex = 4;
+            // 
+            // guna2TextBox2
+            // 
+            this.guna2TextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2TextBox2.Animated = true;
+            this.guna2TextBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2TextBox2.BorderColor = System.Drawing.Color.DarkGreen;
+            this.guna2TextBox2.BorderRadius = 15;
+            this.guna2TextBox2.BorderThickness = 2;
+            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox2.DefaultText = "";
+            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox2.FillColor = System.Drawing.Color.MediumSeaGreen;
+            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.guna2TextBox2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox2.Location = new System.Drawing.Point(803, 15);
+            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.guna2TextBox2.Name = "guna2TextBox2";
+            this.guna2TextBox2.PasswordChar = '\0';
+            this.guna2TextBox2.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.guna2TextBox2.PlaceholderText = "Search here...";
+            this.guna2TextBox2.SelectedText = "";
+            this.guna2TextBox2.Size = new System.Drawing.Size(275, 38);
+            this.guna2TextBox2.TabIndex = 2;
             // 
             // guna2BorderlessForm1
             // 
@@ -363,25 +362,23 @@
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(131, 28);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 100);
-            this.panel1.TabIndex = 1;
-            // 
             // MainPnl
             // 
-            this.MainPnl.BackColor = System.Drawing.Color.Transparent;
-            this.MainPnl.Controls.Add(this.panel1);
             this.MainPnl.Controls.Add(this.label2);
-            this.MainPnl.FillColor = System.Drawing.Color.White;
-            this.MainPnl.Location = new System.Drawing.Point(221, 71);
+            this.MainPnl.Location = new System.Drawing.Point(221, 79);
             this.MainPnl.Name = "MainPnl";
-            this.MainPnl.Radius = 10;
-            this.MainPnl.ShadowColor = System.Drawing.Color.Black;
-            this.MainPnl.Size = new System.Drawing.Size(1047, 644);
+            this.MainPnl.Size = new System.Drawing.Size(1047, 633);
             this.MainPnl.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(326, 257);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(303, 45);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Content Goes Here";
             // 
             // Main
             // 
@@ -422,12 +419,11 @@
         private Guna.UI2.WinForms.Guna2TileButton CourseBtn;
         private Guna.UI2.WinForms.Guna2Panel ActivePnl;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
         private Guna.UI2.WinForms.Guna2Button ExitBtn;
         private Guna.UI2.WinForms.Guna2Button SearchBtn;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
-        private System.Windows.Forms.Panel panel1;
-        private Guna.UI2.WinForms.Guna2ShadowPanel MainPnl;
+        private System.Windows.Forms.Panel MainPnl;
+        private System.Windows.Forms.Label label2;
     }
 }

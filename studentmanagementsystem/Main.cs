@@ -32,7 +32,7 @@ namespace studentmanagementsystem
         {
             form.TopLevel = false;
             form.FormBorderStyle = FormBorderStyle.None;
-            form.Dock = DockStyle.Fill;
+            //form.Dock = DockStyle.Fill;
             MainPnl.Controls.Clear();
             MainPnl.Controls.Add(form);
             form.Show();
