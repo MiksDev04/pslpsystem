@@ -75,6 +75,14 @@ namespace studentmanagementsystem
             this.Close();
         }
 
-      
+        private void LogoutBtn_Click(object sender, EventArgs e)
+        {
+            DialogResult = MessageBox.Show("Do you want to logout?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (DialogResult == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
     }
 }

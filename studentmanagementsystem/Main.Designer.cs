@@ -113,6 +113,7 @@
             this.LogoutBtn.TabIndex = 9;
             this.LogoutBtn.Text = "Logout";
             this.LogoutBtn.TextOffset = new System.Drawing.Point(10, -18);
+            this.LogoutBtn.Click += new System.EventHandler(this.LogoutBtn_Click);
             // 
             // ManageBtn
             // 

@@ -16,5 +16,9 @@ namespace studentmanagementsystem.content
         {
             InitializeComponent();
         }
+
+     
+
+ 
     }
 }
