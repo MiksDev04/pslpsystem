@@ -64,11 +64,17 @@
     <Compile Include="account\Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
-    <Compile Include="content\Course.cs">
+    <Compile Include="content\AddUpdate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="content\Course.Designer.cs">
-      <DependentUpon>Course.cs</DependentUpon>
+    <Compile Include="content\AddUpdate.Designer.cs">
+      <DependentUpon>AddUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="content\Department.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="content\Department.Designer.cs">
+      <DependentUpon>Department.cs</DependentUpon>
     </Compile>
     <Compile Include="content\Dashboard.cs">
       <SubType>Form</SubType>
@@ -121,8 +127,11 @@
     <EmbeddedResource Include="account\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="content\Course.resx">
-      <DependentUpon>Course.cs</DependentUpon>
+    <EmbeddedResource Include="content\AddUpdate.resx">
+      <DependentUpon>AddUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="content\Department.resx">
+      <DependentUpon>Department.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="content\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>

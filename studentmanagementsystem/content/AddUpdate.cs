@@ -10,24 +10,24 @@ using System.Windows.Forms;
 
 namespace studentmanagementsystem.content
 {
-    public partial class Manage : Form
+    public partial class AddUpdate : Form
     {
-        public Manage()
+        public AddUpdate()
         {
             InitializeComponent();
         }
 
-        private void Manage_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnUpdate_Click(object sender, EventArgs e)
+        private void guna2Button3_Click(object sender, EventArgs e)
         {
 
         }
 
         private void guna2TextBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }

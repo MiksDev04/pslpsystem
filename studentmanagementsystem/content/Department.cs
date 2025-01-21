@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace studentmanagementsystem.content
 {
-    public partial class Course : Form
+    public partial class Department : Form
     {
-        public Course()
+        public Department()
         {
             InitializeComponent();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

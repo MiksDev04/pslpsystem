@@ -17,8 +17,13 @@ namespace studentmanagementsystem.content
             InitializeComponent();
         }
 
-     
-
- 
+        private void Records_Load(object sender, EventArgs e)
+        {
+            StudentDepartment.Text = "All";
+            StudentProgram.Text = "All";
+            StudentYearLevel.Text = "All";
+            StudentSex.Text = "All";
+            StudentStatus.Text = "All";
+        }
     }
 }

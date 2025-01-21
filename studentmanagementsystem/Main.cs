@@ -53,7 +53,7 @@ namespace studentmanagementsystem
 
         private void CourseBtn_Click(object sender, EventArgs e)
         {
-            LoadContentPnl(new Course(), CourseBtn);
+            LoadContentPnl(new Department(), CourseBtn);
         }
 
         private void SkillsBtn_Click(object sender, EventArgs e)
