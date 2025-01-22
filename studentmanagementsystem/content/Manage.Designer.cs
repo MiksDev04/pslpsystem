@@ -166,6 +166,7 @@
             this.UpdateRecordBtn.Size = new System.Drawing.Size(92, 36);
             this.UpdateRecordBtn.TabIndex = 75;
             this.UpdateRecordBtn.Text = "Update";
+            this.UpdateRecordBtn.Click += new System.EventHandler(this.UpdateRecordBtn_Click);
             // 
             // Manage
             // 

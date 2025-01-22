@@ -39,11 +39,11 @@
             this.StudentYearLevel = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.StudentDepartment = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.PersonalInformationRecords = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PersonalInformationRecords)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,11 +63,12 @@
             this.panel2.Controls.Add(this.StudentYearLevel);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.StudentDepartment);
-            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Controls.Add(this.PersonalInformationRecords);
             this.panel2.Location = new System.Drawing.Point(0, 67);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1049, 567);
             this.panel2.TabIndex = 5;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // label6
             // 
@@ -236,13 +237,13 @@
             this.StudentDepartment.Size = new System.Drawing.Size(169, 36);
             this.StudentDepartment.TabIndex = 2;
             // 
-            // dataGridView1
+            // PersonalInformationRecords
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(14, 75);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1021, 479);
-            this.dataGridView1.TabIndex = 1;
+            this.PersonalInformationRecords.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.PersonalInformationRecords.Location = new System.Drawing.Point(14, 75);
+            this.PersonalInformationRecords.Name = "PersonalInformationRecords";
+            this.PersonalInformationRecords.Size = new System.Drawing.Size(1021, 479);
+            this.PersonalInformationRecords.TabIndex = 1;
             // 
             // panel3
             // 
@@ -279,7 +280,7 @@
             this.Load += new System.EventHandler(this.Records_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PersonalInformationRecords)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
@@ -289,7 +290,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView PersonalInformationRecords;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2ComboBox StudentDepartment;

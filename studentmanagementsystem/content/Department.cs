@@ -47,58 +47,76 @@ namespace studentmanagementsystem.content
             CHKPnl.FillColor = System.Drawing.SystemColors.ControlLightLight;
 
         }
-        private void OnBorder(Guna2Panel pnl)
-        {
+        //private void OnBorder(Guna2Panel pnl)
+        //{
 
-            pnl.BorderColor = System.Drawing.Color.Maroon;
-            pnl.FillColor = System.Drawing.Color.IndianRed;
-        }
+        //    pnl.BorderColor = System.Drawing.Color.Maroon;
+        //    pnl.FillColor = System.Drawing.Color.IndianRed;
+        //}
 
-        private void GoToYearLevel()
+        private void GoToYearLevel(string department)
         {
-            
+            Courses courses = new Courses()
+            {
+                TopLevel = false,
+                FormBorderStyle = FormBorderStyle.None,
+                Dock = DockStyle.Fill
+            };
+            main.MainPnl.Controls.Clear();
+            main.MainPnl.Controls.Add(courses);
+            courses.Show();
         }
         private void GoToCOA(object sender, EventArgs e)
         {
-            
-            OnBorder(COAPnl);
+            GoToYearLevel("COA");
+            //OnBorder(COAPnl);
         }
 
         private void GoToCAS(object sender, EventArgs e)
         {
-            OnBorder(CASPnl);
+            GoToYearLevel("COA");
+            //OnBorder(CASPnl);
         }
 
         private void GoToCBA(object sender, EventArgs e)
         {
-            OnBorder(CBAPnl);
+            GoToYearLevel("COA");
+            //OnBorder(CBAPnl);
         }
 
         private void GoToCCST(object sender, EventArgs e)
         {
-            OnBorder(CCSTPnl);
+            GoToYearLevel("COA");
+            //OnBorder(CCSTPnl);
         }
 
         private void GoToCOE(object sender, EventArgs e)
         {
-            OnBorder(COEPnl);
+            GoToYearLevel("COA");
+            //OnBorder(COEPnl);
         }
 
         private void GoToCHK(object sender, EventArgs e)
         {
-            OnBorder(CHKPnl);
+            GoToYearLevel("COA");
+            //OnBorder(CHKPnl);
         }
 
         private void GoToCNAHS(object sender, EventArgs e)
         {
-            OnBorder(CNAHSPnl);
+            GoToYearLevel("COA");
+            //OnBorder(CNAHSPnl);
         }
 
         private void GoToCTHM(object sender, EventArgs e)
         {
-            OnBorder(CTHMPnl);
+            GoToYearLevel("COA");
+            //OnBorder(CTHMPnl);
         }
 
-        
+        private void guna2HtmlLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

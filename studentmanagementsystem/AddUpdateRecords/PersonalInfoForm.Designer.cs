@@ -60,8 +60,8 @@
             this.guna2TextBox10 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.AddUpdateProgressBar = new System.Windows.Forms.ProgressBar();
             this.ExitBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.AddUpdateProgressBar = new System.Windows.Forms.ProgressBar();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2GroupBox1.SuspendLayout();
             this.guna2GroupBox2.SuspendLayout();
@@ -579,13 +579,6 @@
             this.panel1.Size = new System.Drawing.Size(901, 50);
             this.panel1.TabIndex = 142;
             // 
-            // AddUpdateProgressBar
-            // 
-            this.AddUpdateProgressBar.Location = new System.Drawing.Point(38, 458);
-            this.AddUpdateProgressBar.Name = "AddUpdateProgressBar";
-            this.AddUpdateProgressBar.Size = new System.Drawing.Size(598, 10);
-            this.AddUpdateProgressBar.TabIndex = 170;
-            // 
             // ExitBtn
             // 
             this.ExitBtn.Animated = true;
@@ -605,6 +598,13 @@
             this.ExitBtn.TabIndex = 143;
             this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
             // 
+            // AddUpdateProgressBar
+            // 
+            this.AddUpdateProgressBar.Location = new System.Drawing.Point(38, 458);
+            this.AddUpdateProgressBar.Name = "AddUpdateProgressBar";
+            this.AddUpdateProgressBar.Size = new System.Drawing.Size(598, 10);
+            this.AddUpdateProgressBar.TabIndex = 170;
+            // 
             // guna2BorderlessForm1
             // 
             this.guna2BorderlessForm1.BorderRadius = 15;
@@ -612,7 +612,7 @@
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
-            // PersonalInfo
+            // PersonalInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -645,7 +645,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "PersonalInfo";
+            this.Name = "PersonalInfoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddUpdate";
             this.Load += new System.EventHandler(this.PersonalInfo_Load);

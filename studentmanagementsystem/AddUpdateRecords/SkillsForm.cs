@@ -21,5 +21,19 @@ namespace studentmanagementsystem.AddUpdateRecords
         {
             AddUpdateProgressBar.Value = 70;
         }
+
+        private void ExitBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+
+
+        private void NextToSuccessBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SuccessfulForm successfulForm = new SuccessfulForm();
+            successfulForm.Show();
+        }
     }
 }

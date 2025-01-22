@@ -248,7 +248,7 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Course Description";
             // 
-            // Courses
+            // CoursesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -260,7 +260,7 @@
             this.Controls.Add(this.guna2Button2);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Courses";
+            this.Name = "CoursesForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Courses";
             this.Load += new System.EventHandler(this.Courses_Load);

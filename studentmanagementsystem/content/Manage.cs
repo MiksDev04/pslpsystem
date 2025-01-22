@@ -37,5 +37,11 @@ namespace studentmanagementsystem.content
             PersonalInfoForm personalInfo = new PersonalInfoForm();
             personalInfo.Show();
         }
+
+        private void UpdateRecordBtn_Click(object sender, EventArgs e)
+        {
+            PersonalInfoForm personalInfo = new PersonalInfoForm();
+            personalInfo.Show();
+        }
     }
 }

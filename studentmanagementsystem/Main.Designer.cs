@@ -367,7 +367,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Button ExitBtn;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
-        private System.Windows.Forms.Panel MainPnl;
+        public System.Windows.Forms.Panel MainPnl;
         private System.Windows.Forms.Label label2;
     }
 }
