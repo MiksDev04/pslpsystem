@@ -10,24 +10,19 @@ using System.Windows.Forms;
 
 namespace studentmanagementsystem.content
 {
-    public partial class AddUpdate : Form
+    public partial class Courses : Form
     {
-        public AddUpdate()
+        public Courses()
         {
             InitializeComponent();
         }
 
-        private void guna2Button3_Click(object sender, EventArgs e)
+        private void guna2TileButton2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void guna2TextBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
+        private void guna2TileButton3_Click(object sender, EventArgs e)
         {
 
         }

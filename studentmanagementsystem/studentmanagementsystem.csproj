@@ -64,11 +64,23 @@
     <Compile Include="account\Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
-    <Compile Include="content\AddUpdate.cs">
+    <Compile Include="AddUpdateRecords\CoursesForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="content\AddUpdate.Designer.cs">
-      <DependentUpon>AddUpdate.cs</DependentUpon>
+    <Compile Include="AddUpdateRecords\CoursesForm.Designer.cs">
+      <DependentUpon>CoursesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddUpdateRecords\PersonalInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddUpdateRecords\PersonalInfoForm.Designer.cs">
+      <DependentUpon>PersonalInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddUpdateRecords\SkillsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddUpdateRecords\SkillsForm.Designer.cs">
+      <DependentUpon>SkillsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="content\Department.cs">
       <SubType>Form</SubType>
@@ -106,6 +118,12 @@
     <Compile Include="content\Skills.Designer.cs">
       <DependentUpon>Skills.cs</DependentUpon>
     </Compile>
+    <Compile Include="content\Courses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="content\Courses.Designer.cs">
+      <DependentUpon>Courses.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,8 +145,14 @@
     <EmbeddedResource Include="account\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="content\AddUpdate.resx">
-      <DependentUpon>AddUpdate.cs</DependentUpon>
+    <EmbeddedResource Include="AddUpdateRecords\CoursesForm.resx">
+      <DependentUpon>CoursesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddUpdateRecords\PersonalInfoForm.resx">
+      <DependentUpon>PersonalInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddUpdateRecords\SkillsForm.resx">
+      <DependentUpon>SkillsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="content\Department.resx">
       <DependentUpon>Department.cs</DependentUpon>
@@ -147,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="content\Skills.resx">
       <DependentUpon>Skills.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="content\Courses.resx">
+      <DependentUpon>Courses.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -237,6 +264,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\people big1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="More\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\COA.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cas.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cba.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ccst.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\COE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chk.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cnahs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cthm.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
