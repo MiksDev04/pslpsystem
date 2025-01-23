@@ -154,6 +154,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.GoToRecords);
             // 
             // label4
             // 
@@ -167,6 +168,7 @@
             this.label4.Size = new System.Drawing.Size(99, 30);
             this.label4.TabIndex = 8;
             this.label4.Text = "Students";
+            this.label4.Click += new System.EventHandler(this.GoToRecords);
             // 
             // label3
             // 
@@ -180,6 +182,7 @@
             this.label3.Size = new System.Drawing.Size(78, 45);
             this.label3.TabIndex = 5;
             this.label3.Text = "423";
+            this.label3.Click += new System.EventHandler(this.GoToRecords);
             // 
             // panel2
             // 
@@ -200,6 +203,7 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 10;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.GoToRecords);
             // 
             // label2
             // 
@@ -217,6 +221,7 @@
             this.label2.Size = new System.Drawing.Size(83, 21);
             this.label2.TabIndex = 8;
             this.label2.Text = "More info";
+            this.label2.Click += new System.EventHandler(this.GoToRecords);
             // 
             // pictureBox2
             // 
@@ -228,6 +233,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.GoToCourses);
             // 
             // label5
             // 
@@ -241,6 +247,7 @@
             this.label5.Size = new System.Drawing.Size(140, 30);
             this.label5.TabIndex = 8;
             this.label5.Text = "Departments";
+            this.label5.Click += new System.EventHandler(this.GoToCourses);
             // 
             // label6
             // 
@@ -254,6 +261,7 @@
             this.label6.Size = new System.Drawing.Size(39, 45);
             this.label6.TabIndex = 5;
             this.label6.Text = "8";
+            this.label6.Click += new System.EventHandler(this.GoToCourses);
             // 
             // pictureBox3
             // 
@@ -265,6 +273,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 9;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.GoToSkills);
             // 
             // label7
             // 
@@ -278,6 +287,7 @@
             this.label7.Size = new System.Drawing.Size(64, 30);
             this.label7.TabIndex = 8;
             this.label7.Text = "Skills";
+            this.label7.Click += new System.EventHandler(this.GoToSkills);
             // 
             // label8
             // 
@@ -291,6 +301,7 @@
             this.label8.Size = new System.Drawing.Size(102, 45);
             this.label8.TabIndex = 5;
             this.label8.Text = "1,908";
+            this.label8.Click += new System.EventHandler(this.GoToSkills);
             // 
             // panel5
             // 
@@ -311,6 +322,7 @@
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 11;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.GoToCourses);
             // 
             // label9
             // 
@@ -327,6 +339,7 @@
             this.label9.Size = new System.Drawing.Size(83, 21);
             this.label9.TabIndex = 8;
             this.label9.Text = "More info";
+            this.label9.Click += new System.EventHandler(this.GoToCourses);
             // 
             // panel6
             // 
@@ -347,6 +360,7 @@
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 12;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.GoToSkills);
             // 
             // label10
             // 
@@ -363,6 +377,7 @@
             this.label10.Size = new System.Drawing.Size(83, 21);
             this.label10.TabIndex = 8;
             this.label10.Text = "More info";
+            this.label10.Click += new System.EventHandler(this.GoToSkills);
             // 
             // label15
             // 
@@ -396,6 +411,7 @@
             this.guna2Panel1.ShadowDecoration.BorderRadius = 20;
             this.guna2Panel1.Size = new System.Drawing.Size(254, 144);
             this.guna2Panel1.TabIndex = 14;
+            this.guna2Panel1.Click += new System.EventHandler(this.GoToRecords);
             // 
             // guna2Panel2
             // 
@@ -411,6 +427,7 @@
             this.guna2Panel2.ShadowDecoration.BorderRadius = 20;
             this.guna2Panel2.Size = new System.Drawing.Size(254, 144);
             this.guna2Panel2.TabIndex = 13;
+            this.guna2Panel2.Click += new System.EventHandler(this.GoToCourses);
             // 
             // guna2Panel3
             // 
@@ -426,6 +443,7 @@
             this.guna2Panel3.ShadowDecoration.BorderRadius = 20;
             this.guna2Panel3.Size = new System.Drawing.Size(254, 144);
             this.guna2Panel3.TabIndex = 13;
+            this.guna2Panel3.Click += new System.EventHandler(this.GoToSkills);
             // 
             // Dashboard
             // 
@@ -441,7 +459,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Dashboard";
             this.Text = "Dashboard";
-            this.Load += new System.EventHandler(this.Dashboard_Load);
+            this.Click += new System.EventHandler(this.GoToRecords);
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -16,6 +16,7 @@ namespace studentmanagementsystem.content
         public Records()
         {
             InitializeComponent();
+
         }
         string stringConnection = "Server=localhost;Database=universitydb;User=root;Password=;";
         private void Records_Load(object sender, EventArgs e)
@@ -25,11 +26,15 @@ namespace studentmanagementsystem.content
             StudentYearLevel.Text = "All";
             StudentSex.Text = "All";
             StudentStatus.Text = "All";
+            StudentProgram.Items.Clear();
+            StudentProgram.Items.Add("All");
+            StudentProgram.SelectedItem = "All";
+            LoadPersonalInformation();
         }
 
         private void LoadPersonalInformation()
         {
-            DataTable dataTable = new DataTable();
+            DataTable dataTable = new DataTable(); 
             using (var connection = new MySqlConnection(stringConnection))
             {
                 connection.Open();
@@ -45,9 +50,51 @@ namespace studentmanagementsystem.content
             }
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        private void StudentDepartment_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            LoadPersonalInformation();
+            StudentProgram.Items.Clear();
+            StudentProgram.Items.Add("All");
+            StudentProgram.SelectedItem = "All";
+            string departmentSelected = StudentDepartment.SelectedItem.ToString();
+            switch (departmentSelected)
+            {
+                case "COE":
+                    StudentProgram.Items.Add("Bachelor of Science in Computer Engineering");
+                    StudentProgram.Items.Add("Bachelor of Science in Industrial Engineering");
+                    break;
+                case "CONAHS":
+                    StudentProgram.Items.Add("Bachelor of Science in Nursing");
+                    break;
+                case "CHK":
+                    StudentProgram.Items.Add("Bachelor of Physical Education");
+                    break;
+                case "CBA":
+                    StudentProgram.Items.Add("Bachelor of Science in Business Administration");
+                    StudentProgram.Items.Add("Bachelor of Science in Entrepreneurship");
+                    StudentProgram.Items.Add("Bachelor of Science in Office Administration");
+                    break;
+                case "COA":
+                    StudentProgram.Items.Add("Bachelor of Science in Accountancy");
+                    StudentProgram.Items.Add("Bachelor of Science in Accounting Information System");
+                    StudentProgram.Items.Add("Bachelor of Science in Management Accounting");
+                    break;
+                case "CCST":
+                    StudentProgram.Items.Add("Bachelor of Science in Information Technology");
+                    StudentProgram.Items.Add("Bachelor of Science in Information Systems");
+                    break;
+                case "CAS":
+                    StudentProgram.Items.Add("Bachelor of Science in Psychology");
+                    StudentProgram.Items.Add("Bachelor of Arts in Communication");
+                    StudentProgram.Items.Add("Bachelor of Science in Economics");
+                    StudentProgram.Items.Add("Bachelor of Public Administration");
+                    StudentProgram.Items.Add("Bachelor of Arts in Political Science");
+                    break;
+                case "CTHM":
+                    StudentProgram.Items.Add("Bachelor of Science in Hospitality Management");
+                    StudentProgram.Items.Add("Bachelor of Science in Tourism Management");
+                    break;
+            }
+
         }
     }
 }

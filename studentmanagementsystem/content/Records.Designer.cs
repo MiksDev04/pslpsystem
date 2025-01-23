@@ -28,7 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.PersonalInformationRecords = new Guna.UI2.WinForms.Guna2DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.StudentSex = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -39,7 +44,6 @@
             this.StudentYearLevel = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.StudentDepartment = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.PersonalInformationRecords = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
@@ -53,6 +57,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(220)))));
+            this.panel2.Controls.Add(this.PersonalInformationRecords);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.StudentSex);
             this.panel2.Controls.Add(this.label5);
@@ -63,12 +68,67 @@
             this.panel2.Controls.Add(this.StudentYearLevel);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.StudentDepartment);
-            this.panel2.Controls.Add(this.PersonalInformationRecords);
             this.panel2.Location = new System.Drawing.Point(0, 67);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1049, 567);
             this.panel2.TabIndex = 5;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // PersonalInformationRecords
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(223)))), ((int)(((byte)(251)))));
+            this.PersonalInformationRecords.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.PersonalInformationRecords.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.PersonalInformationRecords.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.PersonalInformationRecords.ColumnHeadersHeight = 30;
+            this.PersonalInformationRecords.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(233)))), ((int)(((byte)(252)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(185)))), ((int)(((byte)(246)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.PersonalInformationRecords.DefaultCellStyle = dataGridViewCellStyle3;
+            this.PersonalInformationRecords.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(222)))), ((int)(((byte)(251)))));
+            this.PersonalInformationRecords.Location = new System.Drawing.Point(12, 86);
+            this.PersonalInformationRecords.Name = "PersonalInformationRecords";
+            this.PersonalInformationRecords.ReadOnly = true;
+            this.PersonalInformationRecords.RowHeadersVisible = false;
+            this.PersonalInformationRecords.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.PersonalInformationRecords.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.PersonalInformationRecords.RowTemplate.Height = 25;
+            this.PersonalInformationRecords.Size = new System.Drawing.Size(1023, 468);
+            this.PersonalInformationRecords.TabIndex = 12;
+            this.PersonalInformationRecords.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Blue;
+            this.PersonalInformationRecords.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(223)))), ((int)(((byte)(251)))));
+            this.PersonalInformationRecords.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.PersonalInformationRecords.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.PersonalInformationRecords.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.PersonalInformationRecords.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.PersonalInformationRecords.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.PersonalInformationRecords.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(222)))), ((int)(((byte)(251)))));
+            this.PersonalInformationRecords.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.Navy;
+            this.PersonalInformationRecords.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.PersonalInformationRecords.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PersonalInformationRecords.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.PersonalInformationRecords.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.PersonalInformationRecords.ThemeStyle.HeaderStyle.Height = 30;
+            this.PersonalInformationRecords.ThemeStyle.ReadOnly = true;
+            this.PersonalInformationRecords.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(233)))), ((int)(((byte)(252)))));
+            this.PersonalInformationRecords.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.PersonalInformationRecords.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PersonalInformationRecords.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.PersonalInformationRecords.ThemeStyle.RowsStyle.Height = 25;
+            this.PersonalInformationRecords.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(185)))), ((int)(((byte)(246)))));
+            this.PersonalInformationRecords.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
             // label6
             // 
@@ -90,7 +150,7 @@
             this.StudentSex.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.StudentSex.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.StudentSex.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.StudentSex.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
+            this.StudentSex.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StudentSex.ForeColor = System.Drawing.SystemColors.ControlText;
             this.StudentSex.ItemHeight = 30;
             this.StudentSex.Items.AddRange(new object[] {
@@ -122,7 +182,7 @@
             this.StudentStatus.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.StudentStatus.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.StudentStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.StudentStatus.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
+            this.StudentStatus.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StudentStatus.ForeColor = System.Drawing.SystemColors.ControlText;
             this.StudentStatus.ItemHeight = 30;
             this.StudentStatus.Items.AddRange(new object[] {
@@ -151,10 +211,11 @@
             this.StudentProgram.BorderRadius = 10;
             this.StudentProgram.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.StudentProgram.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.StudentProgram.DropDownWidth = 400;
             this.StudentProgram.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.StudentProgram.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.StudentProgram.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.StudentProgram.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
+            this.StudentProgram.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StudentProgram.ForeColor = System.Drawing.SystemColors.ControlText;
             this.StudentProgram.ItemHeight = 30;
             this.StudentProgram.Items.AddRange(new object[] {
@@ -164,6 +225,7 @@
             this.StudentProgram.Location = new System.Drawing.Point(443, 33);
             this.StudentProgram.Name = "StudentProgram";
             this.StudentProgram.Size = new System.Drawing.Size(169, 36);
+            this.StudentProgram.Sorted = true;
             this.StudentProgram.TabIndex = 6;
             // 
             // label3
@@ -186,7 +248,7 @@
             this.StudentYearLevel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.StudentYearLevel.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.StudentYearLevel.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.StudentYearLevel.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
+            this.StudentYearLevel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StudentYearLevel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.StudentYearLevel.ItemHeight = 30;
             this.StudentYearLevel.Items.AddRange(new object[] {
@@ -220,30 +282,24 @@
             this.StudentDepartment.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.StudentDepartment.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.StudentDepartment.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.StudentDepartment.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
+            this.StudentDepartment.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StudentDepartment.ForeColor = System.Drawing.SystemColors.ControlText;
             this.StudentDepartment.ItemHeight = 30;
             this.StudentDepartment.Items.AddRange(new object[] {
             "All",
-            "CCST",
             "COA",
             "CAS",
-            "BA",
-            "Entrep",
-            "Engenireeng",
-            "Nursing"});
+            "CBA",
+            "CCST",
+            "COE",
+            "CHK",
+            "CNAHK",
+            "CTHM"});
             this.StudentDepartment.Location = new System.Drawing.Point(14, 33);
             this.StudentDepartment.Name = "StudentDepartment";
             this.StudentDepartment.Size = new System.Drawing.Size(169, 36);
             this.StudentDepartment.TabIndex = 2;
-            // 
-            // PersonalInformationRecords
-            // 
-            this.PersonalInformationRecords.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.PersonalInformationRecords.Location = new System.Drawing.Point(14, 75);
-            this.PersonalInformationRecords.Name = "PersonalInformationRecords";
-            this.PersonalInformationRecords.Size = new System.Drawing.Size(1021, 479);
-            this.PersonalInformationRecords.TabIndex = 1;
+            this.StudentDepartment.SelectionChangeCommitted += new System.EventHandler(this.StudentDepartment_SelectionChangeCommitted);
             // 
             // panel3
             // 
@@ -290,7 +346,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView PersonalInformationRecords;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2ComboBox StudentDepartment;
@@ -303,5 +358,6 @@
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2ComboBox StudentYearLevel;
         private System.Windows.Forms.Label label2;
+        private Guna.UI2.WinForms.Guna2DataGridView PersonalInformationRecords;
     }
 }

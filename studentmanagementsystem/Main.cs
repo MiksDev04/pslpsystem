@@ -25,7 +25,7 @@ namespace studentmanagementsystem
         }
         private void Main_Load(object sender, EventArgs e)
         {
-            LoadContentPnl(new Dashboard(), DashboardBtn);
+            LoadContentPnl(new Dashboard(this), DashboardBtn);
         }
 
         private void LoadContentPnl(Form form, Guna2TileButton btn)
@@ -43,7 +43,7 @@ namespace studentmanagementsystem
 
         private void DashboardBtn_Click(object sender, EventArgs e)
         {
-            LoadContentPnl(new Dashboard(), DashboardBtn);
+            LoadContentPnl(new Dashboard(this), DashboardBtn);
         }
 
         private void RecordsBtn_Click(object sender, EventArgs e)

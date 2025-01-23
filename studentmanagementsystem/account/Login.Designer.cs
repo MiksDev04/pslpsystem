@@ -126,9 +126,11 @@
             this.LoginUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.LoginUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.LoginUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.LoginUsername.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginUsername.Font = new System.Drawing.Font("Segoe UI", 15.75F);
+            this.LoginUsername.ForeColor = System.Drawing.SystemColors.ControlText;
             this.LoginUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.LoginUsername.Location = new System.Drawing.Point(33, 79);
+            this.LoginUsername.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.LoginUsername.Name = "LoginUsername";
             this.LoginUsername.PasswordChar = '\0';
             this.LoginUsername.PlaceholderText = "user123";
@@ -147,8 +149,10 @@
             this.LoginPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.LoginPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.LoginPassword.Font = new System.Drawing.Font("Segoe UI", 15.75F);
+            this.LoginPassword.ForeColor = System.Drawing.SystemColors.ControlText;
             this.LoginPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.LoginPassword.Location = new System.Drawing.Point(33, 178);
+            this.LoginPassword.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.LoginPassword.Name = "LoginPassword";
             this.LoginPassword.PasswordChar = '•';
             this.LoginPassword.PlaceholderText = "";

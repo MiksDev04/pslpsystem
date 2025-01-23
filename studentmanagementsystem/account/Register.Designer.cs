@@ -139,9 +139,11 @@
             this.RegisterUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.RegisterUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.RegisterUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.RegisterUsername.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RegisterUsername.Font = new System.Drawing.Font("Segoe UI", 15.75F);
+            this.RegisterUsername.ForeColor = System.Drawing.SystemColors.ControlText;
             this.RegisterUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.RegisterUsername.Location = new System.Drawing.Point(32, 55);
+            this.RegisterUsername.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.RegisterUsername.Name = "RegisterUsername";
             this.RegisterUsername.PasswordChar = '\0';
             this.RegisterUsername.PlaceholderText = "user123";
@@ -160,8 +162,10 @@
             this.RegisterPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.RegisterPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.RegisterPassword.Font = new System.Drawing.Font("Segoe UI", 15.75F);
+            this.RegisterPassword.ForeColor = System.Drawing.SystemColors.ControlText;
             this.RegisterPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.RegisterPassword.Location = new System.Drawing.Point(32, 132);
+            this.RegisterPassword.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.RegisterPassword.Name = "RegisterPassword";
             this.RegisterPassword.PasswordChar = '•';
             this.RegisterPassword.PlaceholderText = "";
@@ -180,8 +184,10 @@
             this.RegisterConfirmPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.RegisterConfirmPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.RegisterConfirmPassword.Font = new System.Drawing.Font("Segoe UI", 15.75F);
+            this.RegisterConfirmPassword.ForeColor = System.Drawing.SystemColors.ControlText;
             this.RegisterConfirmPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.RegisterConfirmPassword.Location = new System.Drawing.Point(32, 206);
+            this.RegisterConfirmPassword.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.RegisterConfirmPassword.Name = "RegisterConfirmPassword";
             this.RegisterConfirmPassword.PasswordChar = '•';
             this.RegisterConfirmPassword.PlaceholderText = "";

@@ -357,13 +357,13 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2ShadowPanel NavigationPnl;
         private Guna.UI2.WinForms.Guna2TileButton ProfileBtn;
-        private Guna.UI2.WinForms.Guna2TileButton RecordsBtn;
+        public Guna.UI2.WinForms.Guna2TileButton RecordsBtn;
         private Guna.UI2.WinForms.Guna2TileButton DashboardBtn;
         private Guna.UI2.WinForms.Guna2TileButton LogoutBtn;
         private Guna.UI2.WinForms.Guna2TileButton ManageBtn;
-        private Guna.UI2.WinForms.Guna2TileButton SkillsBtn;
-        private Guna.UI2.WinForms.Guna2TileButton DepartmentBtn;
-        private Guna.UI2.WinForms.Guna2Panel ActivePnl;
+        public Guna.UI2.WinForms.Guna2TileButton SkillsBtn;
+        public Guna.UI2.WinForms.Guna2TileButton DepartmentBtn;
+        public Guna.UI2.WinForms.Guna2Panel ActivePnl;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Button ExitBtn;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
