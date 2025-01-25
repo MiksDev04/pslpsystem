@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using studentmanagementsystem.content;
+using studentmanagementsystem.Queries;
 
 namespace studentmanagementsystem.account
 {
@@ -17,19 +19,30 @@ namespace studentmanagementsystem.account
         public Login(Form1 form1)
         {
             InitializeComponent();
-            RoundedCornersHelper.ApplyRoundedCorners(LoginUsername, 12);
-            RoundedCornersHelper.ApplyRoundedCorners(LoginPassword, 12);
-            RoundedCornersHelper.ApplyRoundedCorners(LoginBtn, 12);
             this.form1 = form1;
         }
-
+        SQLQueries queries = new SQLQueries();
         private void LoginBtn_Click(object sender, EventArgs e)
         {
-            if (LoginUsername.Text != "" && LoginPassword.Text != "")
+            Main main = new Main();
+            string Username = LoginUsername.Text;
+            string Password = LoginPassword.Text;
+            if (Username != "" && Password != "")
             {
-                Main main = new Main();
-                main.Show();
-                form1.Hide();
+                bool[] bools = queries.CheckUser(Username, Password);
+                if (bools[0])
+                {
+                    if (bools[1])
+                    {
+                        main.ProfileBtn.Text = "Admin";
+                        main.ManageBtn.Visible = true;
+                    }
+                    main.Show();
+                    form1.Hide();
+                } else
+                {
+                    MessageBox.Show("Invalid account please try again...", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
             else
             {

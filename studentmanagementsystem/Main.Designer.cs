@@ -32,10 +32,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.NavigationPnl = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.ActivePnl = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.MainPnl = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.LogoutBtn = new Guna.UI2.WinForms.Guna2TileButton();
             this.ManageBtn = new Guna.UI2.WinForms.Guna2TileButton();
             this.SkillsBtn = new Guna.UI2.WinForms.Guna2TileButton();
@@ -43,7 +39,11 @@
             this.RecordsBtn = new Guna.UI2.WinForms.Guna2TileButton();
             this.DashboardBtn = new Guna.UI2.WinForms.Guna2TileButton();
             this.ProfileBtn = new Guna.UI2.WinForms.Guna2TileButton();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.ExitBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.MainPnl = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.NavigationPnl.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.MainPnl.SuspendLayout();
@@ -85,42 +85,6 @@
             this.ActivePnl.Name = "ActivePnl";
             this.ActivePnl.Size = new System.Drawing.Size(10, 51);
             this.ActivePnl.TabIndex = 1;
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.guna2Panel1.Controls.Add(this.ExitBtn);
-            this.guna2Panel1.Controls.Add(this.label1);
-            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1280, 65);
-            this.guna2Panel1.TabIndex = 1;
-            // 
-            // guna2BorderlessForm1
-            // 
-            this.guna2BorderlessForm1.BorderRadius = 15;
-            this.guna2BorderlessForm1.ContainerControl = this;
-            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2BorderlessForm1.TransparentWhileDrag = true;
-            // 
-            // MainPnl
-            // 
-            this.MainPnl.Controls.Add(this.label2);
-            this.MainPnl.Location = new System.Drawing.Point(221, 79);
-            this.MainPnl.Name = "MainPnl";
-            this.MainPnl.Size = new System.Drawing.Size(1047, 633);
-            this.MainPnl.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(326, 257);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(303, 45);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Content Goes Here";
             // 
             // LogoutBtn
             // 
@@ -174,6 +138,7 @@
             this.ManageBtn.Text = "        Manage";
             this.ManageBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.ManageBtn.TextOffset = new System.Drawing.Point(0, -18);
+            this.ManageBtn.Visible = false;
             this.ManageBtn.Click += new System.EventHandler(this.ManageBtn_Click);
             // 
             // SkillsBtn
@@ -305,8 +270,19 @@
             this.ProfileBtn.Name = "ProfileBtn";
             this.ProfileBtn.Size = new System.Drawing.Size(206, 112);
             this.ProfileBtn.TabIndex = 3;
-            this.ProfileBtn.Text = "Admin";
+            this.ProfileBtn.Text = "User";
             this.ProfileBtn.Click += new System.EventHandler(this.ProfileBtn_Click);
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.guna2Panel1.Controls.Add(this.ExitBtn);
+            this.guna2Panel1.Controls.Add(this.label1);
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(1280, 65);
+            this.guna2Panel1.TabIndex = 1;
             // 
             // ExitBtn
             // 
@@ -326,6 +302,31 @@
             this.ExitBtn.Size = new System.Drawing.Size(25, 25);
             this.ExitBtn.TabIndex = 5;
             this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
+            // 
+            // guna2BorderlessForm1
+            // 
+            this.guna2BorderlessForm1.BorderRadius = 15;
+            this.guna2BorderlessForm1.ContainerControl = this;
+            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2BorderlessForm1.TransparentWhileDrag = true;
+            // 
+            // MainPnl
+            // 
+            this.MainPnl.Controls.Add(this.label2);
+            this.MainPnl.Location = new System.Drawing.Point(221, 79);
+            this.MainPnl.Name = "MainPnl";
+            this.MainPnl.Size = new System.Drawing.Size(1047, 633);
+            this.MainPnl.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(326, 257);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(303, 45);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Content Goes Here";
             // 
             // Main
             // 
@@ -356,11 +357,11 @@
         #endregion
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2ShadowPanel NavigationPnl;
-        private Guna.UI2.WinForms.Guna2TileButton ProfileBtn;
+        public Guna.UI2.WinForms.Guna2TileButton ProfileBtn;
         public Guna.UI2.WinForms.Guna2TileButton RecordsBtn;
         private Guna.UI2.WinForms.Guna2TileButton DashboardBtn;
         private Guna.UI2.WinForms.Guna2TileButton LogoutBtn;
-        private Guna.UI2.WinForms.Guna2TileButton ManageBtn;
+        public Guna.UI2.WinForms.Guna2TileButton ManageBtn;
         public Guna.UI2.WinForms.Guna2TileButton SkillsBtn;
         public Guna.UI2.WinForms.Guna2TileButton DepartmentBtn;
         public Guna.UI2.WinForms.Guna2Panel ActivePnl;

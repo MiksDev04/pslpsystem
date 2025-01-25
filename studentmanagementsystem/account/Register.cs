@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using studentmanagementsystem.Queries;
 
 namespace studentmanagementsystem.account
 {
@@ -23,17 +24,22 @@ namespace studentmanagementsystem.account
             RoundedCornersHelper.ApplyRoundedCorners(RegisterBtn, 12);
             this.form1 = form1;
         }
+        SQLQueries queries = new SQLQueries();
 
         private void RegisterBtn_Click(object sender, EventArgs e)
         {
-            if (RegisterUsername.Text != "" && RegisterPassword.Text != "" && RegisterConfirmPassword.Text != "")
+            string Username = RegisterUsername.Text;
+            string Password = RegisterPassword.Text;
+            string ConfirmPassword = RegisterConfirmPassword.Text;
+            if (Username != "" && Password != "" && ConfirmPassword != "")
             {
-                if (RegisterPassword.Text != RegisterConfirmPassword.Text)
+                if (Password != ConfirmPassword)
                 {
                     MessageBox.Show("Please make sure to confirm the password properly.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
+                    queries.AddUserAccount(Username, Password);
                     MessageBox.Show("Registration successful", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LoginFormOpen();
                 }
