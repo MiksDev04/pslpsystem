@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.PersonalInformationRecords = new Guna.UI2.WinForms.Guna2DataGridView();
             this.label6 = new System.Windows.Forms.Label();
@@ -45,9 +45,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.StudentDepartment = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.ViewMoreBtn = new Guna.UI2.WinForms.Guna2Button();
             this.SearchBtn = new Guna.UI2.WinForms.Guna2Button();
             this.SearchInput = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PersonalInformationRecords)).BeginInit();
             this.panel3.SuspendLayout();
@@ -77,37 +78,37 @@
             // 
             // PersonalInformationRecords
             // 
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(223)))), ((int)(((byte)(251)))));
-            this.PersonalInformationRecords.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(223)))), ((int)(((byte)(251)))));
+            this.PersonalInformationRecords.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.PersonalInformationRecords.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.PersonalInformationRecords.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.PersonalInformationRecords.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.PersonalInformationRecords.ColumnHeadersHeight = 30;
             this.PersonalInformationRecords.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(233)))), ((int)(((byte)(252)))));
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(185)))), ((int)(((byte)(246)))));
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.PersonalInformationRecords.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(233)))), ((int)(((byte)(252)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(185)))), ((int)(((byte)(246)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.PersonalInformationRecords.DefaultCellStyle = dataGridViewCellStyle7;
             this.PersonalInformationRecords.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(222)))), ((int)(((byte)(251)))));
-            this.PersonalInformationRecords.Location = new System.Drawing.Point(12, 86);
+            this.PersonalInformationRecords.Location = new System.Drawing.Point(12, 72);
             this.PersonalInformationRecords.Name = "PersonalInformationRecords";
             this.PersonalInformationRecords.ReadOnly = true;
             this.PersonalInformationRecords.RowHeadersVisible = false;
             this.PersonalInformationRecords.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.PersonalInformationRecords.RowsDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.PersonalInformationRecords.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.PersonalInformationRecords.RowTemplate.Height = 25;
-            this.PersonalInformationRecords.Size = new System.Drawing.Size(1023, 468);
+            this.PersonalInformationRecords.Size = new System.Drawing.Size(1023, 482);
             this.PersonalInformationRecords.TabIndex = 12;
             this.PersonalInformationRecords.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Blue;
             this.PersonalInformationRecords.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(223)))), ((int)(((byte)(251)))));
@@ -159,7 +160,7 @@
             "All",
             "Male",
             "Female"});
-            this.StudentSex.Location = new System.Drawing.Point(866, 33);
+            this.StudentSex.Location = new System.Drawing.Point(866, 30);
             this.StudentSex.Name = "StudentSex";
             this.StudentSex.Size = new System.Drawing.Size(169, 36);
             this.StudentSex.TabIndex = 10;
@@ -192,7 +193,7 @@
             "All",
             "Regular ",
             "Irregular"});
-            this.StudentStatus.Location = new System.Drawing.Point(656, 33);
+            this.StudentStatus.Location = new System.Drawing.Point(656, 30);
             this.StudentStatus.Name = "StudentStatus";
             this.StudentStatus.Size = new System.Drawing.Size(169, 36);
             this.StudentStatus.TabIndex = 8;
@@ -243,7 +244,7 @@
             "Bachelor of Science in Office Administration",
             "Bachelor of Science in Psychology",
             "Bachelor of Science in Tourism Management"});
-            this.StudentProgram.Location = new System.Drawing.Point(443, 33);
+            this.StudentProgram.Location = new System.Drawing.Point(443, 30);
             this.StudentProgram.Name = "StudentProgram";
             this.StudentProgram.Size = new System.Drawing.Size(169, 36);
             this.StudentProgram.Sorted = true;
@@ -279,7 +280,7 @@
             "2",
             "3",
             "4"});
-            this.StudentYearLevel.Location = new System.Drawing.Point(231, 33);
+            this.StudentYearLevel.Location = new System.Drawing.Point(231, 30);
             this.StudentYearLevel.Name = "StudentYearLevel";
             this.StudentYearLevel.Size = new System.Drawing.Size(169, 36);
             this.StudentYearLevel.TabIndex = 4;
@@ -318,7 +319,7 @@
             "CHK",
             "CNAHS",
             "CTHM"});
-            this.StudentDepartment.Location = new System.Drawing.Point(14, 33);
+            this.StudentDepartment.Location = new System.Drawing.Point(14, 30);
             this.StudentDepartment.Name = "StudentDepartment";
             this.StudentDepartment.Size = new System.Drawing.Size(169, 36);
             this.StudentDepartment.TabIndex = 2;
@@ -329,6 +330,7 @@
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(40)))), ((int)(((byte)(150)))));
+            this.panel3.Controls.Add(this.ViewMoreBtn);
             this.panel3.Controls.Add(this.SearchBtn);
             this.panel3.Controls.Add(this.SearchInput);
             this.panel3.Controls.Add(this.label1);
@@ -337,23 +339,28 @@
             this.panel3.Size = new System.Drawing.Size(1049, 61);
             this.panel3.TabIndex = 4;
             // 
-            // label1
+            // ViewMoreBtn
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 32);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "RECORDS";
+            this.ViewMoreBtn.BorderRadius = 10;
+            this.ViewMoreBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.ViewMoreBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.ViewMoreBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.ViewMoreBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.ViewMoreBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.ViewMoreBtn.ForeColor = System.Drawing.Color.White;
+            this.ViewMoreBtn.Location = new System.Drawing.Point(908, 12);
+            this.ViewMoreBtn.Name = "ViewMoreBtn";
+            this.ViewMoreBtn.Size = new System.Drawing.Size(127, 37);
+            this.ViewMoreBtn.TabIndex = 73;
+            this.ViewMoreBtn.Text = "View More";
+            this.ViewMoreBtn.Click += new System.EventHandler(this.ViewMoreBtn_Click);
             // 
             // SearchBtn
             // 
             this.SearchBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.SearchBtn.Animated = true;
-            this.SearchBtn.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.SearchBtn.BackColor = System.Drawing.SystemColors.Control;
             this.SearchBtn.BackgroundImage = global::studentmanagementsystem.Properties.Resources.search;
             this.SearchBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SearchBtn.BorderColor = System.Drawing.Color.Transparent;
@@ -364,7 +371,7 @@
             this.SearchBtn.FillColor = System.Drawing.Color.Transparent;
             this.SearchBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.SearchBtn.ForeColor = System.Drawing.Color.White;
-            this.SearchBtn.Location = new System.Drawing.Point(959, 18);
+            this.SearchBtn.Location = new System.Drawing.Point(837, 20);
             this.SearchBtn.Name = "SearchBtn";
             this.SearchBtn.Size = new System.Drawing.Size(24, 24);
             this.SearchBtn.TabIndex = 72;
@@ -384,12 +391,12 @@
             this.SearchInput.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.SearchInput.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.SearchInput.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.SearchInput.FillColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.SearchInput.FillColor = System.Drawing.SystemColors.Control;
             this.SearchInput.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.SearchInput.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.SearchInput.ForeColor = System.Drawing.SystemColors.ControlText;
             this.SearchInput.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.SearchInput.Location = new System.Drawing.Point(728, 14);
+            this.SearchInput.Location = new System.Drawing.Point(606, 16);
             this.SearchInput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SearchInput.Name = "SearchInput";
             this.SearchInput.PasswordChar = '\0';
@@ -398,6 +405,17 @@
             this.SearchInput.SelectedText = "";
             this.SearchInput.Size = new System.Drawing.Size(265, 33);
             this.SearchInput.TabIndex = 71;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(12, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(123, 32);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "RECORDS";
             // 
             // Records
             // 
@@ -437,5 +455,6 @@
         private Guna.UI2.WinForms.Guna2DataGridView PersonalInformationRecords;
         private Guna.UI2.WinForms.Guna2Button SearchBtn;
         private Guna.UI2.WinForms.Guna2TextBox SearchInput;
+        private Guna.UI2.WinForms.Guna2Button ViewMoreBtn;
     }
 }

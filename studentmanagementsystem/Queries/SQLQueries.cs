@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using static System.ComponentModel.Design.ObjectSelectorEditor;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace studentmanagementsystem.Queries
 {
@@ -13,7 +15,7 @@ namespace studentmanagementsystem.Queries
     {
 
         // Main SQL connection
-        string stringConnection = "Server=localhost;Database=universitydb;User=root;Password=;";
+        string stringConnection = "Server=localhost;Database=plspdb;User=root;Password=1234;";
 
         public DataTable LoadDBContent(string Department, string YearLevel, string Program, string Sex, string Status)
         {
@@ -21,7 +23,7 @@ namespace studentmanagementsystem.Queries
             using (var connection = new MySqlConnection(stringConnection))
             {
                 connection.Open();
-                string query = "SELECT * FROM Personal_Information ";
+                string query = "SELECT DISTINCT Student_ID, Student_Name, Age, Sex, Birthdate, Address, Email, Phone_Number, YearLevel, Section, Program, Department, Status FROM Student_Information; ";
                 if (Department != "All")
                 {
                     query += "WHERE Department = @Department ";
@@ -136,7 +138,6 @@ namespace studentmanagementsystem.Queries
                 (Email LIKE @search) OR
                 (Phone_Number LIKE @search)";
 
-                MessageBox.Show("HUHUHUUHUH");
                 using (var connection = new MySqlConnection(stringConnection))
                 {
                     try
@@ -156,6 +157,94 @@ namespace studentmanagementsystem.Queries
 
             return dataTable;
 
+        }
+        public string[] ViewStudentInformation(string id)
+        {
+            string[] records = new string[100];
+            using (var connection = new MySqlConnection(stringConnection))
+            {
+                connection.Open();
+                string query = "SELECT DISTINCT Student_ID, Student_Name, Age, Sex, Birthdate, Address, Email, Phone_Number, YearLevel, Section, Program, Department, Status FROM Student_Information " + 
+                                "WHERE ID = @id";
+
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@id", id);
+                    command.ExecuteNonQuery();
+                    using (var reader = command.ExecuteReader()) 
+                    {
+                        reader.Read();
+                        records[0] = reader["Student_ID"].ToString() ?? "Null";
+                        records[1] = reader["Student_Name"].ToString() ?? "Null";
+                        records[2] = reader["Age"].ToString() ?? "Null";
+                        records[3] = reader["Sex"].ToString() ?? "Null";
+                        records[4] = reader["Birthdate"].ToString() ?? "Null";
+                        records[5] = reader["Address"].ToString() ?? "Null";
+                        records[6] = reader["Email"].ToString() ?? "Null";
+                        records[7] = reader["Phone_Number"].ToString() ?? "Null";
+                        records[8] = reader["YearLevel"].ToString() ?? "Null";
+                        records[9] = reader["Section"].ToString() ?? "Null";
+                        records[10] = reader["Program"].ToString() ?? "Null";
+                        records[11] = reader["Department"].ToString() ?? "Null";
+                        records[12] = reader["Status"].ToString() ?? "Null";
+                    }
+                }
+            }
+            return records;
+        }
+        public DataTable ViewCourseInformation(string id)
+        {
+            DataTable dataTable = new DataTable();
+            using (var connection = new MySqlConnection(stringConnection))
+            {
+                connection.Open();
+                string query = "SELECT c.Course_Code, " +
+                   "c.Course_Name, " +
+                   "c.Day, " +
+                   "c.Time, " +
+                   "c.Units " +
+                   "FROM Student_Information AS si " +
+                   "JOIN Courses AS c ON c.course_id = si.course_id " +
+                   "WHERE si.Student_ID = @id;";
+
+
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@id", id);
+                    command.ExecuteNonQuery();
+                    using (var adapter = new MySqlDataAdapter(command))
+                    {
+                        adapter.Fill(dataTable);
+                    }
+                }
+            }
+            return dataTable;
+        }
+        public List<string> ViewSkillInformation(string id)
+        {
+            List<string> records = new List<string>();
+            using (var connection = new MySqlConnection(stringConnection))
+            {
+                connection.Open();
+                string query = "SELECT s.Skill_Name " +
+                   "FROM Student_Information AS si " +
+                   "JOIN Skills AS s ON s.skill_id = si.skill_id " +
+                   "WHERE si.Student_ID = @id;";
+
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@id", id);
+                    command.ExecuteNonQuery();
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            records.Add(reader["Skill_name"].ToString() ?? "Null");
+                        }
+                    }
+                }
+            }
+            return records;
         }
     }
 }

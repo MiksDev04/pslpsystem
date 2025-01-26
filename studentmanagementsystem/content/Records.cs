@@ -134,5 +134,21 @@ namespace studentmanagementsystem.content
             PersonalInformationRecords.DataSource = queries.SearchRecord(SearchInput.Text);
             
         }
+
+        private void ViewMoreBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var id = PersonalInformationRecords.SelectedRows[0].Cells[0].Value.ToString();
+                string[] studentRecords = queries.ViewStudentInformation(id);
+                DataTable courseRecords = queries.ViewCourseInformation(id);
+                List<string> skillRecords = queries.ViewSkillInformation(id);
+                ViewRecord viewRecord = new ViewRecord(studentRecords, courseRecords, skillRecords);
+                viewRecord.Show();
+            } catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
