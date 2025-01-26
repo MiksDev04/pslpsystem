@@ -53,7 +53,7 @@
             this.SearchBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.SearchBtn.Animated = true;
-            this.SearchBtn.BackColor = System.Drawing.Color.Transparent;
+            this.SearchBtn.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.SearchBtn.BackgroundImage = global::studentmanagementsystem.Properties.Resources.search;
             this.SearchBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SearchBtn.BorderColor = System.Drawing.Color.Transparent;
@@ -77,14 +77,13 @@
             this.SearchInput.BackColor = System.Drawing.Color.Transparent;
             this.SearchInput.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
             this.SearchInput.BorderRadius = 15;
-            this.SearchInput.BorderThickness = 2;
             this.SearchInput.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.SearchInput.DefaultText = "";
             this.SearchInput.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.SearchInput.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.SearchInput.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.SearchInput.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.SearchInput.FillColor = System.Drawing.SystemColors.Control;
+            this.SearchInput.FillColor = System.Drawing.SystemColors.ButtonHighlight;
             this.SearchInput.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.SearchInput.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.SearchInput.ForeColor = System.Drawing.SystemColors.ControlText;

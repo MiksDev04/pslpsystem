@@ -19,7 +19,7 @@ namespace studentmanagementsystem.content
             InitializeComponent();
 
         }
-        SQLQueries sQLQueries = new SQLQueries();
+        SQLQueries queries = new SQLQueries();
         private void Records_Load(object sender, EventArgs e)
         {
             StudentDepartment.SelectedItem = "All";
@@ -37,7 +37,7 @@ namespace studentmanagementsystem.content
             string program = StudentProgram.SelectedItem.ToString();
             string sex = StudentSex.SelectedItem.ToString();
             string status = StudentStatus.SelectedItem.ToString();
-            PersonalInformationRecords.DataSource = sQLQueries.LoadDBContent(department, yearLevel, program, sex, status);
+            PersonalInformationRecords.DataSource = queries.LoadDBContent(department, yearLevel, program, sex, status);
         }
 
         private void StudentDepartment_SelectionChangeCommitted(object sender, EventArgs e)
@@ -129,6 +129,10 @@ namespace studentmanagementsystem.content
             LoadPersonalInformation();
         }
 
-       
+        private void SearchBtn_Click(object sender, EventArgs e)
+        {
+            PersonalInformationRecords.DataSource = queries.SearchRecord(SearchInput.Text);
+            
+        }
     }
 }

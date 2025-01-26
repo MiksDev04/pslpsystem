@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
 namespace studentmanagementsystem.Queries
@@ -116,6 +117,45 @@ namespace studentmanagementsystem.Queries
                     command.ExecuteNonQuery();
                 }
             }
+        }
+
+        public DataTable SearchRecord(string SearchInput)
+        {
+            DataTable dataTable = new DataTable();
+            SearchInput.Trim();
+            if (!string.IsNullOrEmpty(SearchInput))
+            {
+                // SQL query divided into smaller parts for better readability
+                string query = @"
+                SELECT * FROM Personal_Information
+                WHERE 
+                (Student_ID LIKE @search) OR
+                (Student_Name LIKE @search) OR
+                (Birthdate LIKE @search) OR
+                (Address LIKE @search) OR
+                (Email LIKE @search) OR
+                (Phone_Number LIKE @search)";
+
+                MessageBox.Show("HUHUHUUHUH");
+                using (var connection = new MySqlConnection(stringConnection))
+                {
+                    try
+                    {
+                        connection.Open();
+                        MySqlCommand command = new MySqlCommand(query, connection);
+                        command.Parameters.AddWithValue("@search", "%" + SearchInput + "%"); // Using LIKE to allow partial matching
+                        MySqlDataAdapter dataAdapter = new MySqlDataAdapter(command);
+                        dataAdapter.Fill(dataTable);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message);
+                    }
+                }
+            }
+
+            return dataTable;
+
         }
     }
 }

@@ -46,6 +46,8 @@
             this.StudentDepartment = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.SearchBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.SearchInput = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PersonalInformationRecords)).BeginInit();
             this.panel3.SuspendLayout();
@@ -303,7 +305,7 @@
             this.StudentDepartment.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.StudentDepartment.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.StudentDepartment.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.StudentDepartment.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.StudentDepartment.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StudentDepartment.ForeColor = System.Drawing.SystemColors.ControlText;
             this.StudentDepartment.ItemHeight = 30;
             this.StudentDepartment.Items.AddRange(new object[] {
@@ -327,6 +329,8 @@
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(40)))), ((int)(((byte)(150)))));
+            this.panel3.Controls.Add(this.SearchBtn);
+            this.panel3.Controls.Add(this.SearchInput);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
@@ -338,11 +342,62 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(466, 11);
+            this.label1.Location = new System.Drawing.Point(12, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(123, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "RECORDS";
+            // 
+            // SearchBtn
+            // 
+            this.SearchBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SearchBtn.Animated = true;
+            this.SearchBtn.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.SearchBtn.BackgroundImage = global::studentmanagementsystem.Properties.Resources.search;
+            this.SearchBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SearchBtn.BorderColor = System.Drawing.Color.Transparent;
+            this.SearchBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.SearchBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.SearchBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.SearchBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.SearchBtn.FillColor = System.Drawing.Color.Transparent;
+            this.SearchBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.SearchBtn.ForeColor = System.Drawing.Color.White;
+            this.SearchBtn.Location = new System.Drawing.Point(959, 18);
+            this.SearchBtn.Name = "SearchBtn";
+            this.SearchBtn.Size = new System.Drawing.Size(24, 24);
+            this.SearchBtn.TabIndex = 72;
+            this.SearchBtn.Click += new System.EventHandler(this.SearchBtn_Click);
+            // 
+            // SearchInput
+            // 
+            this.SearchInput.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SearchInput.Animated = true;
+            this.SearchInput.BackColor = System.Drawing.Color.Transparent;
+            this.SearchInput.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.SearchInput.BorderRadius = 15;
+            this.SearchInput.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.SearchInput.DefaultText = "";
+            this.SearchInput.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.SearchInput.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.SearchInput.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.SearchInput.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.SearchInput.FillColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.SearchInput.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.SearchInput.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.SearchInput.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.SearchInput.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.SearchInput.Location = new System.Drawing.Point(728, 14);
+            this.SearchInput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.SearchInput.Name = "SearchInput";
+            this.SearchInput.PasswordChar = '\0';
+            this.SearchInput.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.SearchInput.PlaceholderText = "Search here...";
+            this.SearchInput.SelectedText = "";
+            this.SearchInput.Size = new System.Drawing.Size(265, 33);
+            this.SearchInput.TabIndex = 71;
             // 
             // Records
             // 
@@ -380,5 +435,7 @@
         private Guna.UI2.WinForms.Guna2ComboBox StudentYearLevel;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2DataGridView PersonalInformationRecords;
+        private Guna.UI2.WinForms.Guna2Button SearchBtn;
+        private Guna.UI2.WinForms.Guna2TextBox SearchInput;
     }
 }

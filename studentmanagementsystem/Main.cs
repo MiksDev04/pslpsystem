@@ -81,7 +81,9 @@ namespace studentmanagementsystem
 
             if (DialogResult == DialogResult.Yes)
             {
-                this.Close();
+                this.Hide();
+                Form1 form1 = new Form1();
+                form1.Show();
             }
         }
     }
