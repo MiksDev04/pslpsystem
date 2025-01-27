@@ -46,5 +46,7 @@ namespace studentmanagementsystem.content
         {
             this.Hide();
         }
+
+      
     }
 }

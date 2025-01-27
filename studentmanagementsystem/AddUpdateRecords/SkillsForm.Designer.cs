@@ -37,8 +37,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.ExitBtn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.SkillSets = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -148,28 +148,6 @@
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
-            // guna2TextBox1
-            // 
-            this.guna2TextBox1.BorderRadius = 20;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "Ex. Dancing\r\n\r\n\r\n";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(58, 142);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(790, 260);
-            this.guna2TextBox1.TabIndex = 197;
-            this.guna2TextBox1.TextOffset = new System.Drawing.Point(10, -100);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -180,13 +158,36 @@
             this.label1.TabIndex = 198;
             this.label1.Text = "Skill Sets";
             // 
+            // SkillSets
+            // 
+            this.SkillSets.BorderRadius = 20;
+            this.SkillSets.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.SkillSets.DefaultText = "";
+            this.SkillSets.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.SkillSets.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.SkillSets.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.SkillSets.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.SkillSets.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.SkillSets.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.SkillSets.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.SkillSets.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.SkillSets.Location = new System.Drawing.Point(58, 142);
+            this.SkillSets.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SkillSets.Name = "SkillSets";
+            this.SkillSets.PasswordChar = '\0';
+            this.SkillSets.PlaceholderText = "Ex. dancing";
+            this.SkillSets.SelectedText = "";
+            this.SkillSets.Size = new System.Drawing.Size(790, 260);
+            this.SkillSets.TabIndex = 197;
+            this.SkillSets.TextOffset = new System.Drawing.Point(10, -100);
+            // 
             // SkillsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 500);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.guna2TextBox1);
+            this.Controls.Add(this.SkillSets);
             this.Controls.Add(this.AddUpdateProgressBar);
             this.Controls.Add(this.NextToSuccessBtn);
             this.Controls.Add(this.guna2Button2);
@@ -215,6 +216,6 @@
         private Guna.UI2.WinForms.Guna2Button ExitBtn;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox SkillSets;
     }
 }

@@ -138,7 +138,6 @@ namespace studentmanagementsystem.content
         private void SearchBtn_Click(object sender, EventArgs e)
         {
             PersonalInformationRecords.DataSource = queries.SearchRecord(SearchInput.Text);
-            
         }
 
         private void ViewMoreBtn_Click(object sender, EventArgs e)

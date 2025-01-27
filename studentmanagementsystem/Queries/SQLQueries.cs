@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using studentmanagementsystem.content;
 using static System.ComponentModel.Design.ObjectSelectorEditor;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
@@ -58,7 +59,7 @@ namespace studentmanagementsystem.Queries
                     {
                         query += "WHERE Status = @Status ";
                     }
-                    query += "AND Status = @Status";
+                    query += "AND Status = @Status ";
                 }
                 using (var command = new MySqlCommand(query, connection))
                 {
@@ -287,7 +288,87 @@ namespace studentmanagementsystem.Queries
             return dataTable;
         }
 
-        public void Delete_StudentInformation(string id)
+
+        public void AddStudentInformation(string[] personalInformation, string[] CourseCodes, string[] CourseDescriptions, string[] Times, string[] Days, string[] Units, string skillsets)
+        {
+            try
+            {
+                for (int i = 0; i < CourseCodes.Length; i++)
+                {
+                    using (MySqlConnection connection = new MySqlConnection(stringConnection))
+                    {
+                        // ADD course information
+                        connection.Open();
+
+                        string queryCourse = @"
+                            INSERT INTO courses (
+                                Course_Code, Course_Name, Day, Time, Units
+                            ) VALUES (@Course_Code, @Course_Name, @Day, @Time, @Units);
+                            SELECT LAST_INSERT_ID();
+                            ";
+                        int courseId = 0;
+                        using (MySqlCommand cmd1 = new MySqlCommand(queryCourse, connection))
+                        {
+                            cmd1.Parameters.Clear();
+
+                            cmd1.Parameters.AddWithValue("@Course_Code", CourseCodes[i]);
+                            cmd1.Parameters.AddWithValue("@Course_Name", CourseDescriptions[i]);
+                            cmd1.Parameters.AddWithValue("@Day", Days[i]);
+                            cmd1.Parameters.AddWithValue("@Time", Times[i]);
+                            cmd1.Parameters.AddWithValue("@Units", Convert.ToInt32(Units[i]));
+                            courseId = Convert.ToInt32(cmd1.ExecuteScalar()); // Get the last inserted skill_id
+
+                        }
+
+                        // Add skills information
+
+                        string querySkill = "INSERT INTO skills (Skill_Name) VALUES (@Skill_Name); SELECT LAST_INSERT_ID();";
+                        int skillId = 0;
+                        using (MySqlCommand cmd2 = new MySqlCommand(querySkill, connection))
+                        {
+                            cmd2.Parameters.AddWithValue("@Skill_Name", skillsets);
+                            skillId = Convert.ToInt32(cmd2.ExecuteScalar()); // Get the last inserted skill_id
+                        }
+
+                        // ADD student information
+                        string queryStudent = @"INSERT INTO student_information 
+                        (Student_ID, Student_Name, Age, Sex, Birthdate, Address, Email, Phone_Number, 
+                        Yearlevel, Section, Program, Department, Status, Course_ID, Skill_ID ) 
+                        VALUES (@Student_ID, @Student_Name, @Age, @Sex, @Birthdate, @Address, @Email, @Phone_Number, 
+                        @Yearlevel, @Section, @Program, @Department, @Status, @Course_ID, @Skill_ID);
+                        ";
+                        using (MySqlCommand cmd3 = new MySqlCommand(queryStudent, connection))
+                        {
+                            cmd3.Parameters.Clear();
+
+                            cmd3.Parameters.AddWithValue("@Student_ID", personalInformation[0]);
+                            cmd3.Parameters.AddWithValue("@Student_Name", personalInformation[1]);
+                            cmd3.Parameters.AddWithValue("@Age", Convert.ToInt32(personalInformation[2]));
+                            cmd3.Parameters.AddWithValue("@Sex", personalInformation[3]);
+                            cmd3.Parameters.AddWithValue("@Birthdate", personalInformation[4]);
+                            cmd3.Parameters.AddWithValue("@Address", personalInformation[5]);
+                            cmd3.Parameters.AddWithValue("@Email", personalInformation[6]);
+                            cmd3.Parameters.AddWithValue("@Phone_Number", Convert.ToInt64(personalInformation[7]));
+                            cmd3.Parameters.AddWithValue("@Yearlevel", personalInformation[8]);
+                            cmd3.Parameters.AddWithValue("@Section", personalInformation[9]);
+                            cmd3.Parameters.AddWithValue("@Program", personalInformation[10]);
+                            cmd3.Parameters.AddWithValue("@Department", personalInformation[11]);
+                            cmd3.Parameters.AddWithValue("@Status", personalInformation[12]);
+                            cmd3.Parameters.AddWithValue("@Course_ID", courseId);
+                            cmd3.Parameters.AddWithValue("@Skill_ID", skillId);
+                            cmd3.ExecuteNonQuery();
+                        }
+                    }
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + "huauha");
+            }
+        }
+        public void DeleteStudentInformation(string id)
         {
             string query = "DELETE FROM student_information WHERE Student_ID = @id;";
 

@@ -43,15 +43,15 @@
             this.label6 = new System.Windows.Forms.Label();
             this.Email = new Guna.UI2.WinForms.Guna2TextBox();
             this.Status = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.guna2RadioButton2 = new Guna.UI2.WinForms.Guna2RadioButton();
-            this.guna2RadioButton1 = new Guna.UI2.WinForms.Guna2RadioButton();
-            this.Gender = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.guna2RadioButton3 = new Guna.UI2.WinForms.Guna2RadioButton();
-            this.guna2RadioButton4 = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.Irregular = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.Regular = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.Sex = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.Female = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.Male = new Guna.UI2.WinForms.Guna2RadioButton();
             this.label7 = new System.Windows.Forms.Label();
             this.Phone = new Guna.UI2.WinForms.Guna2TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.Year_Section = new Guna.UI2.WinForms.Guna2TextBox();
+            this.YearLevel = new Guna.UI2.WinForms.Guna2TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.Program = new Guna.UI2.WinForms.Guna2TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -63,8 +63,10 @@
             this.ExitBtn = new Guna.UI2.WinForms.Guna2Button();
             this.AddUpdateProgressBar = new System.Windows.Forms.ProgressBar();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.label13 = new System.Windows.Forms.Label();
+            this.Section = new Guna.UI2.WinForms.Guna2TextBox();
             this.Status.SuspendLayout();
-            this.Gender.SuspendLayout();
+            this.Sex.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -139,7 +141,7 @@
             this.StudentID.PasswordChar = '\0';
             this.StudentID.PlaceholderText = "23-10010";
             this.StudentID.SelectedText = "";
-            this.StudentID.Size = new System.Drawing.Size(264, 38);
+            this.StudentID.Size = new System.Drawing.Size(229, 38);
             this.StudentID.TabIndex = 115;
             // 
             // label1
@@ -182,7 +184,7 @@
             this.FullName.PasswordChar = '\0';
             this.FullName.PlaceholderText = "Juan Dela Cruz";
             this.FullName.SelectedText = "";
-            this.FullName.Size = new System.Drawing.Size(264, 38);
+            this.FullName.Size = new System.Drawing.Size(229, 38);
             this.FullName.TabIndex = 117;
             // 
             // label4
@@ -215,7 +217,7 @@
             this.Birthdate.PasswordChar = '\0';
             this.Birthdate.PlaceholderText = "12-25-01";
             this.Birthdate.SelectedText = "";
-            this.Birthdate.Size = new System.Drawing.Size(264, 38);
+            this.Birthdate.Size = new System.Drawing.Size(229, 38);
             this.Birthdate.TabIndex = 119;
             // 
             // label5
@@ -248,14 +250,14 @@
             this.Age.PasswordChar = '\0';
             this.Age.PlaceholderText = "20";
             this.Age.SelectedText = "";
-            this.Age.Size = new System.Drawing.Size(264, 38);
+            this.Age.Size = new System.Drawing.Size(229, 38);
             this.Age.TabIndex = 121;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(349, 67);
+            this.label6.Location = new System.Drawing.Point(334, 67);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(123, 21);
             this.label6.TabIndex = 124;
@@ -275,128 +277,128 @@
             this.Email.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.Email.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Email.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Email.Location = new System.Drawing.Point(353, 91);
+            this.Email.Location = new System.Drawing.Point(338, 91);
             this.Email.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Email.Name = "Email";
             this.Email.PasswordChar = '\0';
             this.Email.PlaceholderText = "juan@gmail.com";
             this.Email.SelectedText = "";
-            this.Email.Size = new System.Drawing.Size(264, 38);
+            this.Email.Size = new System.Drawing.Size(229, 38);
             this.Email.TabIndex = 123;
             // 
             // Status
             // 
-            this.Status.Controls.Add(this.guna2RadioButton2);
-            this.Status.Controls.Add(this.guna2RadioButton1);
+            this.Status.Controls.Add(this.Irregular);
+            this.Status.Controls.Add(this.Regular);
             this.Status.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Status.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Status.Location = new System.Drawing.Point(662, 169);
+            this.Status.Location = new System.Drawing.Point(630, 271);
             this.Status.Name = "Status";
-            this.Status.Size = new System.Drawing.Size(192, 85);
+            this.Status.Size = new System.Drawing.Size(229, 85);
             this.Status.TabIndex = 125;
             this.Status.Text = "Status";
             // 
-            // guna2RadioButton2
+            // Irregular
             // 
-            this.guna2RadioButton2.AutoSize = true;
-            this.guna2RadioButton2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.guna2RadioButton2.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2RadioButton2.CheckedState.BorderThickness = 0;
-            this.guna2RadioButton2.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2RadioButton2.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.guna2RadioButton2.CheckedState.InnerOffset = -4;
-            this.guna2RadioButton2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.guna2RadioButton2.Location = new System.Drawing.Point(98, 50);
-            this.guna2RadioButton2.Name = "guna2RadioButton2";
-            this.guna2RadioButton2.Size = new System.Drawing.Size(91, 25);
-            this.guna2RadioButton2.TabIndex = 129;
-            this.guna2RadioButton2.Text = "Irregular";
-            this.guna2RadioButton2.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2RadioButton2.UncheckedState.BorderThickness = 2;
-            this.guna2RadioButton2.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.guna2RadioButton2.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.guna2RadioButton2.UseVisualStyleBackColor = false;
+            this.Irregular.AutoSize = true;
+            this.Irregular.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Irregular.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Irregular.CheckedState.BorderThickness = 0;
+            this.Irregular.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Irregular.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.Irregular.CheckedState.InnerOffset = -4;
+            this.Irregular.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.Irregular.Location = new System.Drawing.Point(98, 50);
+            this.Irregular.Name = "Irregular";
+            this.Irregular.Size = new System.Drawing.Size(91, 25);
+            this.Irregular.TabIndex = 129;
+            this.Irregular.Text = "Irregular";
+            this.Irregular.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.Irregular.UncheckedState.BorderThickness = 2;
+            this.Irregular.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.Irregular.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.Irregular.UseVisualStyleBackColor = false;
             // 
-            // guna2RadioButton1
+            // Regular
             // 
-            this.guna2RadioButton1.AutoSize = true;
-            this.guna2RadioButton1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.guna2RadioButton1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2RadioButton1.CheckedState.BorderThickness = 0;
-            this.guna2RadioButton1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2RadioButton1.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.guna2RadioButton1.CheckedState.InnerOffset = -4;
-            this.guna2RadioButton1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.guna2RadioButton1.Location = new System.Drawing.Point(15, 50);
-            this.guna2RadioButton1.Name = "guna2RadioButton1";
-            this.guna2RadioButton1.Size = new System.Drawing.Size(84, 25);
-            this.guna2RadioButton1.TabIndex = 128;
-            this.guna2RadioButton1.Text = "Regular";
-            this.guna2RadioButton1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2RadioButton1.UncheckedState.BorderThickness = 2;
-            this.guna2RadioButton1.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.guna2RadioButton1.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.guna2RadioButton1.UseVisualStyleBackColor = false;
+            this.Regular.AutoSize = true;
+            this.Regular.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Regular.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Regular.CheckedState.BorderThickness = 0;
+            this.Regular.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Regular.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.Regular.CheckedState.InnerOffset = -4;
+            this.Regular.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.Regular.Location = new System.Drawing.Point(15, 50);
+            this.Regular.Name = "Regular";
+            this.Regular.Size = new System.Drawing.Size(84, 25);
+            this.Regular.TabIndex = 128;
+            this.Regular.Text = "Regular";
+            this.Regular.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.Regular.UncheckedState.BorderThickness = 2;
+            this.Regular.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.Regular.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.Regular.UseVisualStyleBackColor = false;
             // 
-            // Gender
+            // Sex
             // 
-            this.Gender.Controls.Add(this.guna2RadioButton3);
-            this.Gender.Controls.Add(this.guna2RadioButton4);
-            this.Gender.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Gender.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Gender.Location = new System.Drawing.Point(662, 67);
-            this.Gender.Name = "Gender";
-            this.Gender.Size = new System.Drawing.Size(192, 88);
-            this.Gender.TabIndex = 130;
-            this.Gender.Text = "Gender";
+            this.Sex.Controls.Add(this.Female);
+            this.Sex.Controls.Add(this.Male);
+            this.Sex.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sex.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Sex.Location = new System.Drawing.Point(630, 169);
+            this.Sex.Name = "Sex";
+            this.Sex.Size = new System.Drawing.Size(229, 88);
+            this.Sex.TabIndex = 130;
+            this.Sex.Text = "Sex";
             // 
-            // guna2RadioButton3
+            // Female
             // 
-            this.guna2RadioButton3.AutoSize = true;
-            this.guna2RadioButton3.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.guna2RadioButton3.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2RadioButton3.CheckedState.BorderThickness = 0;
-            this.guna2RadioButton3.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2RadioButton3.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.guna2RadioButton3.CheckedState.InnerOffset = -4;
-            this.guna2RadioButton3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.guna2RadioButton3.Location = new System.Drawing.Point(84, 50);
-            this.guna2RadioButton3.Name = "guna2RadioButton3";
-            this.guna2RadioButton3.Size = new System.Drawing.Size(80, 25);
-            this.guna2RadioButton3.TabIndex = 129;
-            this.guna2RadioButton3.Text = "Female";
-            this.guna2RadioButton3.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2RadioButton3.UncheckedState.BorderThickness = 2;
-            this.guna2RadioButton3.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.guna2RadioButton3.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.guna2RadioButton3.UseVisualStyleBackColor = false;
+            this.Female.AutoSize = true;
+            this.Female.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Female.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Female.CheckedState.BorderThickness = 0;
+            this.Female.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Female.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.Female.CheckedState.InnerOffset = -4;
+            this.Female.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.Female.Location = new System.Drawing.Point(84, 50);
+            this.Female.Name = "Female";
+            this.Female.Size = new System.Drawing.Size(80, 25);
+            this.Female.TabIndex = 129;
+            this.Female.Text = "Female";
+            this.Female.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.Female.UncheckedState.BorderThickness = 2;
+            this.Female.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.Female.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.Female.UseVisualStyleBackColor = false;
             // 
-            // guna2RadioButton4
+            // Male
             // 
-            this.guna2RadioButton4.AutoSize = true;
-            this.guna2RadioButton4.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.guna2RadioButton4.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2RadioButton4.CheckedState.BorderThickness = 0;
-            this.guna2RadioButton4.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2RadioButton4.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.guna2RadioButton4.CheckedState.InnerOffset = -4;
-            this.guna2RadioButton4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.guna2RadioButton4.Location = new System.Drawing.Point(15, 50);
-            this.guna2RadioButton4.Name = "guna2RadioButton4";
-            this.guna2RadioButton4.Size = new System.Drawing.Size(64, 25);
-            this.guna2RadioButton4.TabIndex = 128;
-            this.guna2RadioButton4.Text = "Male";
-            this.guna2RadioButton4.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2RadioButton4.UncheckedState.BorderThickness = 2;
-            this.guna2RadioButton4.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.guna2RadioButton4.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.guna2RadioButton4.UseVisualStyleBackColor = false;
+            this.Male.AutoSize = true;
+            this.Male.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Male.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Male.CheckedState.BorderThickness = 0;
+            this.Male.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Male.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.Male.CheckedState.InnerOffset = -4;
+            this.Male.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.Male.Location = new System.Drawing.Point(15, 50);
+            this.Male.Name = "Male";
+            this.Male.Size = new System.Drawing.Size(64, 25);
+            this.Male.TabIndex = 128;
+            this.Male.Text = "Male";
+            this.Male.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.Male.UncheckedState.BorderThickness = 2;
+            this.Male.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.Male.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.Male.UseVisualStyleBackColor = false;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(349, 145);
+            this.label7.Location = new System.Drawing.Point(334, 145);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(161, 21);
             this.label7.TabIndex = 132;
@@ -416,53 +418,53 @@
             this.Phone.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.Phone.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Phone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Phone.Location = new System.Drawing.Point(353, 169);
+            this.Phone.Location = new System.Drawing.Point(338, 169);
             this.Phone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Phone.Name = "Phone";
             this.Phone.PasswordChar = '\0';
             this.Phone.PlaceholderText = "09578674401";
             this.Phone.SelectedText = "";
-            this.Phone.Size = new System.Drawing.Size(264, 38);
+            this.Phone.Size = new System.Drawing.Size(229, 38);
             this.Phone.TabIndex = 131;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(349, 219);
+            this.label8.Location = new System.Drawing.Point(334, 219);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(173, 21);
+            this.label8.Size = new System.Drawing.Size(83, 21);
             this.label8.TabIndex = 134;
-            this.label8.Text = "Year Level and Section";
+            this.label8.Text = "Year Level";
             // 
-            // Year_Section
+            // YearLevel
             // 
-            this.Year_Section.Animated = true;
-            this.Year_Section.BorderRadius = 7;
-            this.Year_Section.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Year_Section.DefaultText = "";
-            this.Year_Section.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.Year_Section.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.Year_Section.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Year_Section.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Year_Section.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Year_Section.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.Year_Section.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Year_Section.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Year_Section.Location = new System.Drawing.Point(353, 243);
-            this.Year_Section.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Year_Section.Name = "Year_Section";
-            this.Year_Section.PasswordChar = '\0';
-            this.Year_Section.PlaceholderText = "2-B";
-            this.Year_Section.SelectedText = "";
-            this.Year_Section.Size = new System.Drawing.Size(264, 38);
-            this.Year_Section.TabIndex = 133;
+            this.YearLevel.Animated = true;
+            this.YearLevel.BorderRadius = 7;
+            this.YearLevel.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.YearLevel.DefaultText = "";
+            this.YearLevel.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.YearLevel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.YearLevel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.YearLevel.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.YearLevel.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.YearLevel.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.YearLevel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.YearLevel.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.YearLevel.Location = new System.Drawing.Point(338, 243);
+            this.YearLevel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.YearLevel.Name = "YearLevel";
+            this.YearLevel.PasswordChar = '\0';
+            this.YearLevel.PlaceholderText = "2";
+            this.YearLevel.SelectedText = "";
+            this.YearLevel.Size = new System.Drawing.Size(229, 38);
+            this.YearLevel.TabIndex = 133;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(349, 294);
+            this.label9.Location = new System.Drawing.Point(334, 369);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(73, 21);
             this.label9.TabIndex = 136;
@@ -482,20 +484,20 @@
             this.Program.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.Program.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Program.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Program.Location = new System.Drawing.Point(353, 318);
+            this.Program.Location = new System.Drawing.Point(338, 393);
             this.Program.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Program.Name = "Program";
             this.Program.PasswordChar = '\0';
             this.Program.PlaceholderText = "BSIT";
             this.Program.SelectedText = "";
-            this.Program.Size = new System.Drawing.Size(264, 38);
+            this.Program.Size = new System.Drawing.Size(229, 38);
             this.Program.TabIndex = 135;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(349, 369);
+            this.label10.Location = new System.Drawing.Point(626, 67);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(98, 21);
             this.label10.TabIndex = 140;
@@ -515,13 +517,13 @@
             this.Department.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.Department.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Department.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Department.Location = new System.Drawing.Point(353, 393);
+            this.Department.Location = new System.Drawing.Point(630, 91);
             this.Department.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Department.Name = "Department";
             this.Department.PasswordChar = '\0';
             this.Department.PlaceholderText = "CCST";
             this.Department.SelectedText = "";
-            this.Department.Size = new System.Drawing.Size(264, 38);
+            this.Department.Size = new System.Drawing.Size(229, 38);
             this.Department.TabIndex = 139;
             // 
             // label11
@@ -554,7 +556,7 @@
             this.Address.PasswordChar = '\0';
             this.Address.PlaceholderText = "San Pablo, Laguna";
             this.Address.SelectedText = "";
-            this.Address.Size = new System.Drawing.Size(264, 38);
+            this.Address.Size = new System.Drawing.Size(229, 38);
             this.Address.TabIndex = 137;
             // 
             // label12
@@ -612,11 +614,46 @@
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(334, 294);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(65, 21);
+            this.label13.TabIndex = 172;
+            this.label13.Text = "Section";
+            // 
+            // Section
+            // 
+            this.Section.Animated = true;
+            this.Section.BorderRadius = 7;
+            this.Section.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Section.DefaultText = "";
+            this.Section.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Section.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Section.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Section.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Section.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Section.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Section.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Section.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Section.Location = new System.Drawing.Point(338, 318);
+            this.Section.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Section.Name = "Section";
+            this.Section.PasswordChar = '\0';
+            this.Section.PlaceholderText = "B";
+            this.Section.SelectedText = "";
+            this.Section.Size = new System.Drawing.Size(229, 38);
+            this.Section.TabIndex = 171;
+            // 
             // PersonalInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 500);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.Section);
             this.Controls.Add(this.AddUpdateProgressBar);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.Department);
@@ -625,10 +662,10 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.Program);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.Year_Section);
+            this.Controls.Add(this.YearLevel);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.Phone);
-            this.Controls.Add(this.Gender);
+            this.Controls.Add(this.Sex);
             this.Controls.Add(this.Status);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.Email);
@@ -651,8 +688,8 @@
             this.Load += new System.EventHandler(this.PersonalInfo_Load);
             this.Status.ResumeLayout(false);
             this.Status.PerformLayout();
-            this.Gender.ResumeLayout(false);
-            this.Gender.PerformLayout();
+            this.Sex.ResumeLayout(false);
+            this.Sex.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -675,15 +712,15 @@
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2TextBox Email;
         private Guna.UI2.WinForms.Guna2GroupBox Status;
-        private Guna.UI2.WinForms.Guna2RadioButton guna2RadioButton1;
-        private Guna.UI2.WinForms.Guna2RadioButton guna2RadioButton2;
-        private Guna.UI2.WinForms.Guna2GroupBox Gender;
-        private Guna.UI2.WinForms.Guna2RadioButton guna2RadioButton3;
-        private Guna.UI2.WinForms.Guna2RadioButton guna2RadioButton4;
+        private Guna.UI2.WinForms.Guna2RadioButton Regular;
+        private Guna.UI2.WinForms.Guna2RadioButton Irregular;
+        private Guna.UI2.WinForms.Guna2GroupBox Sex;
+        private Guna.UI2.WinForms.Guna2RadioButton Female;
+        private Guna.UI2.WinForms.Guna2RadioButton Male;
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2TextBox Phone;
         private System.Windows.Forms.Label label8;
-        private Guna.UI2.WinForms.Guna2TextBox Year_Section;
+        private Guna.UI2.WinForms.Guna2TextBox YearLevel;
         private System.Windows.Forms.Label label9;
         private Guna.UI2.WinForms.Guna2TextBox Program;
         private System.Windows.Forms.Label label10;
@@ -695,5 +732,7 @@
         private Guna.UI2.WinForms.Guna2Button ExitBtn;
         private System.Windows.Forms.ProgressBar AddUpdateProgressBar;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        private System.Windows.Forms.Label label13;
+        private Guna.UI2.WinForms.Guna2TextBox Section;
     }
 }

@@ -7,16 +7,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using studentmanagementsystem.Queries;
 
 namespace studentmanagementsystem.AddUpdateRecords
 {
     public partial class SkillsForm : Form
     {
-        public SkillsForm()
+        string[] personalInformation;
+        string[] CourseCodes;
+        string[] CourseDescriptions;
+        string[] Times;
+        string[] Days;
+        string[] Units;
+        public SkillsForm(string[] personalInformation, string[] CourseCodes, string[] CourseDescriptions, string[] Times, string[] Days, string[] Units)
         {
             InitializeComponent();
+            this.personalInformation = personalInformation;
+            this.CourseCodes = CourseCodes;
+            this.CourseDescriptions = CourseDescriptions;
+            this.Times = Times;
+            this.Days = Days;
+            this.Units = Units;
         }
-
+        SQLQueries queries = new SQLQueries();
         private void Skills_Load(object sender, EventArgs e)
         {
             AddUpdateProgressBar.Value = 70;
@@ -31,89 +44,15 @@ namespace studentmanagementsystem.AddUpdateRecords
 
         private void NextToSuccessBtn_Click(object sender, EventArgs e)
         {
+            string skillSets = SkillSets.Text;
+            queries.AddStudentInformation(personalInformation, CourseCodes, CourseDescriptions, Times, Days, Units, skillSets);
             this.Hide();
             SuccessfulForm successfulForm = new SuccessfulForm();
             successfulForm.Show();
+
+            
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void S1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void S2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void S3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void S4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void S5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void s10_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void S9_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void S8_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
+      
     }
 }

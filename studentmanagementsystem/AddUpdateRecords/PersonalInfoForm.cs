@@ -20,19 +20,40 @@ namespace studentmanagementsystem.content
 
         private void NextToCourseInfo_Click(object sender, EventArgs e)
         {
+            string sex = "";
+            if (Male.Checked)
+            {
+                sex = "Male";
+            }
+            else if (Female.Checked) 
+            {
+                sex = "Female";
+            }
+
+            string status = "";
+            if (Regular.Checked)
+            {
+                status = "Regular";
+            }
+            else if (Irregular.Checked)
+            {
+                status = "Irregular";
+            }
+
             string[] personalInformation = new string[50];
             personalInformation[0] = StudentID.Text;
             personalInformation[1] = FullName.Text;
-            personalInformation[2] = Birthdate.Text;
-            personalInformation[3] = Age.Text;
-            personalInformation[4] = Address.Text;
-            personalInformation[5] = Email.Text;
-            personalInformation[6] = Phone.Text;
-            personalInformation[7] = Year_Section.Text;
-            personalInformation[8] = Program.Text;
-            personalInformation[9] = Department.Text;
-            personalInformation[10] = Gender.Text;
-            personalInformation[11] = Status.Text;
+            personalInformation[2] = Age.Text;
+            personalInformation[3] = sex;
+            personalInformation[4] = Birthdate.Text;
+            personalInformation[5] = Address.Text;
+            personalInformation[6] = Email.Text;
+            personalInformation[7] = Phone.Text;
+            personalInformation[8] = YearLevel.Text;
+            personalInformation[9] = Section.Text;
+            personalInformation[10] = Program.Text;
+            personalInformation[11] = Department.Text;
+            personalInformation[12] = status;
            
             CoursesForm courses = new CoursesForm(personalInformation);
             this.Hide();

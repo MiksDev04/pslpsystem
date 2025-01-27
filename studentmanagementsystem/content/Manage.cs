@@ -60,7 +60,7 @@ namespace studentmanagementsystem.content
                     DialogResult = MessageBox.Show("Are you sure you want to permanently delete this record?", "Alert", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     if (DialogResult == DialogResult.Yes)
                     {
-                        queries.Delete_StudentInformation(DataManagement_GridView.SelectedRows[0].Cells[0].Value.ToString());
+                        queries.DeleteStudentInformation(DataManagement_GridView.SelectedRows[0].Cells[0].Value.ToString());
                         DataManagement_GridView.DataSource = queries.LoadDBContent("All", "All", "All", "All", "All");
                     }
                 }
