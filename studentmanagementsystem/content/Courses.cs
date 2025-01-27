@@ -7,24 +7,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using studentmanagementsystem.Queries;
 
 namespace studentmanagementsystem.content
 {
     public partial class Courses : Form
     {
-        public Courses()
+        private string department;
+        public Courses(string department)
         {
             InitializeComponent();
+            this.department = department;
         }
 
-        private void guna2TileButton2_Click(object sender, EventArgs e)
+        SQLQueries queries = new SQLQueries();
+        private void Courses_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void guna2TileButton3_Click(object sender, EventArgs e)
-        {
-
+            try
+            {
+                LoadCoursesPnl.DataSource = queries.LoadDepartmentCourses(department);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

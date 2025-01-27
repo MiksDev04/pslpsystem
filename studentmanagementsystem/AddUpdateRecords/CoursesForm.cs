@@ -12,9 +12,11 @@ namespace studentmanagementsystem.AddUpdateRecords
 {
     public partial class CoursesForm : Form
     {
-        public CoursesForm()
+        string[] personalInformation;
+        public CoursesForm(string[] personalInformation)
         {
             InitializeComponent();
+            this.personalInformation = personalInformation;
         }
 
         private void ExitBtn_Click(object sender, EventArgs e)
@@ -24,6 +26,7 @@ namespace studentmanagementsystem.AddUpdateRecords
 
         private void Courses_Load(object sender, EventArgs e)
         {
+            //Course
             AddUpdateProgressBar.Value = 35;
         }
 

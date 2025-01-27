@@ -22,31 +22,30 @@ namespace studentmanagementsystem.content
 
         private void Department_Load(object sender, EventArgs e)
         {
-            //RemoveBorder(null);
         }
 
-        private void RemoveBorder(object sender, EventArgs e)
-        {
-            // Border
-            COAPnl.BorderColor = System.Drawing.SystemColors.Control;
-            CASPnl.BorderColor = System.Drawing.SystemColors.Control;
-            CBAPnl.BorderColor = System.Drawing.SystemColors.Control;
-            CCSTPnl.BorderColor = System.Drawing.SystemColors.Control;
-            COEPnl.BorderColor = System.Drawing.SystemColors.Control;
-            CNAHSPnl.BorderColor = System.Drawing.SystemColors.Control;
-            CTHMPnl.BorderColor = System.Drawing.SystemColors.Control;
-            CHKPnl.BorderColor = System.Drawing.SystemColors.Control;
-            // Bakcground
-            COAPnl.FillColor = System.Drawing.SystemColors.ControlLightLight;
-            CASPnl.FillColor = System.Drawing.SystemColors.ControlLightLight;
-            CBAPnl.FillColor = System.Drawing.SystemColors.ControlLightLight;
-            CCSTPnl.FillColor = System.Drawing.SystemColors.ControlLightLight;
-            COEPnl.FillColor = System.Drawing.SystemColors.ControlLightLight;
-            CNAHSPnl.FillColor = System.Drawing.SystemColors.ControlLightLight;
-            CTHMPnl.FillColor = System.Drawing.SystemColors.ControlLightLight;
-            CHKPnl.FillColor = System.Drawing.SystemColors.ControlLightLight;
+        //private void RemoveBorder(object sender, EventArgs e)
+        //{
+        //    // Border
+        //    COAPnl.BorderColor = System.Drawing.SystemColors.Control;
+        //    CASPnl.BorderColor = System.Drawing.SystemColors.Control;
+        //    CBAPnl.BorderColor = System.Drawing.SystemColors.Control;
+        //    CCSTPnl.BorderColor = System.Drawing.SystemColors.Control;
+        //    COEPnl.BorderColor = System.Drawing.SystemColors.Control;
+        //    CNAHSPnl.BorderColor = System.Drawing.SystemColors.Control;
+        //    CTHMPnl.BorderColor = System.Drawing.SystemColors.Control;
+        //    CHKPnl.BorderColor = System.Drawing.SystemColors.Control;
+        //    // Bakcground
+        //    COAPnl.FillColor = System.Drawing.SystemColors.ControlLightLight;
+        //    CASPnl.FillColor = System.Drawing.SystemColors.ControlLightLight;
+        //    CBAPnl.FillColor = System.Drawing.SystemColors.ControlLightLight;
+        //    CCSTPnl.FillColor = System.Drawing.SystemColors.ControlLightLight;
+        //    COEPnl.FillColor = System.Drawing.SystemColors.ControlLightLight;
+        //    CNAHSPnl.FillColor = System.Drawing.SystemColors.ControlLightLight;
+        //    CTHMPnl.FillColor = System.Drawing.SystemColors.ControlLightLight;
+        //    CHKPnl.FillColor = System.Drawing.SystemColors.ControlLightLight;
 
-        }
+        //}
         //private void OnBorder(Guna2Panel pnl)
         //{
 
@@ -54,9 +53,9 @@ namespace studentmanagementsystem.content
         //    pnl.FillColor = System.Drawing.Color.IndianRed;
         //}
 
-        private void GoToYearLevel(string department)
+        private void LoadCourses(string department)
         {
-            Courses courses = new Courses()
+            Courses courses = new Courses(department)
             {
                 TopLevel = false,
                 FormBorderStyle = FormBorderStyle.None,
@@ -68,49 +67,49 @@ namespace studentmanagementsystem.content
         }
         private void GoToCOA(object sender, EventArgs e)
         {
-            GoToYearLevel("COA");
+            LoadCourses("COA");
             //OnBorder(COAPnl);
         }
 
         private void GoToCAS(object sender, EventArgs e)
         {
-            GoToYearLevel("COA");
+            LoadCourses("CAS");
             //OnBorder(CASPnl);
         }
 
         private void GoToCBA(object sender, EventArgs e)
         {
-            GoToYearLevel("COA");
+            LoadCourses("CBA");
             //OnBorder(CBAPnl);
         }
 
         private void GoToCCST(object sender, EventArgs e)
         {
-            GoToYearLevel("COA");
+            LoadCourses("CCST");
             //OnBorder(CCSTPnl);
         }
 
         private void GoToCOE(object sender, EventArgs e)
         {
-            GoToYearLevel("COA");
+            LoadCourses("COE");
             //OnBorder(COEPnl);
         }
 
         private void GoToCHK(object sender, EventArgs e)
         {
-            GoToYearLevel("COA");
+            LoadCourses("CHK");
             //OnBorder(CHKPnl);
         }
 
         private void GoToCNAHS(object sender, EventArgs e)
         {
-            GoToYearLevel("COA");
+            LoadCourses("CNAHS");
             //OnBorder(CNAHSPnl);
         }
 
         private void GoToCTHM(object sender, EventArgs e)
         {
-            GoToYearLevel("COA");
+            LoadCourses("CTHM");
             //OnBorder(CTHMPnl);
         }
 

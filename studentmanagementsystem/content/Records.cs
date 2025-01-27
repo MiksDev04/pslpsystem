@@ -32,12 +32,18 @@ namespace studentmanagementsystem.content
 
         private void LoadPersonalInformation()
         {
-            string department = StudentDepartment.SelectedItem.ToString();
-            string yearLevel = StudentYearLevel.SelectedItem.ToString();
-            string program = StudentProgram.SelectedItem.ToString();
-            string sex = StudentSex.SelectedItem.ToString();
-            string status = StudentStatus.SelectedItem.ToString();
-            PersonalInformationRecords.DataSource = queries.LoadDBContent(department, yearLevel, program, sex, status);
+            try
+            {
+                string department = StudentDepartment.SelectedItem.ToString();
+                string yearLevel = StudentYearLevel.SelectedItem.ToString();
+                string program = StudentProgram.SelectedItem.ToString();
+                string sex = StudentSex.SelectedItem.ToString();
+                string status = StudentStatus.SelectedItem.ToString();
+                PersonalInformationRecords.DataSource = queries.LoadDBContent(department, yearLevel, program, sex, status);
+            } catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void StudentDepartment_SelectionChangeCommitted(object sender, EventArgs e)
@@ -139,7 +145,7 @@ namespace studentmanagementsystem.content
         {
             try
             {
-                var id = PersonalInformationRecords.SelectedRows[0].Cells[0].Value.ToString();
+                string id = PersonalInformationRecords.SelectedRows[0].Cells[0].Value.ToString();
                 string[] studentRecords = queries.ViewStudentInformation(id);
                 DataTable courseRecords = queries.ViewCourseInformation(id);
                 List<string> skillRecords = queries.ViewSkillInformation(id);

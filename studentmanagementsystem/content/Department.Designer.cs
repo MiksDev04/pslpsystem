@@ -97,7 +97,6 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "College of \r\nAccountancy";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label2.MouseLeave += new System.EventHandler(this.RemoveBorder);
             this.label2.MouseHover += new System.EventHandler(this.GoToCOA);
             // 
             // label1
@@ -112,7 +111,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "COA";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.MouseLeave += new System.EventHandler(this.RemoveBorder);
             this.label1.MouseHover += new System.EventHandler(this.GoToCOA);
             // 
             // CASPnl
@@ -129,7 +127,6 @@
             this.CASPnl.Size = new System.Drawing.Size(213, 210);
             this.CASPnl.TabIndex = 3;
             this.CASPnl.Click += new System.EventHandler(this.GoToCAS);
-            this.CASPnl.MouseLeave += new System.EventHandler(this.RemoveBorder);
             // 
             // label3
             // 
@@ -144,7 +141,6 @@
             this.label3.Text = "College of Arts and\r\n Sciences";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label3.Click += new System.EventHandler(this.GoToCAS);
-            this.label3.MouseLeave += new System.EventHandler(this.RemoveBorder);
             // 
             // label4
             // 
@@ -159,7 +155,6 @@
             this.label4.Text = "CAS";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label4.Click += new System.EventHandler(this.GoToCAS);
-            this.label4.MouseLeave += new System.EventHandler(this.RemoveBorder);
             // 
             // CBAPnl
             // 
@@ -175,7 +170,6 @@
             this.CBAPnl.Size = new System.Drawing.Size(213, 210);
             this.CBAPnl.TabIndex = 3;
             this.CBAPnl.Click += new System.EventHandler(this.GoToCBA);
-            this.CBAPnl.MouseLeave += new System.EventHandler(this.RemoveBorder);
             // 
             // label5
             // 
@@ -190,7 +184,6 @@
             this.label5.Text = "College of Business\r\nAdministration";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label5.Click += new System.EventHandler(this.GoToCBA);
-            this.label5.MouseLeave += new System.EventHandler(this.RemoveBorder);
             // 
             // label6
             // 
@@ -205,7 +198,6 @@
             this.label6.Text = "CBA";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label6.Click += new System.EventHandler(this.GoToCBA);
-            this.label6.MouseLeave += new System.EventHandler(this.RemoveBorder);
             // 
             // CCSTPnl
             // 
@@ -221,7 +213,6 @@
             this.CCSTPnl.Size = new System.Drawing.Size(213, 210);
             this.CCSTPnl.TabIndex = 3;
             this.CCSTPnl.Click += new System.EventHandler(this.GoToCCST);
-            this.CCSTPnl.MouseLeave += new System.EventHandler(this.RemoveBorder);
             // 
             // label7
             // 
@@ -236,7 +227,6 @@
             this.label7.Text = "College of Computer\r\n Studies and Technology";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label7.Click += new System.EventHandler(this.GoToCCST);
-            this.label7.MouseLeave += new System.EventHandler(this.RemoveBorder);
             // 
             // label8
             // 
@@ -251,7 +241,6 @@
             this.label8.Text = "CCST";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label8.Click += new System.EventHandler(this.GoToCCST);
-            this.label8.MouseLeave += new System.EventHandler(this.RemoveBorder);
             // 
             // CTHMPnl
             // 
@@ -267,7 +256,6 @@
             this.CTHMPnl.Size = new System.Drawing.Size(213, 210);
             this.CTHMPnl.TabIndex = 5;
             this.CTHMPnl.Click += new System.EventHandler(this.GoToCTHM);
-            this.CTHMPnl.MouseLeave += new System.EventHandler(this.RemoveBorder);
             // 
             // label9
             // 
@@ -282,7 +270,6 @@
             this.label9.Text = "College of Tourism and\r\nHospitality Management";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label9.Click += new System.EventHandler(this.GoToCTHM);
-            this.label9.MouseLeave += new System.EventHandler(this.RemoveBorder);
             // 
             // label10
             // 
@@ -297,7 +284,6 @@
             this.label10.Text = "CTHM";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label10.Click += new System.EventHandler(this.GoToCTHM);
-            this.label10.MouseLeave += new System.EventHandler(this.RemoveBorder);
             // 
             // CNAHSPnl
             // 
@@ -313,7 +299,6 @@
             this.CNAHSPnl.Size = new System.Drawing.Size(213, 210);
             this.CNAHSPnl.TabIndex = 6;
             this.CNAHSPnl.Click += new System.EventHandler(this.GoToCNAHS);
-            this.CNAHSPnl.MouseLeave += new System.EventHandler(this.RemoveBorder);
             // 
             // label11
             // 
@@ -328,7 +313,6 @@
             this.label11.Text = "College of Nursing and \r\nAllied Health Sciences";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label11.Click += new System.EventHandler(this.GoToCNAHS);
-            this.label11.MouseLeave += new System.EventHandler(this.RemoveBorder);
             // 
             // label12
             // 
@@ -343,7 +327,6 @@
             this.label12.Text = "CNAHS";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label12.Click += new System.EventHandler(this.GoToCNAHS);
-            this.label12.MouseLeave += new System.EventHandler(this.RemoveBorder);
             // 
             // CHKPnl
             // 
@@ -359,7 +342,6 @@
             this.CHKPnl.Size = new System.Drawing.Size(213, 210);
             this.CHKPnl.TabIndex = 7;
             this.CHKPnl.Click += new System.EventHandler(this.GoToCHK);
-            this.CHKPnl.MouseLeave += new System.EventHandler(this.RemoveBorder);
             // 
             // label13
             // 
@@ -374,7 +356,6 @@
             this.label13.Text = "College of Human\r\nKinetics";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label13.Click += new System.EventHandler(this.GoToCHK);
-            this.label13.MouseLeave += new System.EventHandler(this.RemoveBorder);
             // 
             // label14
             // 
@@ -389,7 +370,6 @@
             this.label14.Text = "CHK";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label14.Click += new System.EventHandler(this.GoToCHK);
-            this.label14.MouseLeave += new System.EventHandler(this.RemoveBorder);
             // 
             // COEPnl
             // 
@@ -405,7 +385,6 @@
             this.COEPnl.Size = new System.Drawing.Size(213, 210);
             this.COEPnl.TabIndex = 4;
             this.COEPnl.Click += new System.EventHandler(this.GoToCOE);
-            this.COEPnl.MouseLeave += new System.EventHandler(this.RemoveBorder);
             // 
             // label15
             // 
@@ -420,7 +399,6 @@
             this.label15.Text = "College of \r\nEngineering";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label15.Click += new System.EventHandler(this.GoToCOE);
-            this.label15.MouseLeave += new System.EventHandler(this.RemoveBorder);
             // 
             // label16
             // 
@@ -435,7 +413,6 @@
             this.label16.Text = "COE";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label16.Click += new System.EventHandler(this.GoToCOE);
-            this.label16.MouseLeave += new System.EventHandler(this.RemoveBorder);
             // 
             // label17
             // 
@@ -470,7 +447,6 @@
             this.COAPnl.Name = "COAPnl";
             this.COAPnl.Size = new System.Drawing.Size(213, 210);
             this.COAPnl.TabIndex = 5;
-            this.COAPnl.MouseLeave += new System.EventHandler(this.RemoveBorder);
             this.COAPnl.MouseHover += new System.EventHandler(this.GoToCOA);
             // 
             // guna2Panel1
@@ -486,7 +462,6 @@
             this.guna2Panel1.Size = new System.Drawing.Size(213, 210);
             this.guna2Panel1.TabIndex = 5;
             this.guna2Panel1.Click += new System.EventHandler(this.GoToCOA);
-            this.guna2Panel1.MouseLeave += new System.EventHandler(this.RemoveBorder);
             // 
             // label18
             // 
@@ -501,7 +476,6 @@
             this.label18.Text = "COA";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label18.Click += new System.EventHandler(this.GoToCOA);
-            this.label18.MouseLeave += new System.EventHandler(this.RemoveBorder);
             // 
             // label19
             // 
@@ -516,7 +490,6 @@
             this.label19.Text = "College of \r\nAccountancy";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label19.Click += new System.EventHandler(this.GoToCOA);
-            this.label19.MouseLeave += new System.EventHandler(this.RemoveBorder);
             // 
             // guna2CirclePictureBox1
             // 
@@ -532,7 +505,6 @@
             this.guna2CirclePictureBox1.TabStop = false;
             this.guna2CirclePictureBox1.UseTransparentBackground = true;
             this.guna2CirclePictureBox1.Click += new System.EventHandler(this.GoToCOA);
-            this.guna2CirclePictureBox1.MouseLeave += new System.EventHandler(this.RemoveBorder);
             // 
             // guna2CirclePictureBox5
             // 
@@ -548,7 +520,6 @@
             this.guna2CirclePictureBox5.TabStop = false;
             this.guna2CirclePictureBox5.UseTransparentBackground = true;
             this.guna2CirclePictureBox5.Click += new System.EventHandler(this.GoToCTHM);
-            this.guna2CirclePictureBox5.MouseLeave += new System.EventHandler(this.RemoveBorder);
             // 
             // guna2CirclePictureBox4
             // 
@@ -564,7 +535,6 @@
             this.guna2CirclePictureBox4.TabStop = false;
             this.guna2CirclePictureBox4.UseTransparentBackground = true;
             this.guna2CirclePictureBox4.Click += new System.EventHandler(this.GoToCCST);
-            this.guna2CirclePictureBox4.MouseLeave += new System.EventHandler(this.RemoveBorder);
             // 
             // guna2CirclePictureBox6
             // 
@@ -580,7 +550,6 @@
             this.guna2CirclePictureBox6.TabStop = false;
             this.guna2CirclePictureBox6.UseTransparentBackground = true;
             this.guna2CirclePictureBox6.Click += new System.EventHandler(this.GoToCNAHS);
-            this.guna2CirclePictureBox6.MouseLeave += new System.EventHandler(this.RemoveBorder);
             // 
             // guna2CirclePictureBox3
             // 
@@ -596,7 +565,6 @@
             this.guna2CirclePictureBox3.TabStop = false;
             this.guna2CirclePictureBox3.UseTransparentBackground = true;
             this.guna2CirclePictureBox3.Click += new System.EventHandler(this.GoToCBA);
-            this.guna2CirclePictureBox3.MouseLeave += new System.EventHandler(this.RemoveBorder);
             // 
             // guna2CirclePictureBox7
             // 
@@ -612,7 +580,6 @@
             this.guna2CirclePictureBox7.TabStop = false;
             this.guna2CirclePictureBox7.UseTransparentBackground = true;
             this.guna2CirclePictureBox7.Click += new System.EventHandler(this.GoToCHK);
-            this.guna2CirclePictureBox7.MouseLeave += new System.EventHandler(this.RemoveBorder);
             // 
             // guna2CirclePictureBox2
             // 
@@ -628,7 +595,6 @@
             this.guna2CirclePictureBox2.TabStop = false;
             this.guna2CirclePictureBox2.UseTransparentBackground = true;
             this.guna2CirclePictureBox2.Click += new System.EventHandler(this.GoToCAS);
-            this.guna2CirclePictureBox2.MouseLeave += new System.EventHandler(this.RemoveBorder);
             // 
             // guna2CirclePictureBox8
             // 
@@ -644,7 +610,6 @@
             this.guna2CirclePictureBox8.TabStop = false;
             this.guna2CirclePictureBox8.UseTransparentBackground = true;
             this.guna2CirclePictureBox8.Click += new System.EventHandler(this.GoToCOE);
-            this.guna2CirclePictureBox8.MouseLeave += new System.EventHandler(this.RemoveBorder);
             // 
             // Department
             // 

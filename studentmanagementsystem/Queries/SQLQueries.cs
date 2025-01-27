@@ -23,7 +23,7 @@ namespace studentmanagementsystem.Queries
             using (var connection = new MySqlConnection(stringConnection))
             {
                 connection.Open();
-                string query = "SELECT DISTINCT Student_ID, Student_Name, Age, Sex, Birthdate, Address, Email, Phone_Number, YearLevel, Section, Program, Department, Status FROM Student_Information; ";
+                string query = "SELECT DISTINCT Student_ID, Student_Name, Age, Sex, Birthdate, Address, Email, Phone_Number, YearLevel, Section, Program, Department, Status FROM Student_Information ";
                 if (Department != "All")
                 {
                     query += "WHERE Department = @Department ";
@@ -129,7 +129,7 @@ namespace studentmanagementsystem.Queries
             {
                 // SQL query divided into smaller parts for better readability
                 string query = @"
-                SELECT * FROM Personal_Information
+                SELECT DISTINCT Student_ID, Student_Name, Age, Sex, Birthdate, Address, Email, Phone_Number, YearLevel, Section, Program, Department, Status FROM Student_Information 
                 WHERE 
                 (Student_ID LIKE @search) OR
                 (Student_Name LIKE @search) OR
@@ -165,7 +165,7 @@ namespace studentmanagementsystem.Queries
             {
                 connection.Open();
                 string query = "SELECT DISTINCT Student_ID, Student_Name, Age, Sex, Birthdate, Address, Email, Phone_Number, YearLevel, Section, Program, Department, Status FROM Student_Information " + 
-                                "WHERE ID = @id";
+                                "WHERE Student_ID = @id;";
 
                 using (var command = new MySqlCommand(query, connection))
                 {
@@ -173,20 +173,25 @@ namespace studentmanagementsystem.Queries
                     command.ExecuteNonQuery();
                     using (var reader = command.ExecuteReader()) 
                     {
-                        reader.Read();
-                        records[0] = reader["Student_ID"].ToString() ?? "Null";
-                        records[1] = reader["Student_Name"].ToString() ?? "Null";
-                        records[2] = reader["Age"].ToString() ?? "Null";
-                        records[3] = reader["Sex"].ToString() ?? "Null";
-                        records[4] = reader["Birthdate"].ToString() ?? "Null";
-                        records[5] = reader["Address"].ToString() ?? "Null";
-                        records[6] = reader["Email"].ToString() ?? "Null";
-                        records[7] = reader["Phone_Number"].ToString() ?? "Null";
-                        records[8] = reader["YearLevel"].ToString() ?? "Null";
-                        records[9] = reader["Section"].ToString() ?? "Null";
-                        records[10] = reader["Program"].ToString() ?? "Null";
-                        records[11] = reader["Department"].ToString() ?? "Null";
-                        records[12] = reader["Status"].ToString() ?? "Null";
+                        while (reader.Read())
+                        {
+                            //if (id == reader["Student_ID"].ToString())
+                            //{
+                                records[0] = reader["Student_ID"].ToString() ?? "Null";
+                                records[1] = reader["Student_Name"].ToString() ?? "Null";
+                                records[2] = reader["Age"].ToString() ?? "Null";
+                                records[3] = reader["Sex"].ToString() ?? "Null";
+                                records[4] = reader["Birthdate"].ToString() ?? "Null";
+                                records[5] = reader["Address"].ToString() ?? "Null";
+                                records[6] = reader["Email"].ToString() ?? "Null";
+                                records[7] = reader["Phone_Number"].ToString() ?? "Null";
+                                records[8] = reader["YearLevel"].ToString() ?? "Null";
+                                records[9] = reader["Section"].ToString() ?? "Null";
+                                records[10] = reader["Program"].ToString() ?? "Null";
+                                records[11] = reader["Department"].ToString() ?? "Null";
+                                records[12] = reader["Status"].ToString() ?? "Null";
+                            //}
+                        }
                     }
                 }
             }
@@ -245,6 +250,65 @@ namespace studentmanagementsystem.Queries
                 }
             }
             return records;
+        }
+
+        public DataTable LoadDepartmentCourses(string department)
+        {
+            DataTable dataTable = new DataTable();
+            using (var connection = new MySqlConnection(stringConnection))
+            {
+                connection.Open();
+                string query = @"
+                    SELECT DISTINCT 
+                        c.Course_Code,
+                        c.Course_Name,
+                        c.Units
+                    FROM 
+                        Student_Information AS si
+                    JOIN 
+                        Courses AS c 
+                        ON c.course_id = si.course_id
+                    WHERE
+                        si.Department = @department;
+                ";
+
+
+
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@department", department);
+                    command.ExecuteNonQuery();
+                    using (var adapter = new MySqlDataAdapter(command))
+                    {
+                        adapter.Fill(dataTable);
+                    }
+                }
+            }
+            return dataTable;
+        }
+
+        public void Delete_StudentInformation(string id)
+        {
+            string query = "DELETE FROM student_information WHERE Student_ID = @id;";
+
+
+            try
+            {
+                using (var connection = new MySqlConnection(stringConnection))
+                {
+                    connection.Open();
+                    using (MySqlCommand command = new MySqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@id", id);
+                        command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
     }
 }

@@ -28,25 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.SearchBtn = new Guna.UI2.WinForms.Guna2Button();
             this.SearchInput = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.AddRecordBtn = new Guna.UI2.WinForms.Guna2Button();
             this.DeleteRecordBtn = new Guna.UI2.WinForms.Guna2Button();
             this.UpdateRecordBtn = new Guna.UI2.WinForms.Guna2Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.DataManagement_GridView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.DataManagement_GridView)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.GridColor = System.Drawing.Color.Black;
-            this.dataGridView1.Location = new System.Drawing.Point(19, 118);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1008, 495);
-            this.dataGridView1.TabIndex = 4;
             // 
             // SearchBtn
             // 
@@ -146,6 +136,7 @@
             this.DeleteRecordBtn.Size = new System.Drawing.Size(92, 36);
             this.DeleteRecordBtn.TabIndex = 74;
             this.DeleteRecordBtn.Text = "Delete";
+            this.DeleteRecordBtn.Click += new System.EventHandler(this.DeleteRecordBtn_Click);
             // 
             // UpdateRecordBtn
             // 
@@ -167,36 +158,45 @@
             this.UpdateRecordBtn.Text = "Update";
             this.UpdateRecordBtn.Click += new System.EventHandler(this.UpdateRecordBtn_Click);
             // 
+            // DataManagement_GridView
+            // 
+            this.DataManagement_GridView.AllowUserToOrderColumns = true;
+            this.DataManagement_GridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.DataManagement_GridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataManagement_GridView.Location = new System.Drawing.Point(22, 130);
+            this.DataManagement_GridView.Name = "DataManagement_GridView";
+            this.DataManagement_GridView.Size = new System.Drawing.Size(1002, 418);
+            this.DataManagement_GridView.TabIndex = 77;
+            // 
             // Manage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1047, 633);
+            this.Controls.Add(this.DataManagement_GridView);
             this.Controls.Add(this.UpdateRecordBtn);
             this.Controls.Add(this.DeleteRecordBtn);
             this.Controls.Add(this.AddRecordBtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.SearchBtn);
             this.Controls.Add(this.SearchInput);
-            this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Manage";
             this.Text = "Manage";
             this.Load += new System.EventHandler(this.Manage_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataManagement_GridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
         private Guna.UI2.WinForms.Guna2Button SearchBtn;
         private Guna.UI2.WinForms.Guna2TextBox SearchInput;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Button AddRecordBtn;
         private Guna.UI2.WinForms.Guna2Button DeleteRecordBtn;
         private Guna.UI2.WinForms.Guna2Button UpdateRecordBtn;
+        private System.Windows.Forms.DataGridView DataManagement_GridView;
     }
 }
