@@ -35,6 +35,7 @@
             this.DeleteRecordBtn = new Guna.UI2.WinForms.Guna2Button();
             this.UpdateRecordBtn = new Guna.UI2.WinForms.Guna2Button();
             this.DataManagement_GridView = new System.Windows.Forms.DataGridView();
+            this.TotalRecords = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DataManagement_GridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,7 +88,6 @@
             this.SearchInput.SelectedText = "";
             this.SearchInput.Size = new System.Drawing.Size(265, 33);
             this.SearchInput.TabIndex = 69;
-            this.SearchInput.TextChanged += new System.EventHandler(this.guna2TextBox2_TextChanged);
             // 
             // label1
             // 
@@ -163,16 +163,28 @@
             this.DataManagement_GridView.AllowUserToOrderColumns = true;
             this.DataManagement_GridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.DataManagement_GridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataManagement_GridView.Location = new System.Drawing.Point(22, 130);
+            this.DataManagement_GridView.Location = new System.Drawing.Point(12, 116);
             this.DataManagement_GridView.Name = "DataManagement_GridView";
-            this.DataManagement_GridView.Size = new System.Drawing.Size(1002, 418);
+            this.DataManagement_GridView.Size = new System.Drawing.Size(1023, 461);
             this.DataManagement_GridView.TabIndex = 77;
+            // 
+            // TotalRecords
+            // 
+            this.TotalRecords.AutoSize = true;
+            this.TotalRecords.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalRecords.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.TotalRecords.Location = new System.Drawing.Point(755, 588);
+            this.TotalRecords.Name = "TotalRecords";
+            this.TotalRecords.Size = new System.Drawing.Size(73, 30);
+            this.TotalRecords.TabIndex = 78;
+            this.TotalRecords.Text = "Total: ";
             // 
             // Manage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1047, 633);
+            this.Controls.Add(this.TotalRecords);
             this.Controls.Add(this.DataManagement_GridView);
             this.Controls.Add(this.UpdateRecordBtn);
             this.Controls.Add(this.DeleteRecordBtn);
@@ -197,6 +209,7 @@
         private Guna.UI2.WinForms.Guna2Button AddRecordBtn;
         private Guna.UI2.WinForms.Guna2Button DeleteRecordBtn;
         private Guna.UI2.WinForms.Guna2Button UpdateRecordBtn;
-        private System.Windows.Forms.DataGridView DataManagement_GridView;
+        public System.Windows.Forms.DataGridView DataManagement_GridView;
+        private System.Windows.Forms.Label TotalRecords;
     }
 }

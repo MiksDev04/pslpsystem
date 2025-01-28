@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.AddUpdateProgressBar = new System.Windows.Forms.ProgressBar();
             this.NextToSuccessBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.CancelBtn = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -71,24 +71,25 @@
             this.NextToSuccessBtn.Text = "Submit";
             this.NextToSuccessBtn.Click += new System.EventHandler(this.NextToSuccessBtn_Click);
             // 
-            // guna2Button2
+            // CancelBtn
             // 
-            this.guna2Button2.Animated = true;
-            this.guna2Button2.AutoRoundedCorners = true;
-            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.BorderRadius = 17;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(21)))), ((int)(((byte)(27)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(776, 444);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(92, 36);
-            this.guna2Button2.TabIndex = 171;
-            this.guna2Button2.Text = "Cancel";
+            this.CancelBtn.Animated = true;
+            this.CancelBtn.AutoRoundedCorners = true;
+            this.CancelBtn.BackColor = System.Drawing.Color.Transparent;
+            this.CancelBtn.BorderRadius = 17;
+            this.CancelBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.CancelBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.CancelBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.CancelBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.CancelBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(21)))), ((int)(((byte)(27)))));
+            this.CancelBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelBtn.ForeColor = System.Drawing.Color.White;
+            this.CancelBtn.Location = new System.Drawing.Point(776, 444);
+            this.CancelBtn.Name = "CancelBtn";
+            this.CancelBtn.Size = new System.Drawing.Size(92, 36);
+            this.CancelBtn.TabIndex = 171;
+            this.CancelBtn.Text = "Cancel";
+            this.CancelBtn.Click += new System.EventHandler(this.CancelBtn_Click);
             // 
             // label2
             // 
@@ -190,7 +191,7 @@
             this.Controls.Add(this.SkillSets);
             this.Controls.Add(this.AddUpdateProgressBar);
             this.Controls.Add(this.NextToSuccessBtn);
-            this.Controls.Add(this.guna2Button2);
+            this.Controls.Add(this.CancelBtn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -209,7 +210,7 @@
 
         private System.Windows.Forms.ProgressBar AddUpdateProgressBar;
         private Guna.UI2.WinForms.Guna2Button NextToSuccessBtn;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button CancelBtn;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel1;

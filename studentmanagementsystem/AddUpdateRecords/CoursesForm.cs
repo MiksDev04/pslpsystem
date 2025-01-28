@@ -95,5 +95,10 @@ namespace studentmanagementsystem.AddUpdateRecords
             SkillsForm skills = new SkillsForm(personalInformation, CourseCodes, CourseDescriptions, Times, Days, Units);
             skills.Show();
         }
+
+        private void CancelBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

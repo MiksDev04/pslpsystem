@@ -29,7 +29,6 @@ namespace studentmanagementsystem.content
             {
                 sex = "Female";
             }
-
             string status = "";
             if (Regular.Checked)
             {
@@ -45,15 +44,16 @@ namespace studentmanagementsystem.content
             personalInformation[1] = FullName.Text;
             personalInformation[2] = Age.Text;
             personalInformation[3] = sex;
-            personalInformation[4] = Birthdate.Text;
+            personalInformation[4] = BirthDate.Value.ToString();
             personalInformation[5] = Address.Text;
             personalInformation[6] = Email.Text;
             personalInformation[7] = Phone.Text;
-            personalInformation[8] = YearLevel.Text;
+            personalInformation[8] = YearLevel.SelectedItem?.ToString() ?? "N/A";
             personalInformation[9] = Section.Text;
             personalInformation[10] = Program.Text;
-            personalInformation[11] = Department.Text;
+            personalInformation[11] = Department.SelectedItem?.ToString() ?? "N/A";
             personalInformation[12] = status;
+
            
             CoursesForm courses = new CoursesForm(personalInformation);
             this.Hide();
@@ -69,6 +69,11 @@ namespace studentmanagementsystem.content
         {
             AddUpdateProgressBar.Value = 5;
 
+        }
+
+        private void CancelBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

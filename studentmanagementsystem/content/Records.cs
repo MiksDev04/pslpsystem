@@ -40,7 +40,10 @@ namespace studentmanagementsystem.content
                 string sex = StudentSex.SelectedItem.ToString();
                 string status = StudentStatus.SelectedItem.ToString();
                 PersonalInformationRecords.DataSource = queries.LoadDBContent(department, yearLevel, program, sex, status);
-            } catch(Exception ex)
+                ulong totalrecords = queries.ToTalRecords(department, yearLevel, program, sex, status);
+                TotalRecords.Text = "Total Records: " + totalrecords.ToString();
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -147,8 +150,9 @@ namespace studentmanagementsystem.content
                 string id = PersonalInformationRecords.SelectedRows[0].Cells[0].Value.ToString();
                 string[] studentRecords = queries.ViewStudentInformation(id);
                 DataTable courseRecords = queries.ViewCourseInformation(id);
-                List<string> skillRecords = queries.ViewSkillInformation(id);
+                string skillRecords = queries.ViewSkillInformation(id);
                 ViewRecord viewRecord = new ViewRecord(studentRecords, courseRecords, skillRecords);
+
                 viewRecord.Show();
             } catch(Exception ex)
             {

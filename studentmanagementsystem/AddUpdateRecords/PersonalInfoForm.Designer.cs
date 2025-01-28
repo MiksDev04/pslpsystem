@@ -31,13 +31,12 @@
             this.components = new System.ComponentModel.Container();
             this.label2 = new System.Windows.Forms.Label();
             this.NextToCourseInfo = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.CancelBtn = new Guna.UI2.WinForms.Guna2Button();
             this.StudentID = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.FullName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.Birthdate = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.Age = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -51,11 +50,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.Phone = new Guna.UI2.WinForms.Guna2TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.YearLevel = new Guna.UI2.WinForms.Guna2TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.Program = new Guna.UI2.WinForms.Guna2TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.Department = new Guna.UI2.WinForms.Guna2TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.Address = new Guna.UI2.WinForms.Guna2TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -65,6 +62,9 @@
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.label13 = new System.Windows.Forms.Label();
             this.Section = new Guna.UI2.WinForms.Guna2TextBox();
+            this.BirthDate = new System.Windows.Forms.DateTimePicker();
+            this.Department = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.YearLevel = new Guna.UI2.WinForms.Guna2ComboBox();
             this.Status.SuspendLayout();
             this.Sex.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -102,24 +102,25 @@
             this.NextToCourseInfo.Text = "Next";
             this.NextToCourseInfo.Click += new System.EventHandler(this.NextToCourseInfo_Click);
             // 
-            // guna2Button2
+            // CancelBtn
             // 
-            this.guna2Button2.Animated = true;
-            this.guna2Button2.AutoRoundedCorners = true;
-            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.BorderRadius = 17;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(21)))), ((int)(((byte)(27)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(777, 444);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(92, 36);
-            this.guna2Button2.TabIndex = 113;
-            this.guna2Button2.Text = "Cancel";
+            this.CancelBtn.Animated = true;
+            this.CancelBtn.AutoRoundedCorners = true;
+            this.CancelBtn.BackColor = System.Drawing.Color.Transparent;
+            this.CancelBtn.BorderRadius = 17;
+            this.CancelBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.CancelBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.CancelBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.CancelBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.CancelBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(21)))), ((int)(((byte)(27)))));
+            this.CancelBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelBtn.ForeColor = System.Drawing.Color.White;
+            this.CancelBtn.Location = new System.Drawing.Point(777, 444);
+            this.CancelBtn.Name = "CancelBtn";
+            this.CancelBtn.Size = new System.Drawing.Size(92, 36);
+            this.CancelBtn.TabIndex = 113;
+            this.CancelBtn.Text = "Cancel";
+            this.CancelBtn.Click += new System.EventHandler(this.CancelBtn_Click);
             // 
             // StudentID
             // 
@@ -196,29 +197,6 @@
             this.label4.Size = new System.Drawing.Size(78, 21);
             this.label4.TabIndex = 120;
             this.label4.Text = "Birthdate";
-            // 
-            // Birthdate
-            // 
-            this.Birthdate.Animated = true;
-            this.Birthdate.BorderRadius = 7;
-            this.Birthdate.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Birthdate.DefaultText = "";
-            this.Birthdate.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.Birthdate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.Birthdate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Birthdate.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Birthdate.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Birthdate.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.Birthdate.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Birthdate.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Birthdate.Location = new System.Drawing.Point(38, 243);
-            this.Birthdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Birthdate.Name = "Birthdate";
-            this.Birthdate.PasswordChar = '\0';
-            this.Birthdate.PlaceholderText = "12-25-01";
-            this.Birthdate.SelectedText = "";
-            this.Birthdate.Size = new System.Drawing.Size(229, 38);
-            this.Birthdate.TabIndex = 119;
             // 
             // label5
             // 
@@ -437,29 +415,6 @@
             this.label8.TabIndex = 134;
             this.label8.Text = "Year Level";
             // 
-            // YearLevel
-            // 
-            this.YearLevel.Animated = true;
-            this.YearLevel.BorderRadius = 7;
-            this.YearLevel.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.YearLevel.DefaultText = "";
-            this.YearLevel.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.YearLevel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.YearLevel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.YearLevel.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.YearLevel.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.YearLevel.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.YearLevel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.YearLevel.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.YearLevel.Location = new System.Drawing.Point(338, 243);
-            this.YearLevel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.YearLevel.Name = "YearLevel";
-            this.YearLevel.PasswordChar = '\0';
-            this.YearLevel.PlaceholderText = "2";
-            this.YearLevel.SelectedText = "";
-            this.YearLevel.Size = new System.Drawing.Size(229, 38);
-            this.YearLevel.TabIndex = 133;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -502,29 +457,6 @@
             this.label10.Size = new System.Drawing.Size(98, 21);
             this.label10.TabIndex = 140;
             this.label10.Text = "Department";
-            // 
-            // Department
-            // 
-            this.Department.Animated = true;
-            this.Department.BorderRadius = 7;
-            this.Department.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Department.DefaultText = "";
-            this.Department.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.Department.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.Department.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Department.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Department.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Department.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.Department.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Department.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Department.Location = new System.Drawing.Point(630, 91);
-            this.Department.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Department.Name = "Department";
-            this.Department.PasswordChar = '\0';
-            this.Department.PlaceholderText = "CCST";
-            this.Department.SelectedText = "";
-            this.Department.Size = new System.Drawing.Size(229, 38);
-            this.Department.TabIndex = 139;
             // 
             // label11
             // 
@@ -647,22 +579,78 @@
             this.Section.Size = new System.Drawing.Size(229, 38);
             this.Section.TabIndex = 171;
             // 
+            // BirthDate
+            // 
+            this.BirthDate.Location = new System.Drawing.Point(38, 252);
+            this.BirthDate.Name = "BirthDate";
+            this.BirthDate.Size = new System.Drawing.Size(200, 20);
+            this.BirthDate.TabIndex = 173;
+            // 
+            // Department
+            // 
+            this.Department.BackColor = System.Drawing.Color.Transparent;
+            this.Department.BorderRadius = 7;
+            this.Department.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.Department.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Department.FillColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Department.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Department.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Department.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Department.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Department.ItemHeight = 30;
+            this.Department.Items.AddRange(new object[] {
+            "COA",
+            "CAS",
+            "CBA",
+            "CCST",
+            "COE",
+            "CHK",
+            "CNAHS",
+            "CTHM"});
+            this.Department.Location = new System.Drawing.Point(630, 93);
+            this.Department.Name = "Department";
+            this.Department.Size = new System.Drawing.Size(229, 36);
+            this.Department.TabIndex = 174;
+            // 
+            // YearLevel
+            // 
+            this.YearLevel.BackColor = System.Drawing.Color.Transparent;
+            this.YearLevel.BorderRadius = 10;
+            this.YearLevel.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.YearLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.YearLevel.FillColor = System.Drawing.SystemColors.ControlLightLight;
+            this.YearLevel.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.YearLevel.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.YearLevel.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.YearLevel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.YearLevel.ItemHeight = 30;
+            this.YearLevel.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.YearLevel.Location = new System.Drawing.Point(338, 243);
+            this.YearLevel.Name = "YearLevel";
+            this.YearLevel.Size = new System.Drawing.Size(229, 36);
+            this.YearLevel.TabIndex = 175;
+            // 
             // PersonalInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 500);
+            this.Controls.Add(this.YearLevel);
+            this.Controls.Add(this.Department);
+            this.Controls.Add(this.BirthDate);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.Section);
             this.Controls.Add(this.AddUpdateProgressBar);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.Department);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.Address);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.Program);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.YearLevel);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.Phone);
             this.Controls.Add(this.Sex);
@@ -672,13 +660,12 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.Age);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.Birthdate);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.FullName);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.StudentID);
             this.Controls.Add(this.NextToCourseInfo);
-            this.Controls.Add(this.guna2Button2);
+            this.Controls.Add(this.CancelBtn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -700,13 +687,12 @@
         #endregion
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2Button NextToCourseInfo;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button CancelBtn;
         private Guna.UI2.WinForms.Guna2TextBox StudentID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2TextBox FullName;
         private System.Windows.Forms.Label label4;
-        private Guna.UI2.WinForms.Guna2TextBox Birthdate;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2TextBox Age;
         private System.Windows.Forms.Label label6;
@@ -720,11 +706,9 @@
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2TextBox Phone;
         private System.Windows.Forms.Label label8;
-        private Guna.UI2.WinForms.Guna2TextBox YearLevel;
         private System.Windows.Forms.Label label9;
         private Guna.UI2.WinForms.Guna2TextBox Program;
         private System.Windows.Forms.Label label10;
-        private Guna.UI2.WinForms.Guna2TextBox Department;
         private System.Windows.Forms.Label label11;
         private Guna.UI2.WinForms.Guna2TextBox Address;
         private System.Windows.Forms.Label label12;
@@ -734,5 +718,8 @@
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private System.Windows.Forms.Label label13;
         private Guna.UI2.WinForms.Guna2TextBox Section;
+        private System.Windows.Forms.DateTimePicker BirthDate;
+        private Guna.UI2.WinForms.Guna2ComboBox Department;
+        private Guna.UI2.WinForms.Guna2ComboBox YearLevel;
     }
 }

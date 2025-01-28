@@ -14,8 +14,8 @@ namespace studentmanagementsystem.content
     {
         private string[] studentRecord; 
         private DataTable courseRecord;
-        private List<string> skillRecord;
-        public ViewRecord(string[] studentRecord, DataTable courseRecord, List<string> skillRecord)
+        private string skillRecord;
+        public ViewRecord(string[] studentRecord, DataTable courseRecord,string skillRecord)
         {
             InitializeComponent();
             this.studentRecord = studentRecord;
@@ -39,7 +39,7 @@ namespace studentmanagementsystem.content
             Department.Text += studentRecord[11];
             Status.Text += studentRecord[12];
             ViewCourseInformation.DataSource = courseRecord;
-            SkillSets.Text = string.Join(", ", skillRecord);
+            SkillSets.Text = skillRecord;
         }
 
         private void ExitBtn_Click(object sender, EventArgs e)

@@ -8,31 +8,31 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Utilities.Encoders;
 using studentmanagementsystem.Queries;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace studentmanagementsystem.content
 {
     public partial class Manage : Form
     {
+        public static DataGridView dataGrid;
+        public static Label totalrecords;
         public Manage()
         {
             InitializeComponent();
+            dataGrid = this.DataManagement_GridView;
+            totalrecords = this.TotalRecords;
         }
         SQLQueries queries = new SQLQueries();
         private void Manage_Load(object sender, EventArgs e)
         {
             DataManagement_GridView.DataSource = queries.LoadDBContent("All", "All", "All", "All", "All");
+            ulong totalrecords = queries.ToTalRecords("All", "All", "All", "All", "All");
+            TotalRecords.Text = "Total Records: " + totalrecords.ToString();
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2TextBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+  
 
         private void AddRecordBtn_Click(object sender, EventArgs e)
         {
@@ -46,10 +46,7 @@ namespace studentmanagementsystem.content
             personalInfo.Show();
         }
 
-        private void PersonalInformationRecords_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+  
 
         private void DeleteRecordBtn_Click(object sender, EventArgs e)
         {

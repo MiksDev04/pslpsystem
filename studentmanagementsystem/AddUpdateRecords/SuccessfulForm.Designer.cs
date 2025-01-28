@@ -71,9 +71,9 @@
             this.label12.ForeColor = System.Drawing.SystemColors.Control;
             this.label12.Location = new System.Drawing.Point(33, 9);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(191, 30);
+            this.label12.Size = new System.Drawing.Size(161, 30);
             this.label12.TabIndex = 141;
-            this.label12.Text = "Update Successful";
+            this.label12.Text = "Add Successful";
             // 
             // guna2BorderlessForm1
             // 
