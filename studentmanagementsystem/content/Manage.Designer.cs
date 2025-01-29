@@ -32,10 +32,11 @@
             this.SearchInput = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.AddRecordBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.DeleteRecordBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.ArchieveRecordBtn = new Guna.UI2.WinForms.Guna2Button();
             this.UpdateRecordBtn = new Guna.UI2.WinForms.Guna2Button();
             this.DataManagement_GridView = new System.Windows.Forms.DataGridView();
             this.TotalRecords = new System.Windows.Forms.Label();
+            this.ViewStudentState = new Guna.UI2.WinForms.Guna2ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.DataManagement_GridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -118,25 +119,25 @@
             this.AddRecordBtn.Text = "Add";
             this.AddRecordBtn.Click += new System.EventHandler(this.AddRecordBtn_Click);
             // 
-            // DeleteRecordBtn
+            // ArchieveRecordBtn
             // 
-            this.DeleteRecordBtn.Animated = true;
-            this.DeleteRecordBtn.AutoRoundedCorners = true;
-            this.DeleteRecordBtn.BackColor = System.Drawing.Color.Transparent;
-            this.DeleteRecordBtn.BorderRadius = 17;
-            this.DeleteRecordBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.DeleteRecordBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.DeleteRecordBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.DeleteRecordBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.DeleteRecordBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(21)))), ((int)(((byte)(27)))));
-            this.DeleteRecordBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteRecordBtn.ForeColor = System.Drawing.Color.White;
-            this.DeleteRecordBtn.Location = new System.Drawing.Point(932, 62);
-            this.DeleteRecordBtn.Name = "DeleteRecordBtn";
-            this.DeleteRecordBtn.Size = new System.Drawing.Size(92, 36);
-            this.DeleteRecordBtn.TabIndex = 74;
-            this.DeleteRecordBtn.Text = "Delete";
-            this.DeleteRecordBtn.Click += new System.EventHandler(this.DeleteRecordBtn_Click);
+            this.ArchieveRecordBtn.Animated = true;
+            this.ArchieveRecordBtn.AutoRoundedCorners = true;
+            this.ArchieveRecordBtn.BackColor = System.Drawing.Color.Transparent;
+            this.ArchieveRecordBtn.BorderRadius = 17;
+            this.ArchieveRecordBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.ArchieveRecordBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.ArchieveRecordBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.ArchieveRecordBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.ArchieveRecordBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(21)))), ((int)(((byte)(27)))));
+            this.ArchieveRecordBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ArchieveRecordBtn.ForeColor = System.Drawing.Color.White;
+            this.ArchieveRecordBtn.Location = new System.Drawing.Point(932, 62);
+            this.ArchieveRecordBtn.Name = "ArchieveRecordBtn";
+            this.ArchieveRecordBtn.Size = new System.Drawing.Size(92, 36);
+            this.ArchieveRecordBtn.TabIndex = 74;
+            this.ArchieveRecordBtn.Text = "Archive";
+            this.ArchieveRecordBtn.Click += new System.EventHandler(this.ArchiveRecordBtn_Click);
             // 
             // UpdateRecordBtn
             // 
@@ -179,15 +180,37 @@
             this.TotalRecords.TabIndex = 78;
             this.TotalRecords.Text = "Total: ";
             // 
+            // ViewStudentState
+            // 
+            this.ViewStudentState.BackColor = System.Drawing.Color.Transparent;
+            this.ViewStudentState.BorderRadius = 7;
+            this.ViewStudentState.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ViewStudentState.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ViewStudentState.FillColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ViewStudentState.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ViewStudentState.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ViewStudentState.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.ViewStudentState.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ViewStudentState.ItemHeight = 30;
+            this.ViewStudentState.Items.AddRange(new object[] {
+            "Active",
+            "Archieved"});
+            this.ViewStudentState.Location = new System.Drawing.Point(12, 588);
+            this.ViewStudentState.Name = "ViewStudentState";
+            this.ViewStudentState.Size = new System.Drawing.Size(229, 36);
+            this.ViewStudentState.TabIndex = 175;
+            this.ViewStudentState.SelectedValueChanged += new System.EventHandler(this.ViewStudentState_SelectedValueChanged);
+            // 
             // Manage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1047, 633);
+            this.Controls.Add(this.ViewStudentState);
             this.Controls.Add(this.TotalRecords);
             this.Controls.Add(this.DataManagement_GridView);
             this.Controls.Add(this.UpdateRecordBtn);
-            this.Controls.Add(this.DeleteRecordBtn);
+            this.Controls.Add(this.ArchieveRecordBtn);
             this.Controls.Add(this.AddRecordBtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.SearchBtn);
@@ -207,9 +230,10 @@
         private Guna.UI2.WinForms.Guna2TextBox SearchInput;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Button AddRecordBtn;
-        private Guna.UI2.WinForms.Guna2Button DeleteRecordBtn;
+        private Guna.UI2.WinForms.Guna2Button ArchieveRecordBtn;
         private Guna.UI2.WinForms.Guna2Button UpdateRecordBtn;
         public System.Windows.Forms.DataGridView DataManagement_GridView;
         private System.Windows.Forms.Label TotalRecords;
+        private Guna.UI2.WinForms.Guna2ComboBox ViewStudentState;
     }
 }

@@ -15,25 +15,20 @@ namespace studentmanagementsystem.AddUpdateRecords
     public partial class SkillsForm : Form
     {
         string[] personalInformation;
-        string[] CourseCodes;
-        string[] CourseDescriptions;
-        string[] Times;
-        string[] Days;
-        string[] Units;
-        public SkillsForm(string[] personalInformation, string[] CourseCodes, string[] CourseDescriptions, string[] Times, string[] Days, string[] Units)
+        List<List<string>> courseInfo;
+        string ID;
+        public SkillsForm(string[] personalInformation, List<List<string>> courseInfo, string ID)
         {
             InitializeComponent();
             this.personalInformation = personalInformation;
-            this.CourseCodes = CourseCodes;
-            this.CourseDescriptions = CourseDescriptions;
-            this.Times = Times;
-            this.Days = Days;
-            this.Units = Units;
+            this.courseInfo = courseInfo;
+            this.ID = ID;
         }
         SQLQueries queries = new SQLQueries();
         private void Skills_Load(object sender, EventArgs e)
         {
             AddUpdateProgressBar.Value = 70;
+            SkillSets.Text = queries.ReadSkillInformation(ID);
         }
 
         private void ExitBtn_Click(object sender, EventArgs e)
@@ -45,8 +40,19 @@ namespace studentmanagementsystem.AddUpdateRecords
 
         private void NextToSuccessBtn_Click(object sender, EventArgs e)
         {
+            if(ID == "")
+            {
+                AddRecordInformation();
+            } else
+            {
+                UpdateRecordInformation();
+            }
+        }
+        
+        private void AddRecordInformation()
+        {
             string skillSets = SkillSets.Text;
-            queries.AddStudentInformation(personalInformation, CourseCodes, CourseDescriptions, Times, Days, Units, skillSets);
+            queries.AddStudentInformation(personalInformation, courseInfo, skillSets);
             this.Hide();
             string id = personalInformation[0];
             try
@@ -61,9 +67,28 @@ namespace studentmanagementsystem.AddUpdateRecords
             {
                 MessageBox.Show(ex.Message);
             }
-
-
         }
+
+        private void UpdateRecordInformation()
+        {
+            string skillSets = SkillSets.Text;
+            queries.UpdateStudentInformation(personalInformation, courseInfo, skillSets, ID);
+            this.Hide();
+            string id = personalInformation[0];
+            try
+            {
+                string[] studentRecords = queries.ViewStudentInformation(id);
+                DataTable courseRecords = queries.ViewCourseInformation(id);
+                string skillRecords = queries.ViewSkillInformation(id);
+                SuccessfulForm successfulForm = new SuccessfulForm(studentRecords, courseRecords, skillRecords);
+                successfulForm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
 
         private void CancelBtn_Click(object sender, EventArgs e)
         {

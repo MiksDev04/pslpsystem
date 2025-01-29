@@ -27,8 +27,9 @@ namespace studentmanagementsystem.content
         SQLQueries queries = new SQLQueries();
         private void Manage_Load(object sender, EventArgs e)
         {
-            DataManagement_GridView.DataSource = queries.LoadDBContent("All", "All", "All", "All", "All");
-            ulong totalrecords = queries.ToTalRecords("All", "All", "All", "All", "All");
+            ViewStudentState.SelectedItem = "Active";
+            DataManagement_GridView.DataSource = queries.LoadDBContent("All", "All", "All", "All", "All", "Active");
+            ulong totalrecords = queries.ToTalRecords("All", "All", "All", "All", "All", "Active");
             TotalRecords.Text = "Total Records: " + totalrecords.ToString();
         }
 
@@ -36,19 +37,19 @@ namespace studentmanagementsystem.content
 
         private void AddRecordBtn_Click(object sender, EventArgs e)
         {
-            PersonalInfoForm personalInfo = new PersonalInfoForm();
+            PersonalInfoForm personalInfo = new PersonalInfoForm("");
             personalInfo.Show();
         }
 
         private void UpdateRecordBtn_Click(object sender, EventArgs e)
         {
-            PersonalInfoForm personalInfo = new PersonalInfoForm();
+            PersonalInfoForm personalInfo = new PersonalInfoForm(DataManagement_GridView.SelectedRows[0].Cells[0].Value.ToString());
             personalInfo.Show();
         }
 
   
 
-        private void DeleteRecordBtn_Click(object sender, EventArgs e)
+        private void ArchiveRecordBtn_Click(object sender, EventArgs e)
         {
             try
             {
@@ -57,8 +58,8 @@ namespace studentmanagementsystem.content
                     DialogResult = MessageBox.Show("Are you sure you want to permanently delete this record?", "Alert", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     if (DialogResult == DialogResult.Yes)
                     {
-                        queries.DeleteStudentInformation(DataManagement_GridView.SelectedRows[0].Cells[0].Value.ToString());
-                        DataManagement_GridView.DataSource = queries.LoadDBContent("All", "All", "All", "All", "All");
+                        queries.ArchiveStudentInformation(DataManagement_GridView.SelectedRows[0].Cells[0].Value.ToString());
+                        DataManagement_GridView.DataSource = queries.LoadDBContent("All", "All", "All", "All", "All", "Active");
                     }
                 }
             }
@@ -66,6 +67,15 @@ namespace studentmanagementsystem.content
             {
                 MessageBox.Show("Please select a row to delete", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void ViewStudentState_SelectedValueChanged(object sender, EventArgs e)
+        {
+            string State = ViewStudentState.SelectedItem.ToString();
+            DataManagement_GridView.DataSource = queries.LoadDBContent("All", "All", "All", "All", "All", State);
+            ulong totalrecords = queries.ToTalRecords("All", "All", "All", "All", "All", State);
+            TotalRecords.Text = "Total Records: " + totalrecords.ToString();
+
         }
     }
 }

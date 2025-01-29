@@ -39,8 +39,8 @@ namespace studentmanagementsystem.content
                 string program = StudentProgram.SelectedItem.ToString();
                 string sex = StudentSex.SelectedItem.ToString();
                 string status = StudentStatus.SelectedItem.ToString();
-                PersonalInformationRecords.DataSource = queries.LoadDBContent(department, yearLevel, program, sex, status);
-                ulong totalrecords = queries.ToTalRecords(department, yearLevel, program, sex, status);
+                PersonalInformationRecords.DataSource = queries.LoadDBContent(department, yearLevel, program, sex, status, "Active");
+                ulong totalrecords = queries.ToTalRecords(department, yearLevel, program, sex, status, "Active");
                 TotalRecords.Text = "Total Records: " + totalrecords.ToString();
             }
             catch (Exception ex)

@@ -48,8 +48,8 @@ namespace studentmanagementsystem.AddUpdateRecords
 
         private void FinishBtn_Click(object sender, EventArgs e)
         {
-            Manage.dataGrid.DataSource = queries.LoadDBContent("All", "All", "All", "All", "All");
-            ulong totalrecords = queries.ToTalRecords("All", "All", "All", "All", "All");
+            Manage.dataGrid.DataSource = queries.LoadDBContent("All", "All", "All", "All", "All", "Active");
+            ulong totalrecords = queries.ToTalRecords("All", "All", "All", "All", "All", "Active");
             Manage.totalrecords.Text = "Total Records: " + totalrecords.ToString();
             this.Hide();
         }
