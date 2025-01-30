@@ -16,5 +16,22 @@ namespace studentmanagementsystem.content
         {
             InitializeComponent();
         }
+
+        private void Profile_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Password_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Username_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 }

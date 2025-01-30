@@ -74,6 +74,9 @@ namespace studentmanagementsystem.content
             if (ViewStudentState.SelectedItem.ToString() == "Archived")
             {
                 RestoreStudentBtn.Visible = true;
+            } else
+            {
+                RestoreStudentBtn.Visible = false;
             }
             string State = ViewStudentState.SelectedItem.ToString();
             DataManagement_GridView.DataSource = queries.LoadDBContent("All", "All", "All", "All", "All", State);

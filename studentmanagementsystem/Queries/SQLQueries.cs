@@ -45,6 +45,63 @@ namespace studentmanagementsystem.Queries
             return dataTable;
         }
 
+        public DataTable LastAddedStudentRecords()
+        {
+            DataTable dataTable = new DataTable();
+            using (var connection = new MySqlConnection(stringConnection))
+            {
+                connection.Open();
+                string query = @"
+                    WITH RankedStudents AS (
+                        SELECT Student_ID, Student_Name, Age, Sex, Birthdate, 
+                               Address, Email, Phone_Number, YearLevel, Section, 
+                               Program, Department, Status,
+                               ROW_NUMBER() OVER (PARTITION BY Student_ID ORDER BY ID DESC) AS RowNum
+                        FROM Student_Information
+                    )
+                    SELECT Student_ID, Student_Name, Age, Sex, Birthdate, 
+                           Address, Email, Phone_Number, YearLevel, Section, 
+                           Program, Department, Status
+                    FROM RankedStudents WHERE RowNum = 1;
+
+                    ";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    using (var adapter = new MySqlDataAdapter(command))
+                    {
+                        adapter.Fill(dataTable);
+                    }
+                }
+            }
+            return dataTable;
+        }
+
+
+        public DataTable MostSkillfulStudent()
+        {
+            DataTable dataTable = new DataTable();
+            using (var connection = new MySqlConnection(stringConnection))
+            {
+                connection.Open();
+                string query = @"
+                SELECT DISTINCT si.Student_ID, si.Student_Name, si.Program, si.YearLevel, si.Section, si.Department, 
+                sk.Skill_Name
+                FROM Student_Information si
+                JOIN Skills sk ON si.skill_id = sk.skill_id
+                ORDER BY LENGTH(sk.Skill_Name) DESC
+                LIMIT 10;
+                    ";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    using (var adapter = new MySqlDataAdapter(command))
+                    {
+                        adapter.Fill(dataTable);
+                    }
+                }
+            }
+            return dataTable;
+        }
+
         private void FilterRecords(ref string query, ref string Department, ref string YearLevel, ref string Program, ref string Sex, ref string Status, ref string State)
         {
             if (Department != "All")
@@ -111,6 +168,47 @@ namespace studentmanagementsystem.Queries
                     command.Parameters.AddWithValue("@Sex", Sex);
                     command.Parameters.AddWithValue("@Status", Status);
                     command.Parameters.AddWithValue("@State", State);
+
+                    // Execute the query and get the total count of distinct records
+                    total = Convert.ToUInt64(command.ExecuteScalar());
+
+                }
+            }
+
+            return total;
+        }
+
+        public ulong TotalCourses(string department, string yearlevel, string program)
+        {
+            ulong total = 0;
+            using (var connection = new MySqlConnection(stringConnection))
+            {
+                connection.Open();
+
+                // Corrected query to count distinct combinations of columns
+                string query = @"
+                    SELECT COUNT(DISTINCT Course_Code, Course_Name, Units) 
+                    FROM 
+	                    student_information as si
+                    Join 
+	                    courses as c
+                    ON 
+	                    si.course_id = c.course_id
+                    WHERE si.Department = @Department ";
+                if (yearlevel != "All")
+                {
+                    query += "AND YearLevel = @YearLevel ";
+                }
+                if (program != "All")
+                {
+                    query += "AND Program = @Program ";
+                }
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    // Add parameters to the query
+                    command.Parameters.AddWithValue("@Department", department);
+                    command.Parameters.AddWithValue("@YearLevel", yearlevel);
+                    command.Parameters.AddWithValue("@Program", program);
 
                     // Execute the query and get the total count of distinct records
                     total = Convert.ToUInt64(command.ExecuteScalar());
@@ -519,7 +617,7 @@ namespace studentmanagementsystem.Queries
 
                 using (MySqlCommand getSkillCmd = new MySqlCommand(getSkillIdQuery, connection))
                 {
-                    getSkillCmd.Parameters.AddWithValue("@Student_ID", studentID.ToString());
+                    getSkillCmd.Parameters.AddWithValue("@Student_ID", personalInformation[0].ToString());
                     using (var reader = getSkillCmd.ExecuteReader())
                     {
                         while (reader.Read())
@@ -550,7 +648,7 @@ namespace studentmanagementsystem.Queries
                     List<int> courseIDArr = new List<int>();
                     using (MySqlCommand getCourseID = new MySqlCommand(courseID, connection))
                     {
-                        getCourseID.Parameters.AddWithValue("@Student_ID", studentID?.ToString());
+                        getCourseID.Parameters.AddWithValue("@Student_ID", personalInformation[0]?.ToString());
                         using (var reader = getCourseID.ExecuteReader())
                         {
                             while (reader.Read())

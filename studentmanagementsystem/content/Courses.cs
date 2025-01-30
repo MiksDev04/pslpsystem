@@ -36,7 +36,7 @@ namespace studentmanagementsystem.content
             {
                 DepartmentLbl.Text = department + " Offered Courses";
                 LoadCoursesPnl.DataSource = queries.LoadDepartmentCourses(department, StudentYearLevel.SelectedItem.ToString(), StudentProgram.SelectedItem.ToString());
-                ulong totalrecords = queries.ToTalRecords(department, StudentYearLevel.SelectedItem.ToString(), StudentProgram.SelectedItem.ToString(), "All", "All", "Active");
+                ulong totalrecords = Convert.ToUInt64(queries.TotalCourses(department, StudentYearLevel.SelectedItem.ToString(), StudentProgram.SelectedItem.ToString()));
                 TotalRecords.Text = "Total Records: " + totalrecords.ToString();
             }
             catch (Exception ex)

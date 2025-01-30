@@ -33,6 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.TotalRecords = new System.Windows.Forms.Label();
             this.PersonalInformationRecords = new Guna.UI2.WinForms.Guna2DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.StudentSex = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -49,7 +50,6 @@
             this.SearchBtn = new Guna.UI2.WinForms.Guna2Button();
             this.SearchInput = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.TotalRecords = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PersonalInformationRecords)).BeginInit();
             this.panel3.SuspendLayout();
@@ -78,6 +78,17 @@
             this.panel2.Size = new System.Drawing.Size(1049, 567);
             this.panel2.TabIndex = 5;
             // 
+            // TotalRecords
+            // 
+            this.TotalRecords.AutoSize = true;
+            this.TotalRecords.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalRecords.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.TotalRecords.Location = new System.Drawing.Point(752, 527);
+            this.TotalRecords.Name = "TotalRecords";
+            this.TotalRecords.Size = new System.Drawing.Size(73, 30);
+            this.TotalRecords.TabIndex = 13;
+            this.TotalRecords.Text = "Total: ";
+            // 
             // PersonalInformationRecords
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(223)))), ((int)(((byte)(251)))));
@@ -92,7 +103,6 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.PersonalInformationRecords.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.PersonalInformationRecords.ColumnHeadersHeight = 30;
-            this.PersonalInformationRecords.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(233)))), ((int)(((byte)(252)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -124,7 +134,7 @@
             this.PersonalInformationRecords.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.PersonalInformationRecords.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PersonalInformationRecords.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.PersonalInformationRecords.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.PersonalInformationRecords.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.PersonalInformationRecords.ThemeStyle.HeaderStyle.Height = 30;
             this.PersonalInformationRecords.ThemeStyle.ReadOnly = true;
             this.PersonalInformationRecords.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(233)))), ((int)(((byte)(252)))));
@@ -418,17 +428,6 @@
             this.label1.Size = new System.Drawing.Size(123, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "RECORDS";
-            // 
-            // TotalRecords
-            // 
-            this.TotalRecords.AutoSize = true;
-            this.TotalRecords.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalRecords.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.TotalRecords.Location = new System.Drawing.Point(752, 527);
-            this.TotalRecords.Name = "TotalRecords";
-            this.TotalRecords.Size = new System.Drawing.Size(73, 30);
-            this.TotalRecords.TabIndex = 13;
-            this.TotalRecords.Text = "Total: ";
             // 
             // Records
             // 

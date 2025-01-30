@@ -31,24 +31,31 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.CASPnl = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.CBAPnl = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2CirclePictureBox3 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.CCSTPnl = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2CirclePictureBox4 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.CTHMPnl = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2CirclePictureBox5 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.CNAHSPnl = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2CirclePictureBox6 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.CHKPnl = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2CirclePictureBox7 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.COEPnl = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2CirclePictureBox8 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -58,31 +65,24 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.guna2CirclePictureBox5 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.guna2CirclePictureBox4 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.guna2CirclePictureBox6 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.guna2CirclePictureBox3 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.guna2CirclePictureBox7 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.guna2CirclePictureBox8 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.CASPnl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).BeginInit();
             this.CBAPnl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).BeginInit();
             this.CCSTPnl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox4)).BeginInit();
             this.CTHMPnl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox5)).BeginInit();
             this.CNAHSPnl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox6)).BeginInit();
             this.CHKPnl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox7)).BeginInit();
             this.COEPnl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox8)).BeginInit();
             this.panel1.SuspendLayout();
             this.COAPnl.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -128,6 +128,21 @@
             this.CASPnl.TabIndex = 3;
             this.CASPnl.Click += new System.EventHandler(this.GoToCAS);
             // 
+            // guna2CirclePictureBox2
+            // 
+            this.guna2CirclePictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CirclePictureBox2.Image = global::studentmanagementsystem.Properties.Resources.cas;
+            this.guna2CirclePictureBox2.ImageRotate = 0F;
+            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(58, 16);
+            this.guna2CirclePictureBox2.Name = "guna2CirclePictureBox2";
+            this.guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox2.Size = new System.Drawing.Size(100, 100);
+            this.guna2CirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2CirclePictureBox2.TabIndex = 4;
+            this.guna2CirclePictureBox2.TabStop = false;
+            this.guna2CirclePictureBox2.UseTransparentBackground = true;
+            this.guna2CirclePictureBox2.Click += new System.EventHandler(this.GoToCAS);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -170,6 +185,21 @@
             this.CBAPnl.Size = new System.Drawing.Size(213, 210);
             this.CBAPnl.TabIndex = 3;
             this.CBAPnl.Click += new System.EventHandler(this.GoToCBA);
+            // 
+            // guna2CirclePictureBox3
+            // 
+            this.guna2CirclePictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CirclePictureBox3.Image = global::studentmanagementsystem.Properties.Resources.cba;
+            this.guna2CirclePictureBox3.ImageRotate = 0F;
+            this.guna2CirclePictureBox3.Location = new System.Drawing.Point(61, 16);
+            this.guna2CirclePictureBox3.Name = "guna2CirclePictureBox3";
+            this.guna2CirclePictureBox3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox3.Size = new System.Drawing.Size(100, 100);
+            this.guna2CirclePictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2CirclePictureBox3.TabIndex = 5;
+            this.guna2CirclePictureBox3.TabStop = false;
+            this.guna2CirclePictureBox3.UseTransparentBackground = true;
+            this.guna2CirclePictureBox3.Click += new System.EventHandler(this.GoToCBA);
             // 
             // label5
             // 
@@ -214,6 +244,21 @@
             this.CCSTPnl.TabIndex = 3;
             this.CCSTPnl.Click += new System.EventHandler(this.GoToCCST);
             // 
+            // guna2CirclePictureBox4
+            // 
+            this.guna2CirclePictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CirclePictureBox4.Image = global::studentmanagementsystem.Properties.Resources.ccst;
+            this.guna2CirclePictureBox4.ImageRotate = 0F;
+            this.guna2CirclePictureBox4.Location = new System.Drawing.Point(60, 16);
+            this.guna2CirclePictureBox4.Name = "guna2CirclePictureBox4";
+            this.guna2CirclePictureBox4.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox4.Size = new System.Drawing.Size(110, 110);
+            this.guna2CirclePictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2CirclePictureBox4.TabIndex = 6;
+            this.guna2CirclePictureBox4.TabStop = false;
+            this.guna2CirclePictureBox4.UseTransparentBackground = true;
+            this.guna2CirclePictureBox4.Click += new System.EventHandler(this.GoToCCST);
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -256,6 +301,21 @@
             this.CTHMPnl.Size = new System.Drawing.Size(213, 210);
             this.CTHMPnl.TabIndex = 5;
             this.CTHMPnl.Click += new System.EventHandler(this.GoToCTHM);
+            // 
+            // guna2CirclePictureBox5
+            // 
+            this.guna2CirclePictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CirclePictureBox5.Image = global::studentmanagementsystem.Properties.Resources.cthm;
+            this.guna2CirclePictureBox5.ImageRotate = 0F;
+            this.guna2CirclePictureBox5.Location = new System.Drawing.Point(55, 16);
+            this.guna2CirclePictureBox5.Name = "guna2CirclePictureBox5";
+            this.guna2CirclePictureBox5.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox5.Size = new System.Drawing.Size(110, 110);
+            this.guna2CirclePictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2CirclePictureBox5.TabIndex = 7;
+            this.guna2CirclePictureBox5.TabStop = false;
+            this.guna2CirclePictureBox5.UseTransparentBackground = true;
+            this.guna2CirclePictureBox5.Click += new System.EventHandler(this.GoToCTHM);
             // 
             // label9
             // 
@@ -300,6 +360,21 @@
             this.CNAHSPnl.TabIndex = 6;
             this.CNAHSPnl.Click += new System.EventHandler(this.GoToCNAHS);
             // 
+            // guna2CirclePictureBox6
+            // 
+            this.guna2CirclePictureBox6.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CirclePictureBox6.Image = global::studentmanagementsystem.Properties.Resources.cnahs;
+            this.guna2CirclePictureBox6.ImageRotate = 0F;
+            this.guna2CirclePictureBox6.Location = new System.Drawing.Point(61, 16);
+            this.guna2CirclePictureBox6.Name = "guna2CirclePictureBox6";
+            this.guna2CirclePictureBox6.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox6.Size = new System.Drawing.Size(100, 100);
+            this.guna2CirclePictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2CirclePictureBox6.TabIndex = 8;
+            this.guna2CirclePictureBox6.TabStop = false;
+            this.guna2CirclePictureBox6.UseTransparentBackground = true;
+            this.guna2CirclePictureBox6.Click += new System.EventHandler(this.GoToCNAHS);
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -342,6 +417,21 @@
             this.CHKPnl.Size = new System.Drawing.Size(213, 210);
             this.CHKPnl.TabIndex = 7;
             this.CHKPnl.Click += new System.EventHandler(this.GoToCHK);
+            // 
+            // guna2CirclePictureBox7
+            // 
+            this.guna2CirclePictureBox7.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CirclePictureBox7.Image = global::studentmanagementsystem.Properties.Resources.chk;
+            this.guna2CirclePictureBox7.ImageRotate = 0F;
+            this.guna2CirclePictureBox7.Location = new System.Drawing.Point(58, 16);
+            this.guna2CirclePictureBox7.Name = "guna2CirclePictureBox7";
+            this.guna2CirclePictureBox7.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox7.Size = new System.Drawing.Size(100, 100);
+            this.guna2CirclePictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2CirclePictureBox7.TabIndex = 9;
+            this.guna2CirclePictureBox7.TabStop = false;
+            this.guna2CirclePictureBox7.UseTransparentBackground = true;
+            this.guna2CirclePictureBox7.Click += new System.EventHandler(this.GoToCHK);
             // 
             // label13
             // 
@@ -386,6 +476,21 @@
             this.COEPnl.TabIndex = 4;
             this.COEPnl.Click += new System.EventHandler(this.GoToCOE);
             // 
+            // guna2CirclePictureBox8
+            // 
+            this.guna2CirclePictureBox8.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CirclePictureBox8.Image = global::studentmanagementsystem.Properties.Resources.COE;
+            this.guna2CirclePictureBox8.ImageRotate = 0F;
+            this.guna2CirclePictureBox8.Location = new System.Drawing.Point(56, 16);
+            this.guna2CirclePictureBox8.Name = "guna2CirclePictureBox8";
+            this.guna2CirclePictureBox8.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox8.Size = new System.Drawing.Size(100, 100);
+            this.guna2CirclePictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2CirclePictureBox8.TabIndex = 10;
+            this.guna2CirclePictureBox8.TabStop = false;
+            this.guna2CirclePictureBox8.UseTransparentBackground = true;
+            this.guna2CirclePictureBox8.Click += new System.EventHandler(this.GoToCOE);
+            // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -428,7 +533,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Maroon;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(61)))), ((int)(((byte)(21)))));
             this.panel1.Controls.Add(this.label17);
             this.panel1.Location = new System.Drawing.Point(0, -1);
             this.panel1.Name = "panel1";
@@ -506,111 +611,6 @@
             this.guna2CirclePictureBox1.UseTransparentBackground = true;
             this.guna2CirclePictureBox1.Click += new System.EventHandler(this.GoToCOA);
             // 
-            // guna2CirclePictureBox5
-            // 
-            this.guna2CirclePictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox5.Image = global::studentmanagementsystem.Properties.Resources.cthm;
-            this.guna2CirclePictureBox5.ImageRotate = 0F;
-            this.guna2CirclePictureBox5.Location = new System.Drawing.Point(55, 16);
-            this.guna2CirclePictureBox5.Name = "guna2CirclePictureBox5";
-            this.guna2CirclePictureBox5.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox5.Size = new System.Drawing.Size(110, 110);
-            this.guna2CirclePictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2CirclePictureBox5.TabIndex = 7;
-            this.guna2CirclePictureBox5.TabStop = false;
-            this.guna2CirclePictureBox5.UseTransparentBackground = true;
-            this.guna2CirclePictureBox5.Click += new System.EventHandler(this.GoToCTHM);
-            // 
-            // guna2CirclePictureBox4
-            // 
-            this.guna2CirclePictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox4.Image = global::studentmanagementsystem.Properties.Resources.ccst;
-            this.guna2CirclePictureBox4.ImageRotate = 0F;
-            this.guna2CirclePictureBox4.Location = new System.Drawing.Point(60, 16);
-            this.guna2CirclePictureBox4.Name = "guna2CirclePictureBox4";
-            this.guna2CirclePictureBox4.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox4.Size = new System.Drawing.Size(110, 110);
-            this.guna2CirclePictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2CirclePictureBox4.TabIndex = 6;
-            this.guna2CirclePictureBox4.TabStop = false;
-            this.guna2CirclePictureBox4.UseTransparentBackground = true;
-            this.guna2CirclePictureBox4.Click += new System.EventHandler(this.GoToCCST);
-            // 
-            // guna2CirclePictureBox6
-            // 
-            this.guna2CirclePictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox6.Image = global::studentmanagementsystem.Properties.Resources.cnahs;
-            this.guna2CirclePictureBox6.ImageRotate = 0F;
-            this.guna2CirclePictureBox6.Location = new System.Drawing.Point(61, 16);
-            this.guna2CirclePictureBox6.Name = "guna2CirclePictureBox6";
-            this.guna2CirclePictureBox6.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox6.Size = new System.Drawing.Size(100, 100);
-            this.guna2CirclePictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2CirclePictureBox6.TabIndex = 8;
-            this.guna2CirclePictureBox6.TabStop = false;
-            this.guna2CirclePictureBox6.UseTransparentBackground = true;
-            this.guna2CirclePictureBox6.Click += new System.EventHandler(this.GoToCNAHS);
-            // 
-            // guna2CirclePictureBox3
-            // 
-            this.guna2CirclePictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox3.Image = global::studentmanagementsystem.Properties.Resources.cba;
-            this.guna2CirclePictureBox3.ImageRotate = 0F;
-            this.guna2CirclePictureBox3.Location = new System.Drawing.Point(61, 16);
-            this.guna2CirclePictureBox3.Name = "guna2CirclePictureBox3";
-            this.guna2CirclePictureBox3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox3.Size = new System.Drawing.Size(100, 100);
-            this.guna2CirclePictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2CirclePictureBox3.TabIndex = 5;
-            this.guna2CirclePictureBox3.TabStop = false;
-            this.guna2CirclePictureBox3.UseTransparentBackground = true;
-            this.guna2CirclePictureBox3.Click += new System.EventHandler(this.GoToCBA);
-            // 
-            // guna2CirclePictureBox7
-            // 
-            this.guna2CirclePictureBox7.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox7.Image = global::studentmanagementsystem.Properties.Resources.chk;
-            this.guna2CirclePictureBox7.ImageRotate = 0F;
-            this.guna2CirclePictureBox7.Location = new System.Drawing.Point(58, 16);
-            this.guna2CirclePictureBox7.Name = "guna2CirclePictureBox7";
-            this.guna2CirclePictureBox7.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox7.Size = new System.Drawing.Size(100, 100);
-            this.guna2CirclePictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2CirclePictureBox7.TabIndex = 9;
-            this.guna2CirclePictureBox7.TabStop = false;
-            this.guna2CirclePictureBox7.UseTransparentBackground = true;
-            this.guna2CirclePictureBox7.Click += new System.EventHandler(this.GoToCHK);
-            // 
-            // guna2CirclePictureBox2
-            // 
-            this.guna2CirclePictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox2.Image = global::studentmanagementsystem.Properties.Resources.cas;
-            this.guna2CirclePictureBox2.ImageRotate = 0F;
-            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(58, 16);
-            this.guna2CirclePictureBox2.Name = "guna2CirclePictureBox2";
-            this.guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox2.Size = new System.Drawing.Size(100, 100);
-            this.guna2CirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2CirclePictureBox2.TabIndex = 4;
-            this.guna2CirclePictureBox2.TabStop = false;
-            this.guna2CirclePictureBox2.UseTransparentBackground = true;
-            this.guna2CirclePictureBox2.Click += new System.EventHandler(this.GoToCAS);
-            // 
-            // guna2CirclePictureBox8
-            // 
-            this.guna2CirclePictureBox8.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox8.Image = global::studentmanagementsystem.Properties.Resources.COE;
-            this.guna2CirclePictureBox8.ImageRotate = 0F;
-            this.guna2CirclePictureBox8.Location = new System.Drawing.Point(56, 16);
-            this.guna2CirclePictureBox8.Name = "guna2CirclePictureBox8";
-            this.guna2CirclePictureBox8.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox8.Size = new System.Drawing.Size(100, 100);
-            this.guna2CirclePictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2CirclePictureBox8.TabIndex = 10;
-            this.guna2CirclePictureBox8.TabStop = false;
-            this.guna2CirclePictureBox8.UseTransparentBackground = true;
-            this.guna2CirclePictureBox8.Click += new System.EventHandler(this.GoToCOE);
-            // 
             // Department
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -634,18 +634,25 @@
             this.Load += new System.EventHandler(this.Department_Load);
             this.CASPnl.ResumeLayout(false);
             this.CASPnl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).EndInit();
             this.CBAPnl.ResumeLayout(false);
             this.CBAPnl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).EndInit();
             this.CCSTPnl.ResumeLayout(false);
             this.CCSTPnl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox4)).EndInit();
             this.CTHMPnl.ResumeLayout(false);
             this.CTHMPnl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox5)).EndInit();
             this.CNAHSPnl.ResumeLayout(false);
             this.CNAHSPnl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox6)).EndInit();
             this.CHKPnl.ResumeLayout(false);
             this.CHKPnl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox7)).EndInit();
             this.COEPnl.ResumeLayout(false);
             this.COEPnl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox8)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.COAPnl.ResumeLayout(false);
@@ -653,13 +660,6 @@
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox8)).EndInit();
             this.ResumeLayout(false);
 
         }

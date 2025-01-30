@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Guna.UI2.WinForms;
+using studentmanagementsystem.Queries;
 
 namespace studentmanagementsystem.content
 {
@@ -19,6 +20,15 @@ namespace studentmanagementsystem.content
             InitializeComponent();
             this.main = main;
         }
+
+        SQLQueries queries = new SQLQueries();
+
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+            LastAddedStudents.DataSource = queries.LastAddedStudentRecords();
+            TotalStudents.Text = queries.ToTalRecords("All", "All", "All", "All", "All", "Active").ToString();
+
+        }
         private void LoadContentPnl(Form form, Guna2TileButton btn)
         {
             form.TopLevel = false;
@@ -29,7 +39,6 @@ namespace studentmanagementsystem.content
             form.Show();
             main.ActivePnl.Height = btn.Height;
             main.ActivePnl.Top = btn.Top;
-
         }
 
 
@@ -48,5 +57,7 @@ namespace studentmanagementsystem.content
             LoadContentPnl(new Skills(), main.SkillsBtn);
 
         }
+
+      
     }
 }

@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -37,16 +40,16 @@
             this.label11 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.TotalStudents = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.TotalDepartment = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.TotalSkills = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -54,10 +57,10 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.LastAddedStudents = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -68,10 +71,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            this.panel7.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LastAddedStudents)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GradientPanel1
@@ -137,10 +140,10 @@
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(346, 17);
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(12, 423);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(359, 37);
+            this.label11.Size = new System.Drawing.Size(211, 21);
             this.label11.TabIndex = 12;
             this.label11.Text = "Last added students here...";
             // 
@@ -170,19 +173,19 @@
             this.label4.Text = "Students";
             this.label4.Click += new System.EventHandler(this.GoToRecords);
             // 
-            // label3
+            // TotalStudents
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Black", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(10, 27);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 45);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "423";
-            this.label3.Click += new System.EventHandler(this.GoToRecords);
+            this.TotalStudents.AutoSize = true;
+            this.TotalStudents.BackColor = System.Drawing.Color.Transparent;
+            this.TotalStudents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TotalStudents.Font = new System.Drawing.Font("Segoe UI Black", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalStudents.ForeColor = System.Drawing.SystemColors.Control;
+            this.TotalStudents.Location = new System.Drawing.Point(10, 27);
+            this.TotalStudents.Name = "TotalStudents";
+            this.TotalStudents.Size = new System.Drawing.Size(78, 45);
+            this.TotalStudents.TabIndex = 5;
+            this.TotalStudents.Text = "423";
+            this.TotalStudents.Click += new System.EventHandler(this.GoToRecords);
             // 
             // panel2
             // 
@@ -249,19 +252,19 @@
             this.label5.Text = "Departments";
             this.label5.Click += new System.EventHandler(this.GoToCourses);
             // 
-            // label6
+            // TotalDepartment
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Black", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.Control;
-            this.label6.Location = new System.Drawing.Point(11, 28);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(39, 45);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "8";
-            this.label6.Click += new System.EventHandler(this.GoToCourses);
+            this.TotalDepartment.AutoSize = true;
+            this.TotalDepartment.BackColor = System.Drawing.Color.Transparent;
+            this.TotalDepartment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TotalDepartment.Font = new System.Drawing.Font("Segoe UI Black", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalDepartment.ForeColor = System.Drawing.SystemColors.Control;
+            this.TotalDepartment.Location = new System.Drawing.Point(11, 28);
+            this.TotalDepartment.Name = "TotalDepartment";
+            this.TotalDepartment.Size = new System.Drawing.Size(39, 45);
+            this.TotalDepartment.TabIndex = 5;
+            this.TotalDepartment.Text = "8";
+            this.TotalDepartment.Click += new System.EventHandler(this.GoToCourses);
             // 
             // pictureBox3
             // 
@@ -289,19 +292,19 @@
             this.label7.Text = "Skills";
             this.label7.Click += new System.EventHandler(this.GoToSkills);
             // 
-            // label8
+            // TotalSkills
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Black", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.Control;
-            this.label8.Location = new System.Drawing.Point(14, 24);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(102, 45);
-            this.label8.TabIndex = 5;
-            this.label8.Text = "1,908";
-            this.label8.Click += new System.EventHandler(this.GoToSkills);
+            this.TotalSkills.AutoSize = true;
+            this.TotalSkills.BackColor = System.Drawing.Color.Transparent;
+            this.TotalSkills.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TotalSkills.Font = new System.Drawing.Font("Segoe UI Black", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalSkills.ForeColor = System.Drawing.SystemColors.Control;
+            this.TotalSkills.Location = new System.Drawing.Point(14, 24);
+            this.TotalSkills.Name = "TotalSkills";
+            this.TotalSkills.Size = new System.Drawing.Size(102, 45);
+            this.TotalSkills.TabIndex = 5;
+            this.TotalSkills.Text = "1,908";
+            this.TotalSkills.Click += new System.EventHandler(this.GoToSkills);
             // 
             // panel5
             // 
@@ -388,15 +391,6 @@
             this.label15.TabIndex = 0;
             this.label15.Text = "Overview";
             // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel7.Controls.Add(this.label11);
-            this.panel7.Location = new System.Drawing.Point(12, 427);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1023, 194);
-            this.panel7.TabIndex = 13;
-            // 
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
@@ -404,7 +398,7 @@
             this.guna2Panel1.Controls.Add(this.pictureBox1);
             this.guna2Panel1.Controls.Add(this.panel2);
             this.guna2Panel1.Controls.Add(this.label4);
-            this.guna2Panel1.Controls.Add(this.label3);
+            this.guna2Panel1.Controls.Add(this.TotalStudents);
             this.guna2Panel1.FillColor = System.Drawing.Color.DodgerBlue;
             this.guna2Panel1.Location = new System.Drawing.Point(66, 264);
             this.guna2Panel1.Name = "guna2Panel1";
@@ -420,7 +414,7 @@
             this.guna2Panel2.Controls.Add(this.pictureBox2);
             this.guna2Panel2.Controls.Add(this.label5);
             this.guna2Panel2.Controls.Add(this.panel5);
-            this.guna2Panel2.Controls.Add(this.label6);
+            this.guna2Panel2.Controls.Add(this.TotalDepartment);
             this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.guna2Panel2.Location = new System.Drawing.Point(394, 264);
             this.guna2Panel2.Name = "guna2Panel2";
@@ -435,7 +429,7 @@
             this.guna2Panel3.BorderRadius = 20;
             this.guna2Panel3.Controls.Add(this.pictureBox3);
             this.guna2Panel3.Controls.Add(this.panel6);
-            this.guna2Panel3.Controls.Add(this.label8);
+            this.guna2Panel3.Controls.Add(this.TotalSkills);
             this.guna2Panel3.Controls.Add(this.label7);
             this.guna2Panel3.FillColor = System.Drawing.Color.Red;
             this.guna2Panel3.Location = new System.Drawing.Point(712, 264);
@@ -445,20 +439,74 @@
             this.guna2Panel3.TabIndex = 13;
             this.guna2Panel3.Click += new System.EventHandler(this.GoToSkills);
             // 
+            // LastAddedStudents
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.LastAddedStudents.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.LastAddedStudents.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.LastAddedStudents.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.LastAddedStudents.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.LastAddedStudents.ColumnHeadersHeight = 30;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.LastAddedStudents.DefaultCellStyle = dataGridViewCellStyle3;
+            this.LastAddedStudents.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.LastAddedStudents.Location = new System.Drawing.Point(16, 448);
+            this.LastAddedStudents.Name = "LastAddedStudents";
+            this.LastAddedStudents.ReadOnly = true;
+            this.LastAddedStudents.RowHeadersVisible = false;
+            this.LastAddedStudents.Size = new System.Drawing.Size(1019, 173);
+            this.LastAddedStudents.TabIndex = 15;
+            this.LastAddedStudents.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.LastAddedStudents.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.LastAddedStudents.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.LastAddedStudents.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.LastAddedStudents.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.LastAddedStudents.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.LastAddedStudents.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.LastAddedStudents.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.LastAddedStudents.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.LastAddedStudents.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LastAddedStudents.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.LastAddedStudents.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.LastAddedStudents.ThemeStyle.HeaderStyle.Height = 30;
+            this.LastAddedStudents.ThemeStyle.ReadOnly = true;
+            this.LastAddedStudents.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.LastAddedStudents.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.LastAddedStudents.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LastAddedStudents.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.LastAddedStudents.ThemeStyle.RowsStyle.Height = 22;
+            this.LastAddedStudents.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.LastAddedStudents.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1047, 633);
+            this.Controls.Add(this.LastAddedStudents);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.guna2Panel3);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.guna2GradientPanel1);
-            this.Controls.Add(this.panel7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Dashboard";
             this.Text = "Dashboard";
+            this.Load += new System.EventHandler(this.Dashboard_Load);
             this.Click += new System.EventHandler(this.GoToRecords);
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
@@ -474,15 +522,15 @@
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LastAddedStudents)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -490,7 +538,7 @@
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label TotalStudents;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -500,10 +548,10 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label TotalSkills;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label TotalDepartment;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
@@ -512,9 +560,9 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Panel panel7;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
+        private Guna.UI2.WinForms.Guna2DataGridView LastAddedStudents;
     }
 }
