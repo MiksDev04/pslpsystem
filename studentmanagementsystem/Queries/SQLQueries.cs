@@ -346,13 +346,22 @@ namespace studentmanagementsystem.Queries
         {
             try
             {
-                for (int i = 0; i < courseInfo[0].Count; i++)
+                using (MySqlConnection connection = new MySqlConnection(stringConnection))
                 {
-                    if (!string.IsNullOrEmpty(courseInfo[0][i]))
+                    connection.Open();
+                    // Add skill information only once
+                    string querySkill = @"INSERT IGNORE INTO skills (Skill_Name) VALUES (@Skill_Name); 
+                                  SELECT LAST_INSERT_ID();";
+                    int skillId = 0;
+                    using (MySqlCommand cmd2 = new MySqlCommand(querySkill, connection))
                     {
-                        using (MySqlConnection connection = new MySqlConnection(stringConnection))
+                        cmd2.Parameters.AddWithValue("@Skill_Name", skillsets?.ToString() ?? "N/A");
+                        skillId = Convert.ToInt32(cmd2.ExecuteScalar());
+                    }
+                    for (int i = 0; i < courseInfo[0].Count; i++)
+                    {
+                        if (!string.IsNullOrEmpty(courseInfo[0][i]))
                         {
-                            connection.Open();
 
                             // Add course information if it doesn't already exist
                             string queryCourse = @"INSERT IGNORE INTO courses (Course_Code, Course_Name, Day, Time, Units) 
@@ -369,15 +378,7 @@ namespace studentmanagementsystem.Queries
                                 courseId = Convert.ToInt32(cmd1.ExecuteScalar());
                             }
 
-                            // Add skill information only once
-                            string querySkill = @"INSERT IGNORE INTO skills (Skill_Name) VALUES (@Skill_Name); 
-                                  SELECT LAST_INSERT_ID();";
-                            int skillId = 0;
-                            using (MySqlCommand cmd2 = new MySqlCommand(querySkill, connection))
-                            {
-                                cmd2.Parameters.AddWithValue("@Skill_Name", skillsets?.ToString() ?? "N/A");
-                                skillId = Convert.ToInt32(cmd2.ExecuteScalar());
-                            }
+                            
 
                             // Add student information
                             string queryStudent = @"INSERT INTO student_information 
@@ -467,126 +468,125 @@ namespace studentmanagementsystem.Queries
 
                 // Update student personal information
                 string queryStudent = @"
-            UPDATE student_information
-            SET Student_Name = @Student_Name,
-                Age = @Age,
-                Sex = @Sex,
-                Birthdate = @Birthdate,
-                Address = @Address,
-                Email = @Email,
-                Phone_Number = @Phone_Number,
-                Yearlevel = @Yearlevel,
-                Section = @Section,
-                Program = @Program,
-                Department = @Department,
-                Status = @Status
-            WHERE Student_ID = @Student_ID;";
+                UPDATE student_information
+                SET Student_ID = @NEWID,
+                    Student_Name = @Student_Name,
+                    Age = @Age,
+                    Sex = @Sex,
+                    Birthdate = @Birthdate,
+                    Address = @Address,
+                    Email = @Email,
+                    Phone_Number = @Phone_Number,
+                    Yearlevel = @Yearlevel,
+                    Section = @Section,
+                    Program = @Program,
+                    Department = @Department,
+                    Status = @Status
+                WHERE Student_ID = @Student_ID;";
 
                 using (MySqlCommand cmd = new MySqlCommand(queryStudent, connection))
                 {
-                    cmd.Parameters.AddWithValue("@Student_ID", studentID);
+                    cmd.Parameters.AddWithValue("@NEWID", personalInformation[0] ?? "N/A");
                     cmd.Parameters.AddWithValue("@Student_Name", personalInformation[1] ?? "N/A");
                     cmd.Parameters.AddWithValue("@Age", Convert.ToInt32(personalInformation[2] ?? "0"));
                     cmd.Parameters.AddWithValue("@Sex", personalInformation[3] ?? "N/A");
                     cmd.Parameters.AddWithValue("@Birthdate", DateTime.TryParse(personalInformation[4], out var birthdate) ? birthdate : (object)DBNull.Value);
                     cmd.Parameters.AddWithValue("@Address", personalInformation[5] ?? "N/A");
                     cmd.Parameters.AddWithValue("@Email", personalInformation[6] ?? "N/A");
-                    cmd.Parameters.AddWithValue("@Phone_Number", personalInformation[7] ?? "N/A");
+                    cmd.Parameters.AddWithValue("@Phone_Number", Convert.ToUInt64(personalInformation[7]));
                     cmd.Parameters.AddWithValue("@Yearlevel", personalInformation[8] ?? "N/A");
                     cmd.Parameters.AddWithValue("@Section", personalInformation[9] ?? "N/A");
                     cmd.Parameters.AddWithValue("@Program", personalInformation[10] ?? "N/A");
                     cmd.Parameters.AddWithValue("@Department", personalInformation[11] ?? "N/A");
                     cmd.Parameters.AddWithValue("@Status", personalInformation[12] ?? "N/A");
+                    cmd.Parameters.AddWithValue("@Student_ID", studentID.ToString());
 
                     cmd.ExecuteNonQuery();
                 }
 
                 // Get Skill_ID based on the Skill_Name provided
-                string getSkillIdQuery = "SELECT Skill_ID FROM skills WHERE Skill_Name = @Skill_Name LIMIT 1";
-                int? skillId = null;
+                string getSkillIdQuery = @"SELECT sk.skill_id
+                    FROM 
+	                    student_information s
+                    JOIN 
+	                    skills sk 
+                    ON 
+	                    s.skill_id = sk.Skill_id
+                    WHERE 
+	                    student_id = @Student_ID;";
+                int skillID = 0;
+
 
                 using (MySqlCommand getSkillCmd = new MySqlCommand(getSkillIdQuery, connection))
                 {
-                    getSkillCmd.Parameters.AddWithValue("@Skill_Name", skillsets ?? "N/A");
-                    object skillResult = getSkillCmd.ExecuteScalar();
-                    if (skillResult != null)
+                    getSkillCmd.Parameters.AddWithValue("@Student_ID", studentID.ToString());
+                    using (var reader = getSkillCmd.ExecuteReader())
                     {
-                        skillId = Convert.ToInt32(skillResult);
+                        while (reader.Read())
+                        {
+                            skillID = Convert.ToInt32(reader["skill_id"]);
+                        }
                     }
-                }
 
-                // If skill exists, update Skill_ID in student_information
-                if (skillId.HasValue)
-                {
+                    // If skill exists, update Skill_ID in student_information
                     string updateStudentSkillQuery = @"
-                UPDATE student_information 
-                SET Skill_ID = @Skill_ID
-                WHERE Student_ID = @Student_ID;";
+                        UPDATE skills 
+                        SET skill_name = @Skill_Name
+                        WHERE skill_id = @skill_id;";
 
                     using (MySqlCommand updateSkillCmd = new MySqlCommand(updateStudentSkillQuery, connection))
                     {
-                        updateSkillCmd.Parameters.AddWithValue("@Student_ID", studentID);
-                        updateSkillCmd.Parameters.AddWithValue("@Skill_ID", skillId.Value);
+                        updateSkillCmd.Parameters.AddWithValue("@Skill_Name", skillsets?.ToString() ?? "N/A");
+                        updateSkillCmd.Parameters.AddWithValue("@skill_id", Convert.ToInt32(skillID));
                         updateSkillCmd.ExecuteNonQuery();
                     }
-                }
 
-                // Update course information for each course the student is associated with
-                for (int i = 0; i < courseInfo[0].Count; i++)
-                {
-                    if (!string.IsNullOrEmpty(courseInfo[0][i])) // Ensure Course_Code is not empty
+
+                    string courseID = @"
+                        SELECT c.Course_ID , si.Student_ID
+                        FROM Student_Information as si
+	                    JOIN Courses as c ON c.course_id = si.course_id
+                        WHERE si.Student_ID = @Student_ID;";
+                    List<int> courseIDArr = new List<int>();
+                    using (MySqlCommand getCourseID = new MySqlCommand(courseID, connection))
                     {
-                        // Get Course_ID based on Course_Code
-                        string getCourseIdQuery = "SELECT Course_ID FROM courses WHERE Course_Code = @Course_Code LIMIT 1";
-                        int? courseId = null;
-
-                        using (MySqlCommand getCourseCmd = new MySqlCommand(getCourseIdQuery, connection))
+                        getCourseID.Parameters.AddWithValue("@Student_ID", studentID?.ToString());
+                        using (var reader = getCourseID.ExecuteReader())
                         {
-                            getCourseCmd.Parameters.AddWithValue("@Course_Code", courseInfo[0][i] ?? "N/A");
-                            object result = getCourseCmd.ExecuteScalar();
-                            if (result != null)
+                            while (reader.Read())
                             {
-                                courseId = Convert.ToInt32(result);
+                                courseIDArr.Add(Convert.ToInt32(reader["Course_ID"]));
                             }
                         }
-
-                        // If the course exists, update the course information
-                        if (courseId.HasValue)
-                        {
-                            string queryCourse = @"
-                        UPDATE courses 
-                        SET Course_Code = @Course_Code,
-                            Course_Name = @Course_Name, 
-                            Day = @Day, 
-                            Time = @Time, 
+                    }
+                    for (int i = 0; i < courseIDArr.Count; i++)
+                    {
+                        string courseUpdate = @"
+                            UPDATE courses 
+                            SET 
+                            Course_Code = @Course_Code,
+                            Course_Name = @Course_Name,
+                            DAY = @DAY,
+                            Time = @Time,
                             Units = @Units
-                        WHERE Course_ID = @Course_ID;";
-
-                            using (MySqlCommand cmd1 = new MySqlCommand(queryCourse, connection))
-                            {
-                                cmd1.Parameters.AddWithValue("@Course_ID", courseId.Value);
-                                cmd1.Parameters.AddWithValue("@Course_Code", courseInfo[0][i] ?? "N/A");
-                                cmd1.Parameters.AddWithValue("@Course_Name", courseInfo[1][i] ?? "N/A");
-                                cmd1.Parameters.AddWithValue("@Day", courseInfo[2][i] ?? "N/A");
-                                cmd1.Parameters.AddWithValue("@Time", courseInfo[3][i] ?? "N/A");
-                                cmd1.Parameters.AddWithValue("@Units", courseInfo[4][i] ?? "0");
-
-                                cmd1.ExecuteNonQuery();
-                            }
-
-                            // Update the student's Course_ID in student_information
-                            string updateCourseQuery = @"
-                        UPDATE student_information 
-                        SET Course_ID = @Course_ID
-                        WHERE Student_ID = @Student_ID;";
-
-                            using (MySqlCommand updateCourseCmd = new MySqlCommand(updateCourseQuery, connection))
-                            {
-                                updateCourseCmd.Parameters.AddWithValue("@Student_ID", studentID);
-                                updateCourseCmd.Parameters.AddWithValue("@Course_ID", courseId.Value);
-                                updateCourseCmd.ExecuteNonQuery();
-                            }
+                            WHERE course_id = @course_id";
+                        using (MySqlCommand cmd = new MySqlCommand(courseUpdate, connection))
+                        {
+                            cmd.Parameters.AddWithValue("@Course_Code", courseInfo[0][i]?.ToString() ?? "N/A");
+                            cmd.Parameters.AddWithValue("@Course_Name", courseInfo[1][i]?.ToString() ?? "N/A");
+                            cmd.Parameters.AddWithValue("@DAY", courseInfo[2][i]?.ToString() ?? "N/A");
+                            cmd.Parameters.AddWithValue("@Time", courseInfo[3][i]?.ToString() ?? "N/A");
+                            cmd.Parameters.AddWithValue("@Units", courseInfo[4][i]?.ToString() ?? "0");
+                            cmd.Parameters.AddWithValue("@course_id", Convert.ToInt32(courseIDArr[i]));
+                            cmd.ExecuteNonQuery();
                         }
+                    }
+                    for (int i = 0; i < courseIDArr.Count; i++)
+                    {
+                        courseInfo[0].RemoveAt(i);
+                        courseInfo[1].RemoveAt(i);
+                        courseInfo[2].RemoveAt(i);
+                        courseInfo[3].RemoveAt(i);
                     }
                 }
             }
@@ -659,7 +659,6 @@ namespace studentmanagementsystem.Queries
                         WHERE
                             si.Student_ID = @Student_ID
                         ";
-
 
                     using (var command = new MySqlCommand(query, connection))
                     {

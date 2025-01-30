@@ -168,6 +168,7 @@
             this.ExitBtn.Name = "ExitBtn";
             this.ExitBtn.Size = new System.Drawing.Size(25, 25);
             this.ExitBtn.TabIndex = 169;
+            this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
             // 
             // SkillSets
             // 

@@ -53,5 +53,10 @@ namespace studentmanagementsystem.AddUpdateRecords
             Manage.totalrecords.Text = "Total Records: " + totalrecords.ToString();
             this.Hide();
         }
+
+        private void ExitBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

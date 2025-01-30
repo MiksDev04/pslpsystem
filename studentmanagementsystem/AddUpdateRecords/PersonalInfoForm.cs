@@ -35,7 +35,7 @@ namespace studentmanagementsystem.content
             {
                 Male.Checked = true;
             }
-            else if (sex == "Male")
+            else if (sex == "Female")
             {
                 Female.Checked = true;
             }
