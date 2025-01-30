@@ -55,7 +55,7 @@ namespace studentmanagementsystem.content
             {
                 if (DataManagement_GridView.SelectedRows[0].Cells[0].Value.ToString() != "")
                 {
-                    DialogResult = MessageBox.Show("Are you sure you want to permanently delete this record?", "Alert", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    DialogResult = MessageBox.Show("Are you sure you want to archive this record?", "Alert", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     if (DialogResult == DialogResult.Yes)
                     {
                         queries.ArchiveStudentInformation(DataManagement_GridView.SelectedRows[0].Cells[0].Value.ToString());
@@ -65,17 +65,41 @@ namespace studentmanagementsystem.content
             }
             catch (Exception)
             {
-                MessageBox.Show("Please select a row to delete", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please select a row to archive", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void ViewStudentState_SelectedValueChanged(object sender, EventArgs e)
         {
+            if (ViewStudentState.SelectedItem.ToString() == "Archived")
+            {
+                RestoreStudentBtn.Visible = true;
+            }
             string State = ViewStudentState.SelectedItem.ToString();
             DataManagement_GridView.DataSource = queries.LoadDBContent("All", "All", "All", "All", "All", State);
             ulong totalrecords = queries.ToTalRecords("All", "All", "All", "All", "All", State);
             TotalRecords.Text = "Total Records: " + totalrecords.ToString();
 
+        }
+
+        private void RestoreStudentBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (DataManagement_GridView.SelectedRows[0].Cells[0].Value.ToString() != "")
+                {
+                    DialogResult = MessageBox.Show("Are you sure you want to restore this record?", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (DialogResult == DialogResult.Yes)
+                    {
+                        queries.RestoreStudentInformation(DataManagement_GridView.SelectedRows[0].Cells[0].Value.ToString());
+                        DataManagement_GridView.DataSource = queries.LoadDBContent("All", "All", "All", "All", "All", "Archived");
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please select a row to restore", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

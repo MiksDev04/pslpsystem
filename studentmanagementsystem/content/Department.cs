@@ -24,34 +24,6 @@ namespace studentmanagementsystem.content
         {
         }
 
-        //private void RemoveBorder(object sender, EventArgs e)
-        //{
-        //    // Border
-        //    COAPnl.BorderColor = System.Drawing.SystemColors.Control;
-        //    CASPnl.BorderColor = System.Drawing.SystemColors.Control;
-        //    CBAPnl.BorderColor = System.Drawing.SystemColors.Control;
-        //    CCSTPnl.BorderColor = System.Drawing.SystemColors.Control;
-        //    COEPnl.BorderColor = System.Drawing.SystemColors.Control;
-        //    CNAHSPnl.BorderColor = System.Drawing.SystemColors.Control;
-        //    CTHMPnl.BorderColor = System.Drawing.SystemColors.Control;
-        //    CHKPnl.BorderColor = System.Drawing.SystemColors.Control;
-        //    // Bakcground
-        //    COAPnl.FillColor = System.Drawing.SystemColors.ControlLightLight;
-        //    CASPnl.FillColor = System.Drawing.SystemColors.ControlLightLight;
-        //    CBAPnl.FillColor = System.Drawing.SystemColors.ControlLightLight;
-        //    CCSTPnl.FillColor = System.Drawing.SystemColors.ControlLightLight;
-        //    COEPnl.FillColor = System.Drawing.SystemColors.ControlLightLight;
-        //    CNAHSPnl.FillColor = System.Drawing.SystemColors.ControlLightLight;
-        //    CTHMPnl.FillColor = System.Drawing.SystemColors.ControlLightLight;
-        //    CHKPnl.FillColor = System.Drawing.SystemColors.ControlLightLight;
-
-        //}
-        //private void OnBorder(Guna2Panel pnl)
-        //{
-
-        //    pnl.BorderColor = System.Drawing.Color.Maroon;
-        //    pnl.FillColor = System.Drawing.Color.IndianRed;
-        //}
 
         private void LoadCourses(string department)
         {
