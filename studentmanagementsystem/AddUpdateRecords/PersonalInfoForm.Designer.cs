@@ -47,8 +47,6 @@
             this.Sex = new Guna.UI2.WinForms.Guna2GroupBox();
             this.Female = new Guna.UI2.WinForms.Guna2RadioButton();
             this.Male = new Guna.UI2.WinForms.Guna2RadioButton();
-            this.label7 = new System.Windows.Forms.Label();
-            this.Phone = new Guna.UI2.WinForms.Guna2TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.Program = new Guna.UI2.WinForms.Guna2TextBox();
@@ -57,7 +55,6 @@
             this.Address = new Guna.UI2.WinForms.Guna2TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.ExitBtn = new Guna.UI2.WinForms.Guna2Button();
             this.AddUpdateProgressBar = new System.Windows.Forms.ProgressBar();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.label13 = new System.Windows.Forms.Label();
@@ -65,6 +62,7 @@
             this.BirthDate = new System.Windows.Forms.DateTimePicker();
             this.Department = new Guna.UI2.WinForms.Guna2ComboBox();
             this.YearLevel = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.ExitBtn = new Guna.UI2.WinForms.Guna2Button();
             this.Status.SuspendLayout();
             this.Sex.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -270,9 +268,9 @@
             this.Status.Controls.Add(this.Regular);
             this.Status.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Status.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Status.Location = new System.Drawing.Point(630, 271);
+            this.Status.Location = new System.Drawing.Point(624, 182);
             this.Status.Name = "Status";
-            this.Status.Size = new System.Drawing.Size(229, 85);
+            this.Status.Size = new System.Drawing.Size(233, 94);
             this.Status.TabIndex = 125;
             this.Status.Text = "Status";
             // 
@@ -324,9 +322,9 @@
             this.Sex.Controls.Add(this.Male);
             this.Sex.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Sex.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Sex.Location = new System.Drawing.Point(630, 169);
+            this.Sex.Location = new System.Drawing.Point(624, 80);
             this.Sex.Name = "Sex";
-            this.Sex.Size = new System.Drawing.Size(229, 88);
+            this.Sex.Size = new System.Drawing.Size(233, 97);
             this.Sex.TabIndex = 130;
             this.Sex.Text = "Sex";
             // 
@@ -372,44 +370,11 @@
             this.Male.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             this.Male.UseVisualStyleBackColor = false;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(334, 145);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(161, 21);
-            this.label7.TabIndex = 132;
-            this.label7.Text = "Phone No. (optional)";
-            // 
-            // Phone
-            // 
-            this.Phone.Animated = true;
-            this.Phone.BorderRadius = 7;
-            this.Phone.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Phone.DefaultText = "";
-            this.Phone.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.Phone.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.Phone.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Phone.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Phone.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Phone.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.Phone.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Phone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Phone.Location = new System.Drawing.Point(338, 169);
-            this.Phone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Phone.Name = "Phone";
-            this.Phone.PasswordChar = '\0';
-            this.Phone.PlaceholderText = "09578674401";
-            this.Phone.SelectedText = "";
-            this.Phone.Size = new System.Drawing.Size(229, 38);
-            this.Phone.TabIndex = 131;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(334, 219);
+            this.label8.Location = new System.Drawing.Point(334, 145);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(83, 21);
             this.label8.TabIndex = 134;
@@ -419,7 +384,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(334, 369);
+            this.label9.Location = new System.Drawing.Point(334, 295);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(73, 21);
             this.label9.TabIndex = 136;
@@ -439,7 +404,7 @@
             this.Program.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.Program.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Program.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Program.Location = new System.Drawing.Point(338, 393);
+            this.Program.Location = new System.Drawing.Point(338, 319);
             this.Program.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Program.Name = "Program";
             this.Program.PasswordChar = '\0';
@@ -452,7 +417,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(626, 67);
+            this.label10.Location = new System.Drawing.Point(334, 369);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(98, 21);
             this.label10.TabIndex = 140;
@@ -513,25 +478,6 @@
             this.panel1.Size = new System.Drawing.Size(901, 50);
             this.panel1.TabIndex = 142;
             // 
-            // ExitBtn
-            // 
-            this.ExitBtn.Animated = true;
-            this.ExitBtn.BackgroundImage = global::studentmanagementsystem.Properties.Resources.reject;
-            this.ExitBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ExitBtn.BorderColor = System.Drawing.Color.Transparent;
-            this.ExitBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.ExitBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.ExitBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.ExitBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.ExitBtn.FillColor = System.Drawing.Color.Transparent;
-            this.ExitBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ExitBtn.ForeColor = System.Drawing.Color.White;
-            this.ExitBtn.Location = new System.Drawing.Point(863, 12);
-            this.ExitBtn.Name = "ExitBtn";
-            this.ExitBtn.Size = new System.Drawing.Size(25, 25);
-            this.ExitBtn.TabIndex = 143;
-            this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
-            // 
             // AddUpdateProgressBar
             // 
             this.AddUpdateProgressBar.Location = new System.Drawing.Point(38, 458);
@@ -550,7 +496,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(334, 294);
+            this.label13.Location = new System.Drawing.Point(334, 220);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(65, 21);
             this.label13.TabIndex = 172;
@@ -570,7 +516,7 @@
             this.Section.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.Section.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Section.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Section.Location = new System.Drawing.Point(338, 318);
+            this.Section.Location = new System.Drawing.Point(338, 244);
             this.Section.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Section.Name = "Section";
             this.Section.PasswordChar = '\0';
@@ -601,13 +547,13 @@
             this.Department.Items.AddRange(new object[] {
             "COA",
             "CAS",
-            "CBA",
+            "CTED",
             "CCST",
             "COE",
             "CHK",
             "CNAHS",
             "CTHM"});
-            this.Department.Location = new System.Drawing.Point(630, 93);
+            this.Department.Location = new System.Drawing.Point(338, 395);
             this.Department.Name = "Department";
             this.Department.Size = new System.Drawing.Size(229, 36);
             this.Department.TabIndex = 174;
@@ -629,16 +575,35 @@
             "2",
             "3",
             "4"});
-            this.YearLevel.Location = new System.Drawing.Point(338, 243);
+            this.YearLevel.Location = new System.Drawing.Point(338, 169);
             this.YearLevel.Name = "YearLevel";
             this.YearLevel.Size = new System.Drawing.Size(229, 36);
             this.YearLevel.TabIndex = 175;
+            // 
+            // ExitBtn
+            // 
+            this.ExitBtn.Animated = true;
+            this.ExitBtn.BackgroundImage = global::studentmanagementsystem.Properties.Resources.reject;
+            this.ExitBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ExitBtn.BorderColor = System.Drawing.Color.Transparent;
+            this.ExitBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.ExitBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.ExitBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.ExitBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.ExitBtn.FillColor = System.Drawing.Color.Transparent;
+            this.ExitBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ExitBtn.ForeColor = System.Drawing.Color.White;
+            this.ExitBtn.Location = new System.Drawing.Point(863, 12);
+            this.ExitBtn.Name = "ExitBtn";
+            this.ExitBtn.Size = new System.Drawing.Size(25, 25);
+            this.ExitBtn.TabIndex = 143;
+            this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
             // 
             // PersonalInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 500);
+            this.ClientSize = new System.Drawing.Size(900, 509);
             this.Controls.Add(this.YearLevel);
             this.Controls.Add(this.Department);
             this.Controls.Add(this.BirthDate);
@@ -651,8 +616,6 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.Program);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.Phone);
             this.Controls.Add(this.Sex);
             this.Controls.Add(this.Status);
             this.Controls.Add(this.label6);
@@ -703,8 +666,6 @@
         private Guna.UI2.WinForms.Guna2GroupBox Sex;
         private Guna.UI2.WinForms.Guna2RadioButton Female;
         private Guna.UI2.WinForms.Guna2RadioButton Male;
-        private System.Windows.Forms.Label label7;
-        private Guna.UI2.WinForms.Guna2TextBox Phone;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private Guna.UI2.WinForms.Guna2TextBox Program;

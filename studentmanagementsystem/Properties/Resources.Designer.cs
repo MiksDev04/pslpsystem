@@ -163,6 +163,16 @@ namespace studentmanagementsystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CTEd_Logo {
+            get {
+                object obj = ResourceManager.GetObject("CTEd-Logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cthm {
             get {
                 object obj = ResourceManager.GetObject("cthm", resourceCulture);

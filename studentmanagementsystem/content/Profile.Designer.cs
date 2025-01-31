@@ -56,7 +56,6 @@
             this.Username.SelectedText = "";
             this.Username.Size = new System.Drawing.Size(308, 36);
             this.Username.TabIndex = 0;
-            this.Username.TextChanged += new System.EventHandler(this.Username_TextChanged);
             // 
             // label1
             // 
@@ -98,7 +97,6 @@
             this.Password.SelectedText = "";
             this.Password.Size = new System.Drawing.Size(308, 36);
             this.Password.TabIndex = 2;
-            this.Password.TextChanged += new System.EventHandler(this.Password_TextChanged);
             // 
             // EditAccountBtn
             // 
@@ -115,6 +113,7 @@
             this.EditAccountBtn.Size = new System.Drawing.Size(308, 45);
             this.EditAccountBtn.TabIndex = 4;
             this.EditAccountBtn.Text = "Edit Account";
+            this.EditAccountBtn.Click += new System.EventHandler(this.EditAccountBtn_Click);
             // 
             // label3
             // 

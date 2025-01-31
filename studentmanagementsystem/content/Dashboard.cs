@@ -27,7 +27,7 @@ namespace studentmanagementsystem.content
         {
             LastAddedStudents.DataSource = queries.LastAddedStudentRecords();
             TotalStudents.Text = queries.ToTalRecords("All", "All", "All", "All", "All", "Active").ToString();
-
+            TotalSkills.Text = queries.TotalSkills().ToString();
         }
         private void LoadContentPnl(Form form, Guna2TileButton btn)
         {

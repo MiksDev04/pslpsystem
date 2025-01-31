@@ -21,9 +21,12 @@ namespace studentmanagementsystem.content
 
         SQLQueries queries = new SQLQueries();
         private void Skills_Load(object sender, EventArgs e)
-        {
+        { 
+
             MosSkillfulStudents.DataSource = queries.MostSkillfulStudent();
             SetUpStudentSkillsChart();          
+            //MosSkillfulStudents.Columns[MosSkillfulStudents.Columns.Count - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
         }
 
         private void SetUpStudentSkillsChart()
@@ -48,47 +51,17 @@ namespace studentmanagementsystem.content
             var skillCounts = GetSkillsCountPerYearLevel();
 
             // Add data to the chart with labels "1st Year", "2nd Year", etc.
-            StudentSkillsChart.Series["SkillsPerYear"].Points.AddXY("1st Year", skillCounts[1]);
-            StudentSkillsChart.Series["SkillsPerYear"].Points.AddXY("2nd Year", skillCounts[2]);
-            StudentSkillsChart.Series["SkillsPerYear"].Points.AddXY("3rd Year", skillCounts[3]);
-            StudentSkillsChart.Series["SkillsPerYear"].Points.AddXY("4th Year", skillCounts[4]);
+            StudentSkillsChart.Series["SkillsPerYear"].Points.AddXY("1st Year", skillCounts.ContainsKey(1) ? skillCounts[1] : 0);
+            StudentSkillsChart.Series["SkillsPerYear"].Points.AddXY("2nd Year", skillCounts.ContainsKey(2) ? skillCounts[2] : 0);
+            StudentSkillsChart.Series["SkillsPerYear"].Points.AddXY("3rd Year", skillCounts.ContainsKey(3) ? skillCounts[3] : 0);
+            StudentSkillsChart.Series["SkillsPerYear"].Points.AddXY("4th Year", skillCounts.ContainsKey(4) ? skillCounts[4] : 0);
+
         }
         private Dictionary<int, int> GetSkillsCountPerYearLevel()
         {
-            var skillCounts = new Dictionary<int, int>
-            {
-                { 1, 20 }, // Example: 20 skills for 1st Year students
-                { 2, 35 }, // Example: 35 skills for 2nd Year students
-                { 3, 50 }, // Example: 50 skills for 3rd Year students
-                { 4, 40 }  // Example: 40 skills for 4th Year students
-            };
+            var skillCounts = new Dictionary<int, int>();
 
-            // If pulling from a database, replace the above dictionary with a database query
-            /*
-            string query = @"
-                SELECT si.YearLevel, COUNT(sk.Skill_ID) AS SkillCount
-                FROM Student_Information si
-                JOIN Skills sk ON si.Student_ID = sk.Student_ID
-                GROUP BY si.YearLevel
-                ORDER BY si.YearLevel";
-
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                conn.Open();
-                using (SqlCommand cmd = new SqlCommand(query, conn))
-                {
-                    using (SqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            int yearLevel = reader.GetInt32(0);  // YearLevel
-                            int skillCount = reader.GetInt32(1); // SkillCount
-                            skillCounts[yearLevel] = skillCount;
-                        }
-                    }
-                }
-            }
-            */
+            queries.LoadSkillChart(skillCounts);
 
             return skillCounts;
         }

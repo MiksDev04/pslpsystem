@@ -352,7 +352,9 @@
   <ItemGroup>
     <None Include="Resources\people big1.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\CTEd-Logo.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\COA.jpg" />
   </ItemGroup>

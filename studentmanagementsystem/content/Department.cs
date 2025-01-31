@@ -51,7 +51,7 @@ namespace studentmanagementsystem.content
 
         private void GoToCBA(object sender, EventArgs e)
         {
-            LoadCourses("CBA");
+            LoadCourses("CTED");
             //OnBorder(CBAPnl);
         }
 

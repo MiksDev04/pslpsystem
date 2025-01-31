@@ -232,30 +232,29 @@
             this.StudentProgram.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.StudentProgram.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.StudentProgram.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.StudentProgram.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StudentProgram.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.StudentProgram.ForeColor = System.Drawing.SystemColors.ControlText;
             this.StudentProgram.ItemHeight = 30;
             this.StudentProgram.Items.AddRange(new object[] {
             "All",
-            "Bachelor of Arts in Communication",
-            "Bachelor of Arts in Political Science",
-            "Bachelor of Physical Education",
-            "Bachelor of Public Administration",
-            "Bachelor of Science in Accountancy",
-            "Bachelor of Science in Accounting Information System",
-            "Bachelor of Science in Business Administration",
-            "Bachelor of Science in Computer Engineering",
-            "Bachelor of Science in Economics",
-            "Bachelor of Science in Entrepreneurship",
-            "Bachelor of Science in Hospitality Management",
-            "Bachelor of Science in Industrial Engineering",
-            "Bachelor of Science in Information Systems",
-            "Bachelor of Science in Information Technology",
-            "Bachelor of Science in Management Accounting",
-            "Bachelor of Science in Nursing",
-            "Bachelor of Science in Office Administration",
-            "Bachelor of Science in Psychology",
-            "Bachelor of Science in Tourism Management"});
+            "BEED",
+            "BPA",
+            "BPED",
+            "BPSY",
+            "BSA",
+            "BSAIS",
+            "BSCOM",
+            "BSCPE",
+            "BSECO",
+            "BSED",
+            "BSHM",
+            "BSIE",
+            "BSIS",
+            "BSIT",
+            "BSMA",
+            "BSN",
+            "BSPOLSCI",
+            "BSTM"});
             this.StudentProgram.Location = new System.Drawing.Point(443, 30);
             this.StudentProgram.Name = "StudentProgram";
             this.StudentProgram.Size = new System.Drawing.Size(169, 36);
@@ -318,14 +317,14 @@
             this.StudentDepartment.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.StudentDepartment.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.StudentDepartment.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.StudentDepartment.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StudentDepartment.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.StudentDepartment.ForeColor = System.Drawing.SystemColors.ControlText;
             this.StudentDepartment.ItemHeight = 30;
             this.StudentDepartment.Items.AddRange(new object[] {
             "All",
             "COA",
             "CAS",
-            "CBA",
+            "CTED",
             "CCST",
             "COE",
             "CHK",

@@ -14,9 +14,13 @@ namespace studentmanagementsystem
 {
     public partial class Main : Form
     {
-        public Main()
+        private string Username;
+        private string Password;
+        public Main(string username, string password)
         {
             InitializeComponent();
+            Username = username;
+            Password = password;
         }
 
         private void Main_FormClosed(object sender, FormClosedEventArgs e)
@@ -68,7 +72,7 @@ namespace studentmanagementsystem
 
         private void ProfileBtn_Click(object sender, EventArgs e)
         {
-            LoadContentPnl(new Profile(), ProfileBtn);
+            LoadContentPnl(new Profile(Username, Password), ProfileBtn);
         }
         private void ExitBtn_Click(object sender, EventArgs e)
         {

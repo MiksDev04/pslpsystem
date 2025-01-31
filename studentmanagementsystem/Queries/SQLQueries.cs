@@ -26,7 +26,7 @@ namespace studentmanagementsystem.Queries
             using (var connection = new MySqlConnection(stringConnection))
             {
                 connection.Open();
-                string query = "SELECT DISTINCT Student_ID, Student_Name, Age, Sex, Birthdate, Address, Email, Phone_Number, YearLevel, Section, Program, Department, Status FROM Student_Information ";
+                string query = "SELECT DISTINCT Student_ID, Student_Name, Age, Sex, Birthdate, Address, Email, YearLevel, Section, Program, Department, Status FROM Student_Information ";
                 FilterRecords(ref query, ref Department, ref YearLevel, ref Program, ref Sex, ref Status, ref State);
                 using (var command = new MySqlCommand(query, connection))
                 {
@@ -54,15 +54,15 @@ namespace studentmanagementsystem.Queries
                 string query = @"
                     WITH RankedStudents AS (
                         SELECT Student_ID, Student_Name, Age, Sex, Birthdate, 
-                               Address, Email, Phone_Number, YearLevel, Section, 
+                               Address, Email, YearLevel, Section, 
                                Program, Department, Status,
                                ROW_NUMBER() OVER (PARTITION BY Student_ID ORDER BY ID DESC) AS RowNum
                         FROM Student_Information
                     )
                     SELECT Student_ID, Student_Name, Age, Sex, Birthdate, 
-                           Address, Email, Phone_Number, YearLevel, Section, 
+                           Address, Email, YearLevel, Section, 
                            Program, Department, Status
-                    FROM RankedStudents WHERE RowNum = 1;
+                    FROM RankedStudents WHERE RowNum = 1 LIMIT 10;
 
                     ";
                 using (var command = new MySqlCommand(query, connection))
@@ -149,6 +149,26 @@ namespace studentmanagementsystem.Queries
             }
             
         }
+
+        public ulong TotalSkills()
+        {
+            ulong total = 0;
+            using (var connection = new MySqlConnection(stringConnection))
+            {
+                connection.Open();
+
+                // Corrected query to count distinct combinations of columns
+                string query = "SELECT COUNT(DISTINCT skill_id) FROM plspdb.skills;";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    // Execute the query and get the total count of distinct records
+                    total = Convert.ToUInt64(command.ExecuteScalar());
+
+                }
+            }
+
+            return total;
+        }
         public ulong ToTalRecords(string Department, string YearLevel, string Program, string Sex, string Status, string State)
         {
             ulong total = 0;
@@ -157,7 +177,7 @@ namespace studentmanagementsystem.Queries
                 connection.Open();
 
                 // Corrected query to count distinct combinations of columns
-                string query = "SELECT  COUNT(DISTINCT Student_ID, Student_Name, Age, Sex, Birthdate, Address, Email, Phone_Number, YearLevel, Section, Program, Department, Status) FROM Student_Information ";
+                string query = "SELECT  COUNT(DISTINCT Student_ID, Student_Name) FROM Student_Information ";
                 FilterRecords(ref query, ref Department, ref YearLevel, ref Program, ref Sex, ref Status, ref State);
                 using (var command = new MySqlCommand(query, connection))
                 {
@@ -272,14 +292,13 @@ namespace studentmanagementsystem.Queries
             {
                 // SQL query divided into smaller parts for better readability
                 string query = @"
-                SELECT DISTINCT Student_ID, Student_Name, Age, Sex, Birthdate, Address, Email, Phone_Number, YearLevel, Section, Program, Department, Status FROM Student_Information 
+                SELECT DISTINCT Student_ID, Student_Name, Age, Sex, Birthdate, Address, Email, YearLevel, Section, Program, Department, Status FROM Student_Information 
                 WHERE 
                 (Student_ID LIKE @search) OR
                 (Student_Name LIKE @search) OR
                 (Birthdate LIKE @search) OR
                 (Address LIKE @search) OR
-                (Email LIKE @search) OR
-                (Phone_Number LIKE @search)";
+                (Email LIKE @search)";
 
                 using (var connection = new MySqlConnection(stringConnection))
                 {
@@ -307,7 +326,7 @@ namespace studentmanagementsystem.Queries
             using (var connection = new MySqlConnection(stringConnection))
             {
                 connection.Open();
-                string query = "SELECT DISTINCT Student_ID, Student_Name, Age, Sex, Birthdate, Address, Email, Phone_Number, YearLevel, Section, Program, Department, Status FROM Student_Information " + 
+                string query = "SELECT DISTINCT Student_ID, Student_Name, Age, Sex, Birthdate, Address, Email, YearLevel, Section, Program, Department, Status FROM Student_Information " + 
                                 "WHERE Student_ID = @id;";
 
                 using (var command = new MySqlCommand(query, connection))
@@ -325,12 +344,11 @@ namespace studentmanagementsystem.Queries
                             records[4] = reader["Birthdate"].ToString() ?? "Null";
                             records[5] = reader["Address"].ToString() ?? "Null";
                             records[6] = reader["Email"].ToString() ?? "Null";
-                            records[7] = reader["Phone_Number"].ToString() ?? "Null";
-                            records[8] = reader["YearLevel"].ToString() ?? "Null";
-                            records[9] = reader["Section"].ToString() ?? "Null";
-                            records[10] = reader["Program"].ToString() ?? "Null";
-                            records[11] = reader["Department"].ToString() ?? "Null";
-                            records[12] = reader["Status"].ToString() ?? "Null";
+                            records[7] = reader["YearLevel"].ToString() ?? "Null";
+                            records[8] = reader["Section"].ToString() ?? "Null";
+                            records[9] = reader["Program"].ToString() ?? "Null";
+                            records[10] = reader["Department"].ToString() ?? "Null";
+                            records[11] = reader["Status"].ToString() ?? "Null";
                             
                         }
                     }
@@ -483,7 +501,7 @@ namespace studentmanagementsystem.Queries
                                 (Student_ID, Student_Name, Age, Sex, Birthdate, Address, Email, Phone_Number, 
                                     Yearlevel, Section, Program, Department, Status, Course_ID, Skill_ID) 
                                 VALUES (@Student_ID, @Student_Name, @Age, @Sex, @Birthdate, @Address, @Email, 
-                                @Phone_Number, @Yearlevel, @Section, @Program, @Department, @Status, 
+                                @Yearlevel, @Section, @Program, @Department, @Status, 
                                 @Course_ID, @Skill_ID);";
                             using (MySqlCommand cmd3 = new MySqlCommand(queryStudent, connection))
                             {
@@ -494,12 +512,11 @@ namespace studentmanagementsystem.Queries
                                 cmd3.Parameters.AddWithValue("@Birthdate", DateTime.TryParse(personalInformation[4]?.ToString(), out var birthdate) ? birthdate : DateTime.MinValue);
                                 cmd3.Parameters.AddWithValue("@Address", personalInformation[5]?.ToString() ?? "N/A");
                                 cmd3.Parameters.AddWithValue("@Email", personalInformation[6]?.ToString() ?? "N/A");
-                                cmd3.Parameters.AddWithValue("@Phone_Number", Convert.ToUInt64(personalInformation[7]?.ToString() ?? "0"));
-                                cmd3.Parameters.AddWithValue("@Yearlevel", personalInformation[8]?.ToString() ?? "N/A");
-                                cmd3.Parameters.AddWithValue("@Section", personalInformation[9]?.ToString() ?? "N/A");
-                                cmd3.Parameters.AddWithValue("@Program", personalInformation[10]?.ToString() ?? "N/A");
-                                cmd3.Parameters.AddWithValue("@Department", personalInformation[11]?.ToString() ?? "N/A");
-                                cmd3.Parameters.AddWithValue("@Status", personalInformation[12]?.ToString() ?? "N/A");
+                                cmd3.Parameters.AddWithValue("@Yearlevel", personalInformation[7]?.ToString() ?? "N/A");
+                                cmd3.Parameters.AddWithValue("@Section", personalInformation[8]?.ToString() ?? "N/A");
+                                cmd3.Parameters.AddWithValue("@Program", personalInformation[9]?.ToString() ?? "N/A");
+                                cmd3.Parameters.AddWithValue("@Department", personalInformation[10]?.ToString() ?? "N/A");
+                                cmd3.Parameters.AddWithValue("@Status", personalInformation[11]?.ToString() ?? "N/A");
                                 cmd3.Parameters.AddWithValue("@Course_ID", courseId);
                                 cmd3.Parameters.AddWithValue("@Skill_ID", skillId);
                                 cmd3.ExecuteNonQuery();
@@ -574,7 +591,6 @@ namespace studentmanagementsystem.Queries
                     Birthdate = @Birthdate,
                     Address = @Address,
                     Email = @Email,
-                    Phone_Number = @Phone_Number,
                     Yearlevel = @Yearlevel,
                     Section = @Section,
                     Program = @Program,
@@ -591,12 +607,11 @@ namespace studentmanagementsystem.Queries
                     cmd.Parameters.AddWithValue("@Birthdate", DateTime.TryParse(personalInformation[4], out var birthdate) ? birthdate : (object)DBNull.Value);
                     cmd.Parameters.AddWithValue("@Address", personalInformation[5] ?? "N/A");
                     cmd.Parameters.AddWithValue("@Email", personalInformation[6] ?? "N/A");
-                    cmd.Parameters.AddWithValue("@Phone_Number", Convert.ToUInt64(personalInformation[7]));
-                    cmd.Parameters.AddWithValue("@Yearlevel", personalInformation[8] ?? "N/A");
-                    cmd.Parameters.AddWithValue("@Section", personalInformation[9] ?? "N/A");
-                    cmd.Parameters.AddWithValue("@Program", personalInformation[10] ?? "N/A");
-                    cmd.Parameters.AddWithValue("@Department", personalInformation[11] ?? "N/A");
-                    cmd.Parameters.AddWithValue("@Status", personalInformation[12] ?? "N/A");
+                    cmd.Parameters.AddWithValue("@Yearlevel", personalInformation[7] ?? "N/A");
+                    cmd.Parameters.AddWithValue("@Section", personalInformation[8] ?? "N/A");
+                    cmd.Parameters.AddWithValue("@Program", personalInformation[9] ?? "N/A");
+                    cmd.Parameters.AddWithValue("@Department", personalInformation[10] ?? "N/A");
+                    cmd.Parameters.AddWithValue("@Status", personalInformation[11] ?? "N/A");
                     cmd.Parameters.AddWithValue("@Student_ID", studentID.ToString());
 
                     cmd.ExecuteNonQuery();
@@ -679,13 +694,7 @@ namespace studentmanagementsystem.Queries
                             cmd.ExecuteNonQuery();
                         }
                     }
-                    for (int i = 0; i < courseIDArr.Count; i++)
-                    {
-                        courseInfo[0].RemoveAt(i);
-                        courseInfo[1].RemoveAt(i);
-                        courseInfo[2].RemoveAt(i);
-                        courseInfo[3].RemoveAt(i);
-                    }
+                   
                 }
             }
         }
@@ -698,7 +707,7 @@ namespace studentmanagementsystem.Queries
             using (var connection = new MySqlConnection(stringConnection))
             {
                 connection.Open();
-                string query = "SELECT DISTINCT Student_ID, Student_Name, Age, Sex, Birthdate, Address, Email, Phone_Number, YearLevel, Section, Program, Department, Status FROM Student_Information WHERE Student_ID = @id";
+                string query = "SELECT DISTINCT Student_ID, Student_Name, Age, Sex, Birthdate, Address, Email, YearLevel, Section, Program, Department, Status FROM Student_Information WHERE Student_ID = @id";
 
 
                 using (var command = new MySqlCommand(query, connection))
@@ -716,12 +725,11 @@ namespace studentmanagementsystem.Queries
                             StudentInformation[4] = reader["Birthdate"].ToString() ?? "Null";
                             StudentInformation[5] = reader["Address"].ToString() ?? "Null";
                             StudentInformation[6] = reader["Email"].ToString() ?? "Null";
-                            StudentInformation[7] = reader["Phone_Number"].ToString() ?? "Null";
-                            StudentInformation[8] = reader["YearLevel"].ToString() ?? "Null";
-                            StudentInformation[9] = reader["Section"].ToString() ?? "Null";
-                            StudentInformation[10] = reader["Program"].ToString() ?? "Null";
-                            StudentInformation[11] = reader["Department"].ToString() ?? "Null";
-                            StudentInformation[12] = reader["Status"].ToString() ?? "Null";
+                            StudentInformation[7] = reader["YearLevel"].ToString() ?? "Null";
+                            StudentInformation[8] = reader["Section"].ToString() ?? "Null";
+                            StudentInformation[9] = reader["Program"].ToString() ?? "Null";
+                            StudentInformation[10] = reader["Department"].ToString() ?? "Null";
+                            StudentInformation[11] = reader["Status"].ToString() ?? "Null";
                         }
                     }
                 }
@@ -734,7 +742,7 @@ namespace studentmanagementsystem.Queries
             List<List<string>> courseInfo = new List<List<string>>();
             for (int j = 0; j < 5; j++) // Assuming 5 lists (Course_Code, Course_Name, DAY, Time, Units)
             {
-                courseInfo.Add(new List<string>(new string[9])); // Initialize each inner list with 9 empty strings
+                courseInfo.Add(new List<string>(new string[10])); // Initialize each inner list with 9 empty strings
             }
             try
             {
@@ -819,6 +827,79 @@ namespace studentmanagementsystem.Queries
                 MessageBox.Show(ex.Message);
             }
             return skillSets;
+        }
+        public int GetAccountID(string username, string password)
+        {
+            int ID = 0;
+            using (MySqlConnection connection = new MySqlConnection(stringConnection))
+            {
+                connection.Open();
+                string query = @"
+                    SELECT ID FROM Administrator WHERE Username = @Username AND Password = @Password;
+                    ";
+                using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@Username", username?.ToString());
+                    cmd.Parameters.AddWithValue("@Password", password?.ToString());
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            ID = Convert.ToInt32(reader["ID"]);
+                        }
+                    }
+                }
+            }
+            return ID;
+        }
+        public void UpdateAccount(string username, string password, int ID)
+        {
+            using (MySqlConnection connection = new MySqlConnection(stringConnection))
+            {
+                connection.Open();
+                string query = @"
+                    UPDATE administrator 
+                    SET 
+                        Username = @Username, Password = @Password
+                    WHERE ID = @ID;
+                    ";
+                using (MySqlCommand cmd = new MySqlCommand(query,connection))
+                {
+                    cmd.Parameters.AddWithValue("@Username", username?.ToString());
+                    cmd.Parameters.AddWithValue("@Password", password?.ToString());
+                    cmd.Parameters.AddWithValue("@ID", ID);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public Dictionary<int, int> LoadSkillChart(Dictionary<int, int> skillCounts)
+        {
+            string query = @"
+                SELECT si.YearLevel, COUNT(DISTINCT sk.Skill_ID) AS SkillCount
+                FROM Student_Information si
+                JOIN Skills sk ON si.Skill_ID = sk.Skill_ID
+                GROUP BY si.YearLevel
+                ORDER BY si.YearLevel;";
+
+            using (MySqlConnection conn = new MySqlConnection(stringConnection))
+            {
+                conn.Open();
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            int yearLevel = reader.GetInt32(0);  // YearLevel
+                            int skillCount = reader.GetInt32(1); // SkillCount
+                            skillCounts[yearLevel] = skillCount;
+                        }
+                    }
+                }
+            }
+            return skillCounts;
+
         }
     }
 }

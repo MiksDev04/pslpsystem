@@ -43,12 +43,11 @@ namespace studentmanagementsystem.content
             BirthDate.Text = studentInformation[4];
             Address.Text = studentInformation[5];
             Email.Text = studentInformation[6];
-            Phone.Text = studentInformation[7];
-            YearLevel.SelectedItem = studentInformation[8];
-            Section.Text = studentInformation[9];
-            Program.Text = studentInformation[10];
-            Department.SelectedItem = studentInformation[11];
-            string status = studentInformation[12];
+            YearLevel.SelectedItem = studentInformation[7];
+            Section.Text = studentInformation[8];
+            Program.Text = studentInformation[9];
+            Department.SelectedItem = studentInformation[10];
+            string status = studentInformation[11];
             if (status == "Regular")
             {
                 Regular.Checked = true;
@@ -97,12 +96,11 @@ namespace studentmanagementsystem.content
             personalInformation[4] = BirthDate.Value.ToString();
             personalInformation[5] = Address.Text;
             personalInformation[6] = Email.Text;
-            personalInformation[7] = Phone.Text;
-            personalInformation[8] = YearLevel.SelectedItem?.ToString() ?? "N/A";
-            personalInformation[9] = Section.Text;
-            personalInformation[10] = Program.Text;
-            personalInformation[11] = Department.SelectedItem?.ToString() ?? "N/A";
-            personalInformation[12] = status;
+            personalInformation[7] = YearLevel.SelectedItem?.ToString() ?? "N/A";
+            personalInformation[8] = Section.Text;
+            personalInformation[9] = Program.Text;
+            personalInformation[10] = Department.SelectedItem?.ToString() ?? "N/A";
+            personalInformation[11] = status;
 
 
             CoursesForm courses = new CoursesForm(personalInformation, ID);
@@ -139,12 +137,11 @@ namespace studentmanagementsystem.content
             personalInformation[4] = BirthDate.Value.ToString();
             personalInformation[5] = Address.Text;
             personalInformation[6] = Email.Text;
-            personalInformation[7] = Phone.Text;
-            personalInformation[8] = YearLevel.SelectedItem?.ToString() ?? "N/A";
-            personalInformation[9] = Section.Text;
-            personalInformation[10] = Program.Text;
-            personalInformation[11] = Department.SelectedItem?.ToString() ?? "N/A";
-            personalInformation[12] = status;
+            personalInformation[7] = YearLevel.SelectedItem?.ToString() ?? "N/A";
+            personalInformation[8] = Section.Text;
+            personalInformation[9] = Program.Text;
+            personalInformation[10] = Department.SelectedItem?.ToString() ?? "N/A";
+            personalInformation[11] = status;
 
 
             CoursesForm courses = new CoursesForm(personalInformation, ID);

@@ -61,6 +61,7 @@
             this.SearchBtn.Name = "SearchBtn";
             this.SearchBtn.Size = new System.Drawing.Size(24, 24);
             this.SearchBtn.TabIndex = 70;
+            this.SearchBtn.Click += new System.EventHandler(this.SearchBtn_Click);
             // 
             // SearchInput
             // 

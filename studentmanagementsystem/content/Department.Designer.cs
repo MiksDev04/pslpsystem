@@ -189,7 +189,7 @@
             // guna2CirclePictureBox3
             // 
             this.guna2CirclePictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox3.Image = global::studentmanagementsystem.Properties.Resources.cba;
+            this.guna2CirclePictureBox3.Image = global::studentmanagementsystem.Properties.Resources.CTEd_Logo;
             this.guna2CirclePictureBox3.ImageRotate = 0F;
             this.guna2CirclePictureBox3.Location = new System.Drawing.Point(61, 16);
             this.guna2CirclePictureBox3.Name = "guna2CirclePictureBox3";
@@ -209,9 +209,9 @@
             this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label5.Location = new System.Drawing.Point(34, 149);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(152, 42);
+            this.label5.Size = new System.Drawing.Size(150, 42);
             this.label5.TabIndex = 1;
-            this.label5.Text = "College of Business\r\nAdministration";
+            this.label5.Text = "College of Teacher \r\nEducation";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label5.Click += new System.EventHandler(this.GoToCBA);
             // 
@@ -223,9 +223,9 @@
             this.label6.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label6.Location = new System.Drawing.Point(83, 119);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(54, 30);
+            this.label6.Size = new System.Drawing.Size(64, 30);
             this.label6.TabIndex = 0;
-            this.label6.Text = "CBA";
+            this.label6.Text = "CTED";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label6.Click += new System.EventHandler(this.GoToCBA);
             // 

@@ -33,7 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.label12 = new System.Windows.Forms.Label();
+            this.SuccessMessage = new System.Windows.Forms.Label();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.AddUpdateProgressBar = new System.Windows.Forms.ProgressBar();
             this.FinishBtn = new Guna.UI2.WinForms.Guna2Button();
@@ -55,7 +55,6 @@
             this.Sex = new System.Windows.Forms.Label();
             this.Section = new System.Windows.Forms.Label();
             this.Birthdate = new System.Windows.Forms.Label();
-            this.PhoneNumber = new System.Windows.Forms.Label();
             this.Address = new System.Windows.Forms.Label();
             this.YearLevel = new System.Windows.Forms.Label();
             this.Email = new System.Windows.Forms.Label();
@@ -63,17 +62,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.ViewCourseInformation)).BeginInit();
             this.SuspendLayout();
             // 
-            // label12
+            // SuccessMessage
             // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.SystemColors.Control;
-            this.label12.Location = new System.Drawing.Point(33, 9);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(161, 30);
-            this.label12.TabIndex = 141;
-            this.label12.Text = "Add Successful";
+            this.SuccessMessage.AutoSize = true;
+            this.SuccessMessage.BackColor = System.Drawing.Color.Transparent;
+            this.SuccessMessage.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SuccessMessage.ForeColor = System.Drawing.SystemColors.Control;
+            this.SuccessMessage.Location = new System.Drawing.Point(33, 9);
+            this.SuccessMessage.Name = "SuccessMessage";
+            this.SuccessMessage.Size = new System.Drawing.Size(161, 30);
+            this.SuccessMessage.TabIndex = 141;
+            this.SuccessMessage.Text = "Add Successful";
             // 
             // guna2BorderlessForm1
             // 
@@ -145,7 +144,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.panel1.Controls.Add(this.ExitBtn);
-            this.panel1.Controls.Add(this.label12);
+            this.panel1.Controls.Add(this.SuccessMessage);
             this.panel1.Location = new System.Drawing.Point(-1, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(901, 50);
@@ -261,7 +260,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(23, 54);
+            this.label1.Location = new System.Drawing.Point(23, 76);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(172, 21);
             this.label1.TabIndex = 224;
@@ -271,7 +270,7 @@
             // 
             this.StudentID.AutoSize = true;
             this.StudentID.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StudentID.Location = new System.Drawing.Point(23, 85);
+            this.StudentID.Location = new System.Drawing.Point(27, 117);
             this.StudentID.Name = "StudentID";
             this.StudentID.Size = new System.Drawing.Size(75, 17);
             this.StudentID.TabIndex = 222;
@@ -291,7 +290,7 @@
             // 
             this.FullName.AutoSize = true;
             this.FullName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FullName.Location = new System.Drawing.Point(23, 113);
+            this.FullName.Location = new System.Drawing.Point(27, 145);
             this.FullName.Name = "FullName";
             this.FullName.Size = new System.Drawing.Size(73, 17);
             this.FullName.TabIndex = 223;
@@ -311,7 +310,7 @@
             // 
             this.Age.AutoSize = true;
             this.Age.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Age.Location = new System.Drawing.Point(140, 146);
+            this.Age.Location = new System.Drawing.Point(144, 178);
             this.Age.Name = "Age";
             this.Age.Size = new System.Drawing.Size(38, 17);
             this.Age.TabIndex = 225;
@@ -331,7 +330,7 @@
             // 
             this.Sex.AutoSize = true;
             this.Sex.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Sex.Location = new System.Drawing.Point(25, 145);
+            this.Sex.Location = new System.Drawing.Point(29, 177);
             this.Sex.Name = "Sex";
             this.Sex.Size = new System.Drawing.Size(35, 17);
             this.Sex.TabIndex = 226;
@@ -351,27 +350,17 @@
             // 
             this.Birthdate.AutoSize = true;
             this.Birthdate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Birthdate.Location = new System.Drawing.Point(26, 172);
+            this.Birthdate.Location = new System.Drawing.Point(30, 204);
             this.Birthdate.Name = "Birthdate";
             this.Birthdate.Size = new System.Drawing.Size(67, 17);
             this.Birthdate.TabIndex = 227;
             this.Birthdate.Text = "Birthdate: ";
             // 
-            // PhoneNumber
-            // 
-            this.PhoneNumber.AutoSize = true;
-            this.PhoneNumber.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PhoneNumber.Location = new System.Drawing.Point(26, 262);
-            this.PhoneNumber.Name = "PhoneNumber";
-            this.PhoneNumber.Size = new System.Drawing.Size(103, 17);
-            this.PhoneNumber.TabIndex = 231;
-            this.PhoneNumber.Text = "Phone Number: ";
-            // 
             // Address
             // 
             this.Address.AutoSize = true;
             this.Address.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Address.Location = new System.Drawing.Point(25, 202);
+            this.Address.Location = new System.Drawing.Point(29, 234);
             this.Address.Name = "Address";
             this.Address.Size = new System.Drawing.Size(63, 17);
             this.Address.TabIndex = 228;
@@ -391,7 +380,7 @@
             // 
             this.Email.AutoSize = true;
             this.Email.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Email.Location = new System.Drawing.Point(26, 230);
+            this.Email.Location = new System.Drawing.Point(30, 262);
             this.Email.Name = "Email";
             this.Email.Size = new System.Drawing.Size(46, 17);
             this.Email.TabIndex = 229;
@@ -416,7 +405,6 @@
             this.Controls.Add(this.Sex);
             this.Controls.Add(this.Section);
             this.Controls.Add(this.Birthdate);
-            this.Controls.Add(this.PhoneNumber);
             this.Controls.Add(this.Address);
             this.Controls.Add(this.YearLevel);
             this.Controls.Add(this.Email);
@@ -441,7 +429,7 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Button ExitBtn;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label SuccessMessage;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private System.Windows.Forms.ProgressBar AddUpdateProgressBar;
         private Guna.UI2.WinForms.Guna2Button FinishBtn;
@@ -462,7 +450,6 @@
         private System.Windows.Forms.Label Sex;
         private System.Windows.Forms.Label Section;
         private System.Windows.Forms.Label Birthdate;
-        private System.Windows.Forms.Label PhoneNumber;
         private System.Windows.Forms.Label Address;
         private System.Windows.Forms.Label YearLevel;
         private System.Windows.Forms.Label Email;

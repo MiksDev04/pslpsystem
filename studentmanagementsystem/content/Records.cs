@@ -58,63 +58,60 @@ namespace studentmanagementsystem.content
             switch (departmentSelected)
             {
                 case "All":
-                    StudentProgram.Items.Add("Bachelor of Science in Computer Engineering");
-                    StudentProgram.Items.Add("Bachelor of Science in Industrial Engineering");
-                    StudentProgram.Items.Add("Bachelor of Science in Nursing");
-                    StudentProgram.Items.Add("Bachelor of Physical Education");
-                    StudentProgram.Items.Add("Bachelor of Science in Business Administration");
-                    StudentProgram.Items.Add("Bachelor of Science in Entrepreneurship");
-                    StudentProgram.Items.Add("Bachelor of Science in Office Administration");
-                    StudentProgram.Items.Add("Bachelor of Science in Accountancy");
-                    StudentProgram.Items.Add("Bachelor of Science in Accounting Information System");
-                    StudentProgram.Items.Add("Bachelor of Science in Management Accounting");
-                    StudentProgram.Items.Add("Bachelor of Science in Information Technology");
-                    StudentProgram.Items.Add("Bachelor of Science in Information Systems");
-                    StudentProgram.Items.Add("Bachelor of Science in Psychology");
-                    StudentProgram.Items.Add("Bachelor of Arts in Communication");
-                    StudentProgram.Items.Add("Bachelor of Science in Economics");
-                    StudentProgram.Items.Add("Bachelor of Public Administration");
-                    StudentProgram.Items.Add("Bachelor of Arts in Political Science");
-                    StudentProgram.Items.Add("Bachelor of Science in Hospitality Management");
-                    StudentProgram.Items.Add("Bachelor of Science in Tourism Management");
+                    StudentProgram.Items.Add("BSIE");
+                    StudentProgram.Items.Add("BSCPE");
+                    StudentProgram.Items.Add("BSN");
+                    StudentProgram.Items.Add("BPED");
+                    StudentProgram.Items.Add("BEED");
+                    StudentProgram.Items.Add("BSED");
+                    StudentProgram.Items.Add("BSAIS");
+                    StudentProgram.Items.Add("BSMA");
+                    StudentProgram.Items.Add("BSA");
+                    StudentProgram.Items.Add("BSIT");
+                    StudentProgram.Items.Add("BSIS");
+                    StudentProgram.Items.Add("BPA");
+                    StudentProgram.Items.Add("BSECO");
+                    StudentProgram.Items.Add("BSPOLSCI");
+                    StudentProgram.Items.Add("BPSY");
+                    StudentProgram.Items.Add("BSCOM");
+                    StudentProgram.Items.Add("BSHM");
+                    StudentProgram.Items.Add("BSTM");
                     break;
                 case "COE":
-                    StudentProgram.Items.Add("Bachelor of Science in Computer Engineering");
-                    StudentProgram.Items.Add("Bachelor of Science in Industrial Engineering");
+                    StudentProgram.Items.Add("BSIE");
+                    StudentProgram.Items.Add("BSCPE");
                     break;
                 case "CNAHS":
-                    StudentProgram.Items.Add("Bachelor of Science in Nursing");
+                    StudentProgram.Items.Add("BSN");
                     break;
                 case "CHK":
-                    StudentProgram.Items.Add("Bachelor of Physical Education");
+                    StudentProgram.Items.Add("BPED");
                     break;
-                case "CBA":
-                    StudentProgram.Items.Add("Bachelor of Science in Business Administration");
-                    StudentProgram.Items.Add("Bachelor of Science in Entrepreneurship");
-                    StudentProgram.Items.Add("Bachelor of Science in Office Administration");
+                case "CTED":
+                    StudentProgram.Items.Add("BEED");
+                    StudentProgram.Items.Add("BSED");
                     break;
                 case "COA":
-                    StudentProgram.Items.Add("Bachelor of Science in Accountancy");
-                    StudentProgram.Items.Add("Bachelor of Science in Accounting Information System");
-                    StudentProgram.Items.Add("Bachelor of Science in Management Accounting");
+                    StudentProgram.Items.Add("BSAIS");
+                    StudentProgram.Items.Add("BSMA");
+                    StudentProgram.Items.Add("BSA");
                     break;
                 case "CCST":
-                    StudentProgram.Items.Add("Bachelor of Science in Information Technology");
-                    StudentProgram.Items.Add("Bachelor of Science in Information Systems");
+                    StudentProgram.Items.Add("BSIT");
+                    StudentProgram.Items.Add("BSIS");
                     break;
                 case "CAS":
-                    StudentProgram.Items.Add("Bachelor of Science in Psychology");
-                    StudentProgram.Items.Add("Bachelor of Arts in Communication");
-                    StudentProgram.Items.Add("Bachelor of Science in Economics");
-                    StudentProgram.Items.Add("Bachelor of Public Administration");
-                    StudentProgram.Items.Add("Bachelor of Arts in Political Science");
+                    StudentProgram.Items.Add("BPA");
+                    StudentProgram.Items.Add("BSECO");
+                    StudentProgram.Items.Add("BSPOLSCI");
+                    StudentProgram.Items.Add("BSPSY");
+                    StudentProgram.Items.Add("BSCOM");
                     break;
                 case "CTHM":
-                    StudentProgram.Items.Add("Bachelor of Science in Hospitality Management");
-                    StudentProgram.Items.Add("Bachelor of Science in Tourism Management");
+                    StudentProgram.Items.Add("BSHM");
+                    StudentProgram.Items.Add("BSTM");
                     break;
             }
-
             LoadPersonalInformation();
         }
 

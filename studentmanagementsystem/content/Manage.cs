@@ -60,6 +60,8 @@ namespace studentmanagementsystem.content
                     {
                         queries.ArchiveStudentInformation(DataManagement_GridView.SelectedRows[0].Cells[0].Value.ToString());
                         DataManagement_GridView.DataSource = queries.LoadDBContent("All", "All", "All", "All", "All", "Active");
+                        ulong totalrecords = queries.ToTalRecords("All", "All", "All", "All", "All", "Active");
+                        TotalRecords.Text = "Total Records: " + totalrecords.ToString();
                     }
                 }
             }
@@ -96,6 +98,8 @@ namespace studentmanagementsystem.content
                     {
                         queries.RestoreStudentInformation(DataManagement_GridView.SelectedRows[0].Cells[0].Value.ToString());
                         DataManagement_GridView.DataSource = queries.LoadDBContent("All", "All", "All", "All", "All", "Archived");
+                        ulong totalrecords = queries.ToTalRecords("All", "All", "All", "All", "All", "Archived");
+                        TotalRecords.Text = "Total Records: " + totalrecords.ToString();
                     }
                 }
             }
@@ -103,6 +107,11 @@ namespace studentmanagementsystem.content
             {
                 MessageBox.Show("Please select a row to restore", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void SearchBtn_Click(object sender, EventArgs e)
+        {
+            DataManagement_GridView.DataSource = queries.SearchRecord(SearchInput.Text);
         }
     }
 }

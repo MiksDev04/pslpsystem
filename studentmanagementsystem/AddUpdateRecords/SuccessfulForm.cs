@@ -18,30 +18,32 @@ namespace studentmanagementsystem.AddUpdateRecords
         private string[] studentRecord;
         private DataTable courseRecord;
         private string skillRecord;
-        public SuccessfulForm(string[] studentRecord, DataTable courseRecord, string skillRecord)
+        private string message;
+        public SuccessfulForm(string[] studentRecord, DataTable courseRecord, string skillRecord, string message)
         {
             InitializeComponent();
             this.studentRecord = studentRecord;
             this.courseRecord = courseRecord;
             this.skillRecord = skillRecord;
+            this.message = message;
         }
         SQLQueries queries = new SQLQueries();
         private void SuccessfulForm_Load(object sender, EventArgs e)
         {
+            SuccessMessage.Text = message;
             AddUpdateProgressBar.Value = 100;
             StudentID.Text += studentRecord[0];
             FullName.Text += studentRecord[1];
             Age.Text += studentRecord[2];
             Sex.Text += studentRecord[3];
-            Birthdate.Text += studentRecord[4];
+            Birthdate.Text += DateTime.Parse(studentRecord[4]).Date;
             Address.Text += studentRecord[5];
             Email.Text += studentRecord[6];
-            PhoneNumber.Text += studentRecord[7];
-            YearLevel.Text += studentRecord[8];
-            Section.Text += studentRecord[9];
-            Program.Text += studentRecord[10];
-            Department.Text += studentRecord[11];
-            Status.Text += studentRecord[12];
+            YearLevel.Text += studentRecord[7];
+            Section.Text += studentRecord[8];
+            Program.Text += studentRecord[9];
+            Department.Text += studentRecord[10];
+            Status.Text += studentRecord[11];
             ViewCourseInformation.DataSource = courseRecord;
             SkillSets.Text = skillRecord;
         }

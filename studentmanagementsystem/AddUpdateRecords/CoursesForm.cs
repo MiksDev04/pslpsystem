@@ -87,6 +87,12 @@ namespace studentmanagementsystem.AddUpdateRecords
             T9.Text = courseInfo[3][8];
             U9.Text = courseInfo[4][8];
 
+            CC10.Text = courseInfo[0][9];
+            CD10.Text = courseInfo[1][9];
+            D10.Text = courseInfo[2][9];
+            T10.Text = courseInfo[3][9];
+            U10.Text = courseInfo[4][9];
+
         }
 
         private void NextToSkillsBtn_Click(object sender, EventArgs e)
@@ -95,11 +101,11 @@ namespace studentmanagementsystem.AddUpdateRecords
             List<List<string>> courseInfo = new List<List<string>>();
 
             // Add sets of 8 strings for each category
-            courseInfo.Add(new List<string> { CC1.Text, CC2.Text, CC3.Text, CC4.Text, CC5.Text, CC6.Text, CC7.Text, CC8.Text });
-            courseInfo.Add(new List<string> { CD1.Text, CD2.Text, CD3.Text, CD4.Text, CD5.Text, CD6.Text, CD7.Text, CD8.Text });
-            courseInfo.Add(new List<string> { T1.Text, T2.Text, T3.Text, T4.Text, T5.Text, T6.Text, T7.Text, T8.Text });
-            courseInfo.Add(new List<string> { D1.Text, D2.Text, D3.Text, D4.Text, D5.Text, D6.Text, D7.Text, D8.Text });
-            courseInfo.Add(new List<string> { U1.Text, U2.Text, U3.Text, U4.Text, U5.Text, U6.Text, U7.Text, U8.Text });
+            courseInfo.Add(new List<string> { CC1.Text, CC2.Text, CC3.Text, CC4.Text, CC5.Text, CC6.Text, CC7.Text, CC8.Text , CC9.Text, CC10.Text});
+            courseInfo.Add(new List<string> { CD1.Text, CD2.Text, CD3.Text, CD4.Text, CD5.Text, CD6.Text, CD7.Text, CD8.Text, CD9.Text, CD10.Text});
+            courseInfo.Add(new List<string> { T1.Text, T2.Text, T3.Text, T4.Text, T5.Text, T6.Text, T7.Text, T8.Text, T9.Text, T10.Text });
+            courseInfo.Add(new List<string> { D1.Text, D2.Text, D3.Text, D4.Text, D5.Text, D6.Text, D7.Text, D8.Text, D9.Text, D10.Text});
+            courseInfo.Add(new List<string> { U1.Text, U2.Text, U3.Text, U4.Text, U5.Text, U6.Text, U7.Text, U8.Text, U9.Text, U10.Text});
 
             // go to skills form
             this.Hide();
@@ -111,5 +117,7 @@ namespace studentmanagementsystem.AddUpdateRecords
         {
             this.Hide();
         }
+
+
     }
 }

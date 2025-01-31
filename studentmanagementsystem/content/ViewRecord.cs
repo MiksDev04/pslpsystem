@@ -32,12 +32,11 @@ namespace studentmanagementsystem.content
             Birthdate.Text += studentRecord[4];
             Address.Text += studentRecord[5];
             Email.Text += studentRecord[6];
-            PhoneNumber.Text += studentRecord[7];
-            YearLevel.Text += studentRecord[8];
-            Section.Text += studentRecord[9];
-            Program.Text += studentRecord[10];
-            Department.Text += studentRecord[11];
-            Status.Text += studentRecord[12];
+            YearLevel.Text += studentRecord[7];
+            Section.Text += studentRecord[8];
+            Program.Text += studentRecord[9];
+            Department.Text += studentRecord[10];
+            Status.Text += studentRecord[11];
             ViewCourseInformation.DataSource = courseRecord;
             SkillSets.Text = skillRecord;
         }

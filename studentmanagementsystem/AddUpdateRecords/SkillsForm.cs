@@ -60,7 +60,7 @@ namespace studentmanagementsystem.AddUpdateRecords
                 string[] studentRecords = queries.ViewStudentInformation(id);
                 DataTable courseRecords = queries.ViewCourseInformation(id);
                 string skillRecords = queries.ViewSkillInformation(id);
-                SuccessfulForm successfulForm = new SuccessfulForm(studentRecords, courseRecords, skillRecords);
+                SuccessfulForm successfulForm = new SuccessfulForm(studentRecords, courseRecords, skillRecords, "Add Successful");
                 successfulForm.Show();
             }
             catch (Exception ex)
@@ -80,7 +80,7 @@ namespace studentmanagementsystem.AddUpdateRecords
                 string[] studentRecords = queries.ViewStudentInformation(id);
                 DataTable courseRecords = queries.ViewCourseInformation(id);
                 string skillRecords = queries.ViewSkillInformation(id);
-                SuccessfulForm successfulForm = new SuccessfulForm(studentRecords, courseRecords, skillRecords);
+                SuccessfulForm successfulForm = new SuccessfulForm(studentRecords, courseRecords, skillRecords, "Update Successful");
                 successfulForm.Show();
             }
             catch (Exception ex)

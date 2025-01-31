@@ -24,7 +24,6 @@ namespace studentmanagementsystem.account
         SQLQueries queries = new SQLQueries();
         private void LoginBtn_Click(object sender, EventArgs e)
         {
-            Main main = new Main();
             string Username = LoginUsername.Text;
             string Password = LoginPassword.Text;
             if (Username != "" && Password != "")
@@ -32,6 +31,7 @@ namespace studentmanagementsystem.account
                 bool[] bools = queries.CheckUser(Username, Password);
                 if (bools[0])
                 {
+                    Main main = new Main(Username, Password);
                     if (bools[1])
                     {
                         main.ProfileBtn.Text = "Admin";

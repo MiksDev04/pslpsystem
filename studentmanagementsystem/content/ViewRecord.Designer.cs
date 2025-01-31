@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.ExitBtn = new Guna.UI2.WinForms.Guna2Button();
@@ -44,7 +44,6 @@
             this.Address = new System.Windows.Forms.Label();
             this.Email = new System.Windows.Forms.Label();
             this.YearLevel = new System.Windows.Forms.Label();
-            this.PhoneNumber = new System.Windows.Forms.Label();
             this.Section = new System.Windows.Forms.Label();
             this.Program = new System.Windows.Forms.Label();
             this.Department = new System.Windows.Forms.Label();
@@ -97,7 +96,7 @@
             // 
             this.StudentID.AutoSize = true;
             this.StudentID.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StudentID.Location = new System.Drawing.Point(22, 105);
+            this.StudentID.Location = new System.Drawing.Point(20, 134);
             this.StudentID.Name = "StudentID";
             this.StudentID.Size = new System.Drawing.Size(75, 17);
             this.StudentID.TabIndex = 0;
@@ -107,7 +106,7 @@
             // 
             this.FullName.AutoSize = true;
             this.FullName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FullName.Location = new System.Drawing.Point(22, 133);
+            this.FullName.Location = new System.Drawing.Point(20, 162);
             this.FullName.Name = "FullName";
             this.FullName.Size = new System.Drawing.Size(73, 17);
             this.FullName.TabIndex = 1;
@@ -117,7 +116,7 @@
             // 
             this.Age.AutoSize = true;
             this.Age.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Age.Location = new System.Drawing.Point(139, 166);
+            this.Age.Location = new System.Drawing.Point(137, 195);
             this.Age.Name = "Age";
             this.Age.Size = new System.Drawing.Size(38, 17);
             this.Age.TabIndex = 2;
@@ -127,7 +126,7 @@
             // 
             this.Sex.AutoSize = true;
             this.Sex.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Sex.Location = new System.Drawing.Point(24, 165);
+            this.Sex.Location = new System.Drawing.Point(22, 194);
             this.Sex.Name = "Sex";
             this.Sex.Size = new System.Drawing.Size(35, 17);
             this.Sex.TabIndex = 3;
@@ -137,7 +136,7 @@
             // 
             this.Birthdate.AutoSize = true;
             this.Birthdate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Birthdate.Location = new System.Drawing.Point(25, 192);
+            this.Birthdate.Location = new System.Drawing.Point(23, 221);
             this.Birthdate.Name = "Birthdate";
             this.Birthdate.Size = new System.Drawing.Size(67, 17);
             this.Birthdate.TabIndex = 4;
@@ -147,7 +146,7 @@
             // 
             this.Address.AutoSize = true;
             this.Address.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Address.Location = new System.Drawing.Point(24, 222);
+            this.Address.Location = new System.Drawing.Point(22, 251);
             this.Address.Name = "Address";
             this.Address.Size = new System.Drawing.Size(63, 17);
             this.Address.TabIndex = 5;
@@ -157,7 +156,7 @@
             // 
             this.Email.AutoSize = true;
             this.Email.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Email.Location = new System.Drawing.Point(25, 250);
+            this.Email.Location = new System.Drawing.Point(23, 279);
             this.Email.Name = "Email";
             this.Email.Size = new System.Drawing.Size(46, 17);
             this.Email.TabIndex = 6;
@@ -172,16 +171,6 @@
             this.YearLevel.Size = new System.Drawing.Size(73, 17);
             this.YearLevel.TabIndex = 7;
             this.YearLevel.Text = "Year Level: ";
-            // 
-            // PhoneNumber
-            // 
-            this.PhoneNumber.AutoSize = true;
-            this.PhoneNumber.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PhoneNumber.Location = new System.Drawing.Point(25, 282);
-            this.PhoneNumber.Name = "PhoneNumber";
-            this.PhoneNumber.Size = new System.Drawing.Size(103, 17);
-            this.PhoneNumber.TabIndex = 8;
-            this.PhoneNumber.Text = "Phone Number: ";
             // 
             // Section
             // 
@@ -255,35 +244,35 @@
             // 
             // ViewCourseInformation
             // 
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(223)))), ((int)(((byte)(251)))));
-            this.ViewCourseInformation.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(223)))), ((int)(((byte)(251)))));
+            this.ViewCourseInformation.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.ViewCourseInformation.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ViewCourseInformation.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ViewCourseInformation.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.ViewCourseInformation.ColumnHeadersHeight = 30;
             this.ViewCourseInformation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(233)))), ((int)(((byte)(252)))));
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(185)))), ((int)(((byte)(246)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ViewCourseInformation.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(233)))), ((int)(((byte)(252)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(185)))), ((int)(((byte)(246)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ViewCourseInformation.DefaultCellStyle = dataGridViewCellStyle3;
             this.ViewCourseInformation.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(222)))), ((int)(((byte)(251)))));
             this.ViewCourseInformation.Location = new System.Drawing.Point(383, 105);
             this.ViewCourseInformation.Name = "ViewCourseInformation";
             this.ViewCourseInformation.ReadOnly = true;
             this.ViewCourseInformation.RowHeadersVisible = false;
             this.ViewCourseInformation.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ViewCourseInformation.RowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ViewCourseInformation.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.ViewCourseInformation.RowTemplate.Height = 25;
             this.ViewCourseInformation.Size = new System.Drawing.Size(494, 291);
             this.ViewCourseInformation.TabIndex = 16;
@@ -341,7 +330,6 @@
             this.Controls.Add(this.Sex);
             this.Controls.Add(this.Section);
             this.Controls.Add(this.Birthdate);
-            this.Controls.Add(this.PhoneNumber);
             this.Controls.Add(this.Address);
             this.Controls.Add(this.YearLevel);
             this.Controls.Add(this.Email);
@@ -370,7 +358,6 @@
         private System.Windows.Forms.Label Department;
         private System.Windows.Forms.Label Program;
         private System.Windows.Forms.Label Section;
-        private System.Windows.Forms.Label PhoneNumber;
         private System.Windows.Forms.Label YearLevel;
         private System.Windows.Forms.Label Email;
         private System.Windows.Forms.Label Address;
