@@ -498,7 +498,7 @@ namespace studentmanagementsystem.Queries
 
                             // Add student information
                             string queryStudent = @"INSERT INTO student_information 
-                                (Student_ID, Student_Name, Age, Sex, Birthdate, Address, Email, Phone_Number, 
+                                (Student_ID, Student_Name, Age, Sex, Birthdate, Address, Email,
                                     Yearlevel, Section, Program, Department, Status, Course_ID, Skill_ID) 
                                 VALUES (@Student_ID, @Student_Name, @Age, @Sex, @Birthdate, @Address, @Email, 
                                 @Yearlevel, @Section, @Program, @Department, @Status, 

@@ -43,8 +43,16 @@ namespace studentmanagementsystem.content
 
         private void UpdateRecordBtn_Click(object sender, EventArgs e)
         {
-            PersonalInfoForm personalInfo = new PersonalInfoForm(DataManagement_GridView.SelectedRows[0].Cells[0].Value.ToString());
-            personalInfo.Show();
+            try
+            {
+                PersonalInfoForm personalInfo = new PersonalInfoForm(DataManagement_GridView.SelectedRows[0].Cells[0].Value.ToString());
+                personalInfo.Show();
+               
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please select a row to update", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
   
