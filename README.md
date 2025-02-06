@@ -5,12 +5,12 @@
 ## Requirements in Fundamentals of Database System (IM211) & Object Oriented Programming (ITELECTV1)
 
 #### Members: 
-  Beriño, Glenn Dela Tonga
-  Bulado, John Adrian Bautista
-  Carillo, Ian Jay Ibabao
-  Gapasan, Miko Magpoot
-  Tano, Anton Joseph Olino
-  Urriza, John Aaron Bundukin  
+  -Beriño, Glenn Dela Tonga
+  -Bulado, John Adrian Bautista
+  -Carillo, Ian Jay Ibabao
+  -Gapasan, Miko Magpoot
+  -Tano, Anton Joseph Olino
+  -Urriza, John Aaron Bundukin  
 
 ## Introduction
 Managing student information is essential for
