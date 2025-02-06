@@ -2,7 +2,7 @@
 # UNIVERSITY STUDENT INFORMATION SYSTEM
 ### by BSIT 2-B Carillo Company
 
-## Requirements in Fundamentals of Database System (IM211) & Object Oriented Programmin (ITELECTV1)
+## Requirements in Fundamentals of Database System (IM211) & Object Oriented Programming (ITELECTV1)
 
 #### Members: 
   Beriño, Glenn Dela Tonga
